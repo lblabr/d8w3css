@@ -1,0 +1,9 @@
+name: Drupal8 W3CSS Subtheme
+type: theme
+base theme: drupal8_w3css_theme
+description: 'drupal8 w3css subtheme is an empty theme for your customization.'
+
+libraries:
+  - drupal8_w3css_subtheme/global-components
+
+core: '8.x'

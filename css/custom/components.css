@@ -1,0 +1,191 @@
+/* Main Menu Horizontal */
+.main-navigation-inner-h ul.w3-menu-main li a {
+  min-height: 50px;
+  width: 100%;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+.main-navigation-inner-h li.w3-menu-main__item--expanded > a:after {
+  content: "\f078";
+  font-family: FontAwesome;
+  padding-left: 5px;
+  text-align: right;
+  float: right;
+}
+
+.main-navigation-inner-h ul.w3-main-menu li.w3-menu-main__item--expanded {
+  position: relative;
+  display: inline-block;
+}
+
+.main-navigation-inner-h ul.w3-main-menu li.w3-menu-main__item--expanded a {
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+ul.w3-menu-0-main__submenu {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 3000;
+}
+.main-navigation-inner-h ul.w3-menu-0-main__submenu li {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+/* Vertical main menu */
+#main-navigation-v {
+  display: none;
+  width: auto!important;
+}
+#main-navigation-v .w3-menu-main ul.w3-menu-0-main__submenu {
+  width: 100%!important;
+  position: relative!important;
+}
+#main-navigation-v .w3-menu-main {
+  width: auto!important;
+  display: inline!important;
+}
+#main-navigation-v .w3-menu-main li {
+  width: 100%!important;
+  float: left!important;
+  display: inline!important;
+  clear: left;
+  text-align: left;
+}
+
+#open-nav-inner {
+  width: 50px;
+  background-color: transparent!important;
+  margin: 10px 20px 0 0;
+}
+/* Global style for vertical and horizontal main menu */
+ul.w3-menu-0-main__submenu {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 3000;
+}
+li.w3-menu-main__item--expanded > a:after {
+  content: "\f078";
+  font-family: FontAwesome;
+  padding-left: 5px;
+  text-align: right;
+  float: right;
+}
+.w3-menu-main a:hover {
+  opacity: 1.0;
+}
+
+/* Header */
+.w3-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.w3-relative {
+  position: relative;
+  width: 100%;
+}
+/* Site Branding */
+.header-inner > div {
+  float: left;
+  width: auto;
+}
+
+/*footer menu font*/
+.copyright-inner,
+.w3-menu-footer {
+  font-family: "Times New Roman", Times, serif;
+}
+/* User Account Menu */
+.header-inner > nav {
+  float: right;
+  width: auto;
+  font-family: "Times New Roman", Times, serif;
+}
+/* Table inside field */
+td.field-multiple-drag {
+  width: 50px;
+}
+a.tabledrag-handle .handle {
+  width: 25px;
+  height: 25px;
+}
+/* To roll the text around the image */
+.node .field--type-image {
+  float: left;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 1em;
+  margin-top: 0;
+}
+div.item-list > ol.item-list > li article::after,
+div.item-list > ol.item-list > li article::before,
+.field--type-text::after,
+.field--type-text-with-summary::after,
+.field--type-text::before,
+.field--type-text-with-summary::before {
+  display: inline!important;
+}
+/* User picture on the node */
+.node__meta article.profile img {
+  width: 50px;
+  height: 50px;
+}
+/* node submited by tag */
+.node__meta div.node__submitted,
+.node__meta article.profile {
+  margin: 0;
+  padding: 0;
+}
+/* search bar */
+.w3-search-block-form > div,
+.w3-search-block-form > input {
+  margin: 5px auto!important;
+  display: inline-block;
+  font-family: Consolas, "courier new";
+}
+/* label form in the footer */
+
+.footer-menu-inner form label {
+  text-align: left;
+  float: left;
+}
+/* ol list */
+ol {
+  display: block;
+}
+/* Search Page */
+.search-form .search-advanced:hover {
+  background-color: transparent!important;
+}
+article.node > h3.node__title {
+  float: left;
+}
+/* Submitted By pic */
+article.node > footer.node__meta {
+  float: right;
+  margin-top: 10px;
+}
+article.node > footer.node__meta > article,
+article.node > footer.node__meta > div {
+  display: inline-block;
+}
+article.node > footer.node__meta .field--name-user-picture {
+  padding: 0!important;
+  margin: 0 10px 0 0;
+}
+/* Pager */
+.pager__items li {padding: 0;}
+.pager__items li a {padding: 6px 12px; display: inline-block;}
+.pager__items li.is-active a {font-weight: bold; font-size: 120%;}
+
+
+
+
