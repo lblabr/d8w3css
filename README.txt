@@ -38,73 +38,46 @@ You can view live demo by going to:
 
 |-  How to install drupal8 w3css theme
 ==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
-Download the theme to www.your-drupal-site-name/themes/ and go to
-your-site-domain/admin/appearance and scroll to the bottom until you see Drupal8
- W3CSS Theme and click on Install and set as default and click save.
+Download the theme to www.your-drupal-site-name/themes/ and go to your-site-domain/admin/appearance and scroll to the bottom until you see Drupal8 W3CSS Theme and click on Install and set as default and click save.
 
 |-  How to change the logo
 ==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
-Go to www.your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme
-and uncheck “Use the logo supplied by the theme” then upload your own website
-logo and click save.
+Go to www.your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme and uncheck “Use the logo supplied by the theme” then upload your own website logo and click save.
 
 |-  How to change the favicon
 ==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
-Go to www.your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme
-and uncheck “Use the favicon supplied by the theme” then upload your own favicon
- and click save.
+Go to www.your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme and uncheck “Use the favicon supplied by the theme” then upload your own favicon and click save.
 
 |-  How to change website width
 ==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
-Go to www.your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme
-and click on Website Width to expand it.  Copy and paste your desired website
-width and click save.
+Go to www.your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme and click on Website Width to expand it. Copy and paste your desired website width and click save.
 
 |-  How to use the w3css predefined themes
 ==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
-Go to www.your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme
-and click on  w3css predefined themes to expand it.  Copy and paste any of your
-desired w3css color theme and click save.
+Go to www.your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme and click on  w3css predefined themes to expand it.  Copy and paste any of your desired w3css color theme and click save.
 
 |-  How to change website colors
 ==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
-Go to www.your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme
-and click on Advanced Site Colors to expand it.  Each section in the website can
-be modified and click save.  You can change the text color, background color,
-padding, margin or borders.  You can use any of W3 CSS Classes
-https://www.w3schools.com/w3css/w3css_references.asp
+Go to www.your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme and click on Advanced Site Colors to expand it.  Each section in the website can be modified and click save.  You can change the text color, background color, padding, margin or borders.  You can use any of W3 CSS Classes https://www.w3schools.com/w3css/w3css_references.asp
 
 |-  How to change Social Media Links
 ==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
-Go to www.your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme
-and click on Social Media Link to expand it.  Change any of the links and click
-save.
+Go to www.your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme and click on Social Media Link to expand it.  Change any of the links and click save.
 
 |-  How to change copyrighT
 ==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
-Go to www.your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme
-and click on Copyright to expand it, then change the text there and click save.
+Go to www.your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme and click on Copyright to expand it, then change the text there and click save.
 
 |-  How to disable the credit at the bottom
 ==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
-Go to www.your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme
-and click on Credit to expand it.  Uncheck the Show/Hide Credit Text and click
-save.
+Go to www.your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme and click on Credit to expand it.  Uncheck the Show/Hide Credit Text and click save.
 
 |-  How to create a new custom predefined color theme
 ==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
-1- Go to https://www.w3schools.com/w3css/w3css_color_themes.asp and create your
-custom theme.  Follow the steps to create a private theme.
-2- After you finish go to your-drupal-site-directory/themes/drupal8_w3css_theme
-/css/w3-css-theme-custom/w3-theme-custom.css Open w3-theme-custom.css and delete
-the old code then paste the new code for your private theme.
-3- Go to www.your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme
-and click on W3css Predefined Theme and enter w3-theme-custom.
-How to install drupal8 w3css subtheme >>  Install Drupal8 W3CSS Theme First,
-then install drupal8 w3css subtheme.
+1- Go to https://www.w3schools.com/w3css/w3css_color_themes.asp and create your custom theme.  Follow the steps to create a private theme.
+2- After you finish go to your-drupal-site-directory/themes/drupal8_w3css_theme/css/w3-css-theme-custom/w3-theme-custom.css Open w3-theme-custom.css and delete the old code then paste the new code for your private theme.
+3- Go to www.your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme and click on W3css Predefined Theme and enter w3-theme-custom. How to install drupal8 w3css subtheme >>  Install Drupal8 W3CSS Theme First, then install drupal8 w3css subtheme.
 
 |-  How to use the drupal8_w3css_subtheme
 ==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
-Inside
-your-drupal-site-directory/themes/drupal8_w3css_theme/drupal8_w3css_subtheme
- you will have all the necessary files for start up theme.
+Inside your-drupal-site-directory/themes/drupal8_w3css_theme/drupal8_w3css_subtheme you will have all the necessary files for start up theme.
