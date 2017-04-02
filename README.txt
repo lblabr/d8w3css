@@ -55,6 +55,12 @@ The dropdown works on hover for big screen and on click for small screen.
 region you don't use.  Nothing will be printed in the back.
 16- Drupal8 W3CSS Theme uses the minumim html structure to show the content.
 Example, You will not see div > div > div > div > div.
+17- Drupal8 W3CSS Theme comes with the ability to create a custom page template
+according to content type's name.  If you have two content types article and
+video you can have page--article.html.twig and page--video.html.twig
+18- Drupal8 W3CSS Theme comes with the ability to create acustom page template
+for any view.  Example if you have a view name "recent_video", then you can
+create a page template name page--recent-video.html.twig.
 ========================================================
 |=       DRUPAL8 W3CSS THEME CONFIGURATION            =|
 ========================================================
