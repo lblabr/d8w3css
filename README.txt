@@ -12,54 +12,26 @@ Drupal8 W3CSS Theme is using the W3.CSS framework with built-in responsiveness:
 ========================================================
 |=           DRUPAL8 W3CSS THEME FEATURES             =|
 ========================================================
-1- Drupal8 W3CSS Theme is using the W3.CSS framework with built-in
-responsiveness
+1- Drupal8 W3CSS Theme is using the W3.CSS framework with built-in responsiveness
 2- Drupal8 W3CSS Theme has 22 regions.
-3- Drupal8 W3CSS Theme has 26 sections with changable colors.  With ww3.css
-frameworks you can change the background color, text color, text shadow and more
-to any section in your website.  Just simply apply the w3.css class to the
-section.
-4- Drupal8 W3CSS Theme comes with ability to change the site width. Just apply
-any of these preconfigured classes to your website. (w3-width-100-percent,
-w3-width-2560, w3-width-1920, w3-width-1600, w3-width-1360, w3-width-1280,
-w3-width-1024 and w3-width-800)
-5- Drupal8 W3CSS Theme comes with horizontal main menu or vertical side nav.
-Simply add the main menu to the horizontal region or the vertical region.
-6- Drupal8 W3CSS Theme comes with 22 predefined w3css theme.  Simply insert the
-name of any of the predefined theme.
-7- Drupal8 W3CSS Theme comes with ability to create your own private w3.css
-theme and apply it to your site.
+3- Drupal8 W3CSS Theme has 26 sections with changeable colors. With ww3.css frameworks you can change the background color, text color, text shadow and more to any section in your website.  Just simply apply the w3.css class to the section.
+4- Drupal8 W3CSS Theme comes with ability to change the site width. Just apply any of these per-configured classes to your website. (w3-width-100-percent, w3-width-2560, w3-width-1920, w3-width-1600, w3-width-1360, w3-width-1280, w3-width-1024 and w3-width-800).
+5- Drupal8 W3CSS Theme comes with horizontal main menu or vertical side nav.  Simply add the main menu to the horizontal region or the vertical region.
+6- Drupal8 W3CSS Theme comes with 22 predefined w3css theme.  Simply insert the name of any of the predefined theme.
+7- Drupal8 W3CSS Theme comes with ability to create your own private w3.css theme and apply it to your site.
 8- Drupal8 W3CSS Theme comes with 8 social media links easy to configure.
-9- Drupal8 W3CSS Theme has a top region with three flexible blocks.  Block width
-will change automatically based on assigned block, Block share equal width based
-on assigned block. (Example, If you have only two blocks in top area block,
-Block share 50% each block, If you assign three it come 33.3% each).Block width
-will change automatically based on assigned block, Block share equal width based
-on assigned block. (Example, If you have only two blocks in top area block,
-Block share 50% each block, If you assign three it come 33.3% each).
-10- Drupal8 W3CSS Theme has a bottom region with four flexible blocks.  Block
-width will change automatically based on assigned block, Block share equal width
-based on assigned block. (Example, If you have only three blocks in bottom
-region, Block share 33.3% each block, If you assign four it come 25% each).
-11- Drupal8 W3CSS Theme has a footer region with three flexible blocks.  Block
-width will change automatically based on assigned block, Block share equal width
-based on assigned block. (Example, If you have only two blocks in footer region,
-Block share 50% each block, If you assign three it come 33.3% each).
+9- Drupal8 W3CSS Theme has a top region with three flexible blocks. Block width will change automatically based on the number of assigned blocks. Block share equal width based on number of assigned blocks. (Example, If you have only two blocks in top area block, Block share 50% each block, If you assign three it come 33.3% each). Block width will change automatically based on assigned block, Block share equal width based on assigned block. (Example, If you have only two blocks in top area block, Block share 50% each block, If you assign three it come 33.3% each).
+10- Drupal8 W3CSS Theme has a bottom region with four flexible blocks. Block width will change automatically based on the number of assigned blocks. Block share equal width based on number of assigned blocks. (Example, If you have only three blocks in bottom region, Block share 33.3% each block, If you assign four it come 25% each).
+11- Drupal8 W3CSS Theme has a footer region with three flexible blocks. Block width will change automatically based on the number of assigned blocks. Block share equal width based on number of assigned blocks. (Example, If you have only two blocks in footer region, Block share 50% each block, If you assign three it come 33.3% each).
 12- Drupal8 W3CSS Theme comes with font awesome added to the css library.
-13- Drupal8 W3CSS Theme comes with jquery match height. Example, if you have
-three blocks in the top area, they will alawys have the height in any width.
-14- Drupal8 W3CSS Theme comes responsive main menu and a dropdown menu.
-The dropdown works on hover for big screen and on click for small screen.
-15- Drupal8 W3CSS Theme will hide completely (divs, wrappers, classes) any
-region you don't use.  Nothing will be printed in the back.
-16- Drupal8 W3CSS Theme uses the minumim html structure to show the content.
-Example, You will not see div > div > div > div > div.
-17- Drupal8 W3CSS Theme comes with the ability to create a custom page template
-according to content type's name.  If you have two content types article and
-video you can have page--article.html.twig and page--video.html.twig
-18- Drupal8 W3CSS Theme comes with the ability to create acustom page template
-for any view.  Example if you have a view name "recent_video", then you can
-create a page template name page--recent-video.html.twig.
+13- Drupal8 W3CSS Theme comes with jQuery match height. Example, if you have three blocks in the top area, they will always have the height in any width.
+14- Drupal8 W3CSS Theme comes responsive main menu and a drop-down menu. The drop-down works on hover for big screen and on click for small screen.
+15- Drupal8 W3CSS Theme will hide completely (divs, wrappers, classes) any region you don't use.  Nothing will be printed in the back.
+16- Drupal8 W3CSS Theme uses the minimum HTML structure to show the content. Example, You will not see div > div > div > div > div.
+17- Drupal8 W3CSS Theme comes with the ability to create a custom page template according to content type's name.  If you have two content types article and video you can have page--article.html.twig and page--video.html.twig
+18- Drupal8 W3CSS Theme comes with the ability to create a custom page template for any view.  Example if you have a view name "recent_video", then you can create a page template name page--recent-video.html.twig.
+You can view live demo by going to:
+<a href="http://drupal8.w3css.theme.flashwebcenter.com" title="Drupal8 W3CSS Theme Demo">http://drupal8.w3css.theme.flashwebcenter.com/</a>
 ========================================================
 |=       DRUPAL8 W3CSS THEME CONFIGURATION            =|
 ========================================================
