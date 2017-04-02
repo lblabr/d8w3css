@@ -45,7 +45,6 @@ region, Block share 33.3% each block, If you assign four it come 25% each).
 width will change automatically based on assigned block, Block share equal width
 based on assigned block. (Example, If you have only two blocks in footer region,
 Block share 50% each block, If you assign three it come 33.3% each).
->>>>>>> External Changes
 12- Drupal8 W3CSS Theme comes with font awesome added to the css library.
 13- Drupal8 W3CSS Theme comes with jquery match height. Example, if you have
 three blocks in the top area, they will alawys have the height in any width.
