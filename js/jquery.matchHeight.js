@@ -14,16 +14,17 @@
     factory(jQuery);
   }
 })(function ($) {
-  var _previousResizeWidth = -1,
-    _updateTimeout = -1;
+  'use strict';
+  var _previousResizeWidth = -1;
+  var _updateTimeout = -1;
   var _parse = function (value) {
     return parseFloat(value) || 0;
   };
   var _rows = function (elements) {
-    var tolerance = 1,
-      $elements = $(elements),
-      lastTop = null,
-      rows = [];
+    var tolerance = 1;
+    var $elements = $(elements);
+    var lastTop = null;
+    var rows = [];
     $elements.each(function () {
       var $that = $(this),
         top = $that.offset().top - _parse($that.css('margin-top')),
@@ -91,11 +92,11 @@
   matchHeight._parse = _parse;
   matchHeight._parseOptions = _parseOptions;
   matchHeight._apply = function (elements, options) {
-    var opts = _parseOptions(options),
-      $elements = $(elements),
-      rows = [$elements];
-    var scrollTop = $(window).scrollTop(),
-      htmlHeight = $('html').outerHeight(true);
+    var opts = _parseOptions(options);
+    var $elements = $(elements);
+    var rows = [$elements];
+    var scrollTop = $(window).scrollTop();
+    var htmlHeight = $('html').outerHeight(true);
     var $hiddenParents = $elements.parents().filter(':hidden');
     $hiddenParents.each(function () {
       var $that = $(this);
