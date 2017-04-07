@@ -23,8 +23,8 @@
      *  internal
      */
 
-  var _previousResizeWidth = -1,
-    _updateTimeout = -1;
+  var _previousResizeWidth = -1;
+  var _updateTimeout = -1;
 
     /*
      *  _parse
@@ -43,16 +43,16 @@
      */
 
   var _rows = function (elements) {
-    var tolerance = 1,
-      $elements = $(elements),
-      lastTop = null,
-      rows = [];
+    var tolerance = 1;
+    var $elements = $(elements);
+    var lastTop = null;
+    var rows = [];
 
         // Group elements by their top position.
     $elements.each(function () {
-      var $that = $(this),
-        top = $that.offset().top - _parse($that.css('margin-top')),
-        lastRow = rows.length > 0 ? rows[rows.length - 1] : null;
+      var $that = $(this);
+      var top = $that.offset().top - _parse($that.css('margin-top'));
+      var lastRow = rows.length > 0 ? rows[rows.length - 1] : null;
 
       if (lastRow === null) {
                 // First item on the row, so just push it.
@@ -162,13 +162,13 @@
      */
 
   matchHeight._apply = function (elements, options) {
-    var opts = _parseOptions(options),
-      $elements = $(elements),
-      rows = [$elements];
+    var opts = _parseOptions(options);
+    var $elements = $(elements);
+    var rows = [$elements];
 
         // Take note of scroll position.
-    var scrollTop = $(window).scrollTop(),
-      htmlHeight = $('html').outerHeight(true);
+    var scrollTop = $(window).scrollTop();
+    var htmlHeight = $('html').outerHeight(true);
 
         // Get hidden parents.
     var $hiddenParents = $elements.parents().filter(':hidden');
@@ -187,8 +187,8 @@
 
             // Must first force an arbitrary equal height so floating elements break evenly.
       $elements.each(function () {
-        var $that = $(this),
-          display = $that.css('display');
+        var $that = $(this);
+        var display = $that.css('display');
 
                 // Temporarily force a usable display value.
         if (display !== 'inline-block' && display !== 'flex' && display !== 'inline-flex') {
@@ -222,8 +222,8 @@
     }
 
     $.each(rows, function (key, row) {
-      var $row = $(row),
-        targetHeight = 0;
+      var $row = $(row);
+      var targetHeight = 0;
 
       if (!opts.target) {
                 // Skip apply to rows with only one item.
@@ -234,9 +234,9 @@
 
                 // Iterate the row and find the max height.
         $row.each(function () {
-          var $that = $(this),
-            style = $that.attr('style'),
-            display = $that.css('display');
+          var $that = $(this);
+          var style = $that.attr('style');
+          var display = $that.css('display');
 
                     // Temporarily force a usable display value.
           if (display !== 'inline-block' && display !== 'flex' && display !== 'inline-flex') {
@@ -271,8 +271,8 @@
 
             // Iterate the row and apply the height to all elements.
       $row.each(function () {
-        var $that = $(this),
-          verticalPadding = 0;
+        var $that = $(this);
+        var verticalPadding = 0;
 
                 // don't apply to a target.
         if (opts.target && $that.is(opts.target)) {
@@ -314,8 +314,8 @@
 
         // Generate groups by their groupId set by elements using data-match-height.
     $('[data-match-height], [data-mh]').each(function () {
-      var $this = $(this),
-        groupId = $this.attr('data-mh') || $this.attr('data-match-height');
+      var $this = $(this);
+      var groupId = $this.attr('data-mh') || $this.attr('data-match-height');
 
       if (groupId in groups) {
         groups[groupId] = groups[groupId].add($this);
