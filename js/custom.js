@@ -11,14 +11,15 @@
   // Add flex position to the main menu at scroll.
   var mainNavigation = document.querySelector('#main-navigation-h');
   // In case the main menu not printed.
+  var origOffsetY;
   if ($('#main-navigation-h ul.w3-menu-main').length > 0) {
-  var origOffsetY = mainNavigation.offsetTop;
+    origOffsetY = mainNavigation.offsetTop;
   }
   function scrollWindow(e) {
     if (window.scrollY >= origOffsetY) {
       mainNavigation.classList.add('w3-fixed');
     }
-else {
+    else {
       mainNavigation.classList.remove('w3-fixed');
     }
   }
@@ -29,11 +30,11 @@ else {
       // Add class to the body for large screen.
       $('body').removeClass('small-screen medium-screen').addClass('large-screen');
       // Make sure all the inside regions have the same height.
-      $('.top-region').matchHeight({ property: 'height' });
-      $('.bottom-region').matchHeight({ property: 'height' });
-      $('.footer-region').matchHeight({ property: 'height' });
-     }
-else if ((screen.width >= 601) && (screen.width >= 992)) {
+      $('.top-region').matchHeight({property: 'height'});
+      $('.bottom-region').matchHeight({property: 'height'});
+      $('.footer-region').matchHeight({property: 'height'});
+    }
+    else if ((screen.width >= 601) && (screen.width >= 992)) {
             // Add class to the body for medium screen.
       $('body').removeClass('small-screen large-screen').addClass('medium-screen');
             // Remove the match height on medium screen.
@@ -41,7 +42,7 @@ else if ((screen.width >= 601) && (screen.width >= 992)) {
       $('.bottom-region').matchHeight({remove: true});
       $('.footer-region').matchHeight({remove: true});
     }
-else if (screen.width <= 600) {
+    else if (screen.width <= 600) {
       // Add class to the body for small screen.
       $('body').removeClass('large-screen medium-screen').addClass('small-screen');
       // Remove the match height on small screen.
@@ -54,17 +55,17 @@ else if (screen.width <= 600) {
     attach: function (context, settings) {
       settings.drupal8_w3css_theme = settings.drupal8_w3css_theme || {};
 
-        mediaSize();
-        window.addEventListener('resize', mediaSize);
-        document.addEventListener('scroll', scrollWindow);
+      mediaSize();
+      window.addEventListener('resize', mediaSize);
+      document.addEventListener('scroll', scrollWindow);
 
-        $(context)
+      $(context)
         .find('#main-navigation-v #close-nav')
         .once('#main-navigation-v #close-nav')
         .on('click', function () {
           document.getElementById('main-navigation-v').style.display = 'none';
         });
-        $(context)
+      $(context)
         .find('#open-nav-inner')
         .once('#open-nav-inner')
         .on('click', function () {
@@ -76,10 +77,10 @@ else if (screen.width <= 600) {
         .once('a')
         .on('click', function () {
           var d = document.getElementById('main-menu-inner');
-          if (d.className.indexOf('w3-show') == -1) {
+          if (d.className.indexOf('w3-show') === -1) {
             d.className += ' w3-show';
           }
-else {
+          else {
             d.className = d.className.replace(' w3-show', '');
           }
           return false;
@@ -90,21 +91,21 @@ else {
         .once('.mobile-nav')
         .on('click', function () {
           var x = document.getElementById('main-menu');
-          if (x.className.indexOf('w3-show') == -1) {
+          if (x.className.indexOf('w3-show') === -1) {
             x.className += ' w3-show';
           }
-else {
+          else {
             x.className = x.className.replace(' w3-show', '');
           }
         });
       // Change the sumbmenu color as the main menu .
-     var footerFormBg = $('#footer-menu').css('background-color');
+      var footerFormBg = $('#footer-menu').css('background-color');
       $(context)
         .find('#footer-menu form')
         .once('#footer-menu form')
         .css('background-color', footerFormBg);
       // Change the form color to match the footer color .
-     var subMenuBg = $('.main-navigation-wrapper').css('background-color');
+      var subMenuBg = $('.main-navigation-wrapper').css('background-color');
       $(context)
         .find('.main-navigation-wrapper ul.w3-menu-0-main__submenu')
         .once('.main-navigation-wrapper ul.w3-menu-0-main__submenu')

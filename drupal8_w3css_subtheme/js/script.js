@@ -4,7 +4,7 @@
 
 (function ($) {
 
-  "use strict";
+  'use strict';
 
   Drupal.behaviors.customBehavior = {
     // Perform jQuery as normal in here.
