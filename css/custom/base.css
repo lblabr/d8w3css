@@ -25,7 +25,6 @@ a img {
 svg:not(:root) {
   overflow: hidden;
 }
-
 h4,
 h5,
 h6 {
@@ -150,7 +149,6 @@ abbr.tabledrag-changed,
 abbr.ajax-changed {
   border-bottom: none;
 }
-
 /* Inline Error Message. */
 .form-item--error-message:before {
   font-family: FontAwesome;

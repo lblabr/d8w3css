@@ -24,7 +24,7 @@ global-components:
       css/custom/theme.css: {}
 
   js:
-    js/jquery.matchHeight-min.js: {}
+    js/jquery.matchHeight.js: {}
     js/custom.js: {}
   dependencies:
     - core/jquery

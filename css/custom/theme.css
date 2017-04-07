@@ -4,7 +4,6 @@ h2,
 h3 {
   font-weight: bold;
 }
-
 .page-wrapper {
   background-color: #f8f8f8;
   color: #3a3a3a;
@@ -12,7 +11,6 @@ h3 {
 #header {
   background-color: #bebebe;
 }
-
 .main-navigation-wrapper,
 .close-nav,
 .mobile-nav {
@@ -27,7 +25,6 @@ h3 {
   background-color: #efefef;
   color: #3a3a3a;
 }
-
 #top-container {
   background-color: #e4e4e4;
 }
@@ -43,7 +40,6 @@ h3 {
   background-color: #ededed;
   color: #3a3a3a;
 }
-
 #page-title {
   background-color: #4e4e4e;
   color: #efefef;
@@ -72,7 +68,6 @@ h3 {
   background-color: #636363;
   color: #efefef;
 }
-
 #footer-container {
   background-color: #3a3a3a;
 }
@@ -88,7 +83,6 @@ h3 {
   background-color: #494949;
   color: #9f9f9f;
 }
-
 #footer-menu {
   background-color: #1e1e1e;
   color: #bebebe;
@@ -97,7 +91,6 @@ h3 {
   background-color: #141414;
   color: #bebebe;
 }
-
 .footer-menu-inner #contact-message-feedback-form {
   background-color: #313131;
   color: #bebebe;
@@ -123,7 +116,6 @@ ul.links li a {
 .page-wrapper a:hover {
   opacity: 0.60;
 }
-
 .w3-button:hover a {
   opacity: 1.0;
 }
@@ -135,7 +127,6 @@ ul.links li a {
   height: 90px;
   width: 110px;
 }
-
 /* Theme settings*/
 body.path-admin ul.secondary {
   display: none;

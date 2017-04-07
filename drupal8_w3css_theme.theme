@@ -5,15 +5,8 @@
  * Functions to support theming in the Drupal 8 W3.css theme.
  */
 
-use Drupal\Core\Template\RenderWrapper;
-use Drupal\Core\Template\Attribute;
-use Drupal\search\Form\SearchBlockForm;
-use Drupal\Component\Utility\SafeMarkup;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\system\Form\ThemeSettingsForm;
-use Drupal\file\Entity\File;
 use Drupal\Core\Url;
-use Drupal\file\Plugin\Core\Entity\FileInterface;
 
 /**
  * Implements hook_preprocess_page() for page templates.
@@ -225,10 +218,10 @@ function drupal8_w3css_theme_preprocess_page(&$variables) {
  */
 function drupal8_w3css_theme_preprocess_breadcrumb(&$variables) {
   if (($node = \Drupal::routeMatch()->getParameter('node')) && $variables['breadcrumb']) {
-    $variables['breadcrumb'][] = array(
+    $variables['breadcrumb'][] = [
       'text' => $node->getTitle(),
       'url' => $node->URL(),
-    );
+    ];
   }
 }
 
@@ -283,249 +276,249 @@ function drupal8_w3css_theme_preprocess_maintenance_page(&$variables) {
  */
 function drupal8_w3css_theme_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
   // Website Width.
-  $form['drupal8_w3css_theme_settings']['w3_website_width'] = array(
+  $form['drupal8_w3css_theme_settings']['w3_website_width'] = [
     '#type' => 'details',
     '#title' => t('Website Width'),
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
     '#description'   => t("<p><strong>You can change the website width by entering any of the desired width.</strong></p><p>w3-width-100-percent, w3-width-2560, w3-width-1920, w3-width-1600, w3-width-1360, w3-width-1280, w3-width-1024 and w3-width-800</p>"),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_website_width']['website_width'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_website_width']['website_width'] = [
     '#type' => 'textfield',
     '#title' => t('Enter your the desired website width'),
     '#default_value' => theme_get_setting('website_width'),
-  );
+  ];
 
   // W3.CSS Predefined Themes.
-  $form['drupal8_w3css_theme_settings']['w3_theme_current'] = array(
+  $form['drupal8_w3css_theme_settings']['w3_theme_current'] = [
     '#type' => 'details',
     '#title' => t('W3CSS Predefined Themes'),
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
     '#description'   => t("<p><strong>Copy and paste one of the names.</strong></p><p>w3-theme-amber, w3-theme-black, w3-theme-blue-grey, w3-theme-blue, w3-theme-brown, w3-theme-cyan, w3-theme-dark-grey, w3-theme-deep-orange, w3-theme-deep-purple, w3-theme-green, w3-theme-grey, w3-theme-indigo, w3-theme-khaki, w3-theme-light-blue, w3-theme-light-green, w3-theme-lime, w3-theme-orange, w3-theme-pink, w3-theme-purple, w3-theme-red, w3-theme-teal, w3-theme-yellow and w3-theme-custom.</p><p>BTW, w3-theme-custom is a file for your custom theme colors you can generate from https://www.w3schools.com/w3css/w3css_color_themes.asp</p>"),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_theme_current']['current_theme'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_theme_current']['current_theme'] = [
     '#type' => 'textfield',
     '#title' => t('Enter your desired theme name'),
     '#default_value' => theme_get_setting('current_theme'),
 
-  );
+  ];
   // Advances Site Colors.
-  $form['drupal8_w3css_theme_settings']['w3_colors'] = array(
+  $form['drupal8_w3css_theme_settings']['w3_colors'] = [
     '#type' => 'details',
     '#title' => t('Advanced Site Colors'),
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
     '#description'   => t("<p><strong>Copy and paste your desired backgournd color and text color in any region.</strong></p><p><strong>Background Colors:</strong></p><p> w3-red, w3-pink, w3-purple, w3-deep-purple, w3-indigo, w3-blue, w3-light-blue, w3-cyan, w3-aqua, w3-teal, w3-green, w3-light-green, w3-lime, w3-sand, w3-khaki, w3-yellow, w3-amber, w3-orange, w3-deep-orange, w3-blue-grey, w3-brown, w3-light-grey, w3-grey, w3-dark-grey, w3-black, w3-pale-red, w3-pale-yellow, w3-pale-green and w3-pale-blue.</p><p><strong>Text Colors:</strong></p><p>w3-text-red, w3-text-pink, w3-text-purple, w3-text-deep-purple, w3-text-indigo, w3-text-blue, w3-text-light-blue, w3-text-cyan, w3-text-aqua, w3-text-teal, w3-text-green, w3-text-light-green, w3-text-lime, w3-text-sand, w3-text-khaki, w3-text-yellow, w3-text-amber, w3-text-orange, w3-text-deep-orange, w3-text-blue-grey, w3-text-brown, w3-text-light-grey, w3-text-grey, w3-text-dark-grey, w3-text-black and w3-text-white</p>"),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_page_wrapper'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_page_wrapper'] = [
     '#type' => 'textfield',
     '#title' => t('Enter Page Wrapper Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_page_wrapper'),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_header'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_header'] = [
     '#type' => 'textfield',
     '#title' => t('Enter Header Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_header'),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_primary_menu'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_primary_menu'] = [
     '#type' => 'textfield',
     '#title' => t('Enter Main Menu Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_primary_menu'),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_welcome_text'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_welcome_text'] = [
     '#type' => 'textfield',
     '#title' => t('Enter Welcome Text Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_welcome_text'),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_highlighted'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_highlighted'] = [
     '#type' => 'textfield',
     '#title' => t('Enter Highlighted Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_highlighted'),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_top_container'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_top_container'] = [
     '#type' => 'textfield',
     '#title' => t('Enter Top Container Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_top_container'),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_top_first'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_top_first'] = [
     '#type' => 'textfield',
     '#title' => t('Enter Top First Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_top_first'),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_top_second'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_top_second'] = [
     '#type' => 'textfield',
     '#title' => t('Enter Top Second Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_top_second'),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_top_third'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_top_third'] = [
     '#type' => 'textfield',
     '#title' => t('Enter Top Third Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_top_third'),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_page_title'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_page_title'] = [
     '#type' => 'textfield',
     '#title' => t('Enter Page Title Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_page_title'),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_main'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_main'] = [
     '#type' => 'textfield',
     '#title' => t('Enter Main Container Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_main'),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_breadcrumb'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_breadcrumb'] = [
     '#type' => 'textfield',
     '#title' => t('Enter Breadcrumb Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_breadcrumb'),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_content'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_content'] = [
     '#type' => 'textfield',
     '#title' => t('Enter W3CSS Content Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_content'),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_sidebar_second'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_sidebar_second'] = [
     '#type' => 'textfield',
     '#title' => t('Enter Sidebar Second Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_sidebar_second'),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_bottom_container'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_bottom_container'] = [
     '#type' => 'textfield',
     '#title' => t('Enter Bottom Container Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_bottom_container'),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_bottom_first'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_bottom_first'] = [
     '#type' => 'textfield',
     '#title' => t('Enter Bottom First Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_bottom_first'),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_bottom_second'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_bottom_second'] = [
     '#type' => 'textfield',
     '#title' => t('Enter Bottom Second Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_bottom_second'),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_bottom_third'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_bottom_third'] = [
     '#type' => 'textfield',
     '#title' => t('Enter Bottom Third Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_bottom_third'),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_bottom_forth'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_bottom_forth'] = [
     '#type' => 'textfield',
     '#title' => t('Enter Bottom Forth Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_bottom_forth'),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_footer_container'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_footer_container'] = [
     '#type' => 'textfield',
     '#title' => t('Enter Footer Container Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_footer_container'),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_footer_first'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_footer_first'] = [
     '#type' => 'textfield',
     '#title' => t('Enter Footer First Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_footer_first'),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_footer_second'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_footer_second'] = [
     '#type' => 'textfield',
     '#title' => t('Enter Footer Second Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_footer_second'),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_footer_third'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_footer_third'] = [
     '#type' => 'textfield',
     '#title' => t('Enter Footer Third Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_footer_third'),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_footer_menu'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_footer_menu'] = [
     '#type' => 'textfield',
     '#title' => t('Enter Footer Menu Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_footer_menu'),
-  );
-  $form['drupal8_w3css_theme_settings']['w3_colors']['color_copyright'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_copyright'] = [
     '#type' => 'textfield',
     '#title' => t('Enter Copyright Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_copyright'),
-  );
+  ];
   // Social Icon Link.
-  $form['drupal8_w3css_theme_settings']['social_icon'] = array(
+  $form['drupal8_w3css_theme_settings']['social_icon'] = [
     '#type' => 'details',
     '#title' => t('Social Media Link'),
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
-  );
-  $form['drupal8_w3css_theme_settings']['social_icon']['show_social_icon'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['social_icon']['show_social_icon'] = [
     '#type' => 'checkbox',
     '#title' => t('Show Social Icons'),
     '#default_value' => theme_get_setting('show_social_icon'),
     '#description'   => t("Show/Hide social media links"),
-  );
-  $form['drupal8_w3css_theme_settings']['social_icon']['facebook_url'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['social_icon']['facebook_url'] = [
     '#type' => 'textfield',
     '#title' => t('Facebook Page'),
     '#default_value' => theme_get_setting('facebook_url'),
-  );
-  $form['drupal8_w3css_theme_settings']['social_icon']['twitter_url'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['social_icon']['twitter_url'] = [
     '#type' => 'textfield',
     '#title' => t('Twitter Profile'),
     '#default_value' => theme_get_setting('twitter_url'),
-  );
-  $form['drupal8_w3css_theme_settings']['social_icon']['pinterest_url'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['social_icon']['pinterest_url'] = [
     '#type' => 'textfield',
     '#title' => t('Pinterest Profile'),
     '#default_value' => theme_get_setting('pinterest_url'),
-  );
-  $form['drupal8_w3css_theme_settings']['social_icon']['google_plus_url'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['social_icon']['google_plus_url'] = [
     '#type' => 'textfield',
     '#title' => t('Google plus Page'),
     '#default_value' => theme_get_setting('google_plus_url'),
-  );
-  $form['drupal8_w3css_theme_settings']['social_icon']['linkedin_url'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['social_icon']['linkedin_url'] = [
     '#type' => 'textfield',
     '#title' => t('Linkedin Profile'),
     '#default_value' => theme_get_setting('linkedin_url'),
-  );
-  $form['drupal8_w3css_theme_settings']['social_icon']['instagram_url'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['social_icon']['instagram_url'] = [
     '#type' => 'textfield',
     '#title' => t('Instagram Profile'),
     '#default_value' => theme_get_setting('instagram_url'),
-  );
-  $form['drupal8_w3css_theme_settings']['social_icon']['Youtube_url'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['social_icon']['Youtube_url'] = [
     '#type' => 'textfield',
     '#title' => t('Youtube Profile'),
     '#default_value' => theme_get_setting('youtube_url'),
-  );
-  $form['drupal8_w3css_theme_settings']['social_icon']['drupal_url'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['social_icon']['drupal_url'] = [
     '#type' => 'textfield',
     '#title' => t('Drupal Profile'),
     '#default_value' => theme_get_setting('drupal_url'),
-  );
-  $form['drupal8_w3css_theme_settings']['social_icon']['rss_url'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['social_icon']['rss_url'] = [
     '#type' => 'textfield',
     '#title' => t('RSS Link'),
     '#default_value' => theme_get_setting('rss_url'),
-  );
+  ];
 
   // Copyright.
-  $form['drupal8_w3css_theme_settings']['copyright'] = array(
+  $form['drupal8_w3css_theme_settings']['copyright'] = [
     '#type' => 'details',
     '#title' => t('Copyright'),
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
-  );
-  $form['drupal8_w3css_theme_settings']['copyright']['copyright_text'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['copyright']['copyright_text'] = [
     '#type' => 'textfield',
     '#title' => t('Enter copyright text'),
     '#default_value' => theme_get_setting('copyright_text'),
-  );
+  ];
 
   // Show/Hide credit.
-  $form['drupal8_w3css_theme_settings']['credit_link'] = array(
+  $form['drupal8_w3css_theme_settings']['credit_link'] = [
     '#type' => 'details',
     '#title' => t('Credit'),
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
-  );
-  $form['drupal8_w3css_theme_settings']['credit_link']['show_credit_link'] = array(
+  ];
+  $form['drupal8_w3css_theme_settings']['credit_link']['show_credit_link'] = [
     '#type' => 'checkbox',
     '#title' => t("Show/Hide credit text"),
     '#default_value' => theme_get_setting('show_credit_link'),
     '#description'   => t("Please display credit in footer"),
-  );
+  ];
 }
