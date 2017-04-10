@@ -15,15 +15,12 @@
 #}
 {%
   set title_classes = [
-    'w3-label',
-    'w3-text-blue',
-    'label',
     required ? 'js-form-required',
     required ? 'form-required',
   ]
 %}
 {% if title %}
-  <h4{{ title_attributes.addClass(title_classes) }}>{{ title }}</h4>
+  <label{{ title_attributes.addClass(title_classes) }}>{{ title }}</label>
 {% endif %}
 {{ content }}
 {% if errors %}

@@ -98,6 +98,11 @@
     width: auto;
     clear: none;
 }
+  .top-container-inner .top-region,
+  .bottom-container-inner .bottom-region,
+  .footer-container-inner .footer-region {
+    margin: 15px 0;
+}
   .top-container-inner .top-region > div,
   .main-container-inner .main-region > div,
   .bottom-container-inner .bottom-region > div,

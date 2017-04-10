@@ -17,7 +17,6 @@
   position: relative;
   display: inline-block;
 }
-
 .main-navigation-inner-h ul.w3-main-menu li.w3-menu-main__item--expanded a {
   padding: 16px;
   font-size: 16px;
@@ -40,6 +39,9 @@ ul.w3-menu-0-main__submenu {
 #main-navigation-v {
   display: none;
   width: auto!important;
+}
+#main-navigation-v #close-nav {
+  width: 100%;
 }
 #main-navigation-v .w3-menu-main ul.w3-menu-0-main__submenu {
   width: 100%!important;
@@ -79,7 +81,6 @@ li.w3-menu-main__item--expanded > a:after {
 .w3-menu-main a:hover {
   opacity: 1.0;
 }
-
 /* Header */
 .w3-fixed {
   position: fixed;

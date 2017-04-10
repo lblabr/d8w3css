@@ -16,7 +16,7 @@
     origOffsetY = mainNavigation.offsetTop;
   }
   function scrollWindow(e) {
-    if (window.scrollY >= origOffsetY) {
+    if (window.scrollY > origOffsetY) {
       mainNavigation.classList.add('w3-fixed');
     }
     else {
@@ -122,7 +122,7 @@
       $(context)
         .find('.search-form .search-help-link')
         .once('.search-form .search-help-link')
-        .addClass('w3-button w3-right w3-border');
+        .addClass('w3-button w3-right w3-border w3-margin-top');
       // Add button class to any link inside li.
       $(context)
         .find('ul.w3-menu-main li > ul li')
@@ -156,6 +156,12 @@
         .find('form#system-theme-settings details > div.details-wrapper')
         .once('div.details-wrapper')
         .addClass('w3-padding-large w3-left-align');
+      $(context)
+        .find('a > img')
+        .once('a > img')
+        .each(function () {
+          $(this).parent().addClass('d8-has-image');
+        });
     }
   };
 

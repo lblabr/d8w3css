@@ -49,8 +49,6 @@
 %}
 {%
   set title_classes = [
-    'w3-label',
-    'w3-text-blue',
     'field__label',
     label_display == 'visually_hidden' ? 'visually-hidden',
   ]
@@ -70,7 +68,7 @@
   {% endif %}
 {% else %}
   <div{{ attributes.addClass(classes) }}>
-    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+    <label{{ title_attributes.addClass(title_classes) }}>{{ label }}</label>
     {% if multiple %}
       <div class="field__items">
     {% endif %}

@@ -14,7 +14,7 @@
 {{ attach_library('classy/progress') }}
 <div class="w3-light-grey w3-border w3-rounded progress" data-drupal-progress>
   {% if label %}
-    <div class="w3-label progress__label">{{ label }}</div>
+    <div class="progress__label">{{ label }}</div>
   {% endif %}
   <div class="progress__track"><div class="w3-container w3-center progress__bar" style="width: {{ percent }}%"></div></div>
   <div class="w3-large progress__percentage">{{ percent }}%</div>

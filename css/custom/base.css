@@ -193,3 +193,10 @@ ul.secondary > li a {
   min-height: 700px;
   margin-top: 30px!important;
 }
+/* Global Classes */
+.w3-padding-0 {
+  padding: 0!important;
+}
+.w3-margin-0 {
+  margin: 0!important;
+}
