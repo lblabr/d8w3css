@@ -14,6 +14,14 @@ Drupal8 W3CSS Theme is using the W3.CSS framework with built-in responsiveness:
 ========================================================
 1-Drupal8 W3CSS Theme is using the W3.CSS framework with built-in responsiveness
 2- Drupal8 W3CSS Theme has 22 regions.
+- Regions Will show on ALL pages: Header, Primary Menu Vertical, Primary Menu,
+Highlighted, Breadcrumb, Content, Left Sidebar, Right Sidebar, Footer First
+Container, Footer Second Container, Footer Third Container and Footer Menu
+Container.
+- Regions will show on All pages EXCEPT the front page: Page Title.
+- Regions will show ONLY on the front page: Welcome Text, Top First container,
+Top Second Container, Top Third Container, Bottom First Container, Bottom Second
+Container, Bottom Third Container and Bottom Forth Container.
 3- Drupal8 W3CSS Theme has 26 sections with changeable colors. With ww3.css
 frameworks you can change the background color, text color, text shadow and more
  to any section in your website.  Just simply apply the w3.css class to the
