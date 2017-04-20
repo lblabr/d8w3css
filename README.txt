@@ -89,6 +89,18 @@ Go to www.your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme
 and uncheck “Use the logo supplied by the theme” then upload your own website
 logo and click save.
 
+|-  How to enable the page title
+==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
+Go to www.your-drupal-site-name/admin/structure/block and scroll down until you
+see Page Title Region. Page Title block is disabled by default, just click on
+Enable to enable the page title.
+
+|-  How to enable the site slogan
+==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
+Go to www.your-drupal-site-name/admin/structure/block and in header region.
+You should see two blocks User account menu and Site branding.
+Click on configure for Site branding and check the check box for Site Slogan.
+
 |-  How to change the favicon
 ==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
 Go to www.your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme
