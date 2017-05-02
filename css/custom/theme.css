@@ -115,7 +115,7 @@ a:hover > img {
   background-color: #141414;
   color: #bebebe;
 }
-/*  ul links and tags */
+/* ul links and tags */
 .field--name-field-tags .field__item,
 ul.links li {
   border: none!important;
@@ -137,7 +137,11 @@ ul.links li a {
 .site-slogan {
   text-transform: uppercase;
 }
+.site-slogan {
+  padding-left: 16px;
+}
 .site-logo img {
   height: 90px;
   width: 110px;
 }
+
