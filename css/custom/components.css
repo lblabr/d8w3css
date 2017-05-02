@@ -174,10 +174,11 @@ article.node > footer.node__meta {
 article.node > footer.node__meta > article,
 article.node > footer.node__meta > div {
   display: inline-block;
+  float: left;
 }
 article.node > footer.node__meta .field--name-user-picture {
   padding: 0!important;
-  margin: 0 10px 0 0;
+  margin: 4px 10px 0 0;
 }
 /* Pager */
 .pager__items li {
