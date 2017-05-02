@@ -1,12 +1,12 @@
 # Default features.
 features:
-   comment_user_picture: true
-   comment_user_verification: true
-   favicon: true
-   logo: true
-   name: true
-   node_user_picture: true
-   slogan: true
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  logo: true
+  name: true
+  node_user_picture: true
+  slogan: true
 facebook_url: 'https://www.facebook.com/flashwebcenter'
 twitter_url: 'https://twitter.com/flashwebcenter'
 pinterest_url: 'https://www.pinterest.com/alaahaddad'

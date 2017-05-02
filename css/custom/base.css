@@ -7,16 +7,14 @@
 img,
 object,
 embed,
-video,
-img.scale-with-grid {
+video {
   outline: 0;
   padding: 0;
   margin: 0;
   border: 0;
   border: none;
   text-align: center;
-  width: 100%;
-  _max-width: 100%;
+  max-width: 100%;
   height: auto;
 }
 a img {

@@ -31,12 +31,12 @@ regions:
   footer_menu: 'Footer Menu Container'
   auto_hidden_block: 'Auto Hidden Blocks'
 features:
-   comment_user_picture: true
-   comment_user_verification: true
-   favicon: true
-   logo: true
-   name: true
-   node_user_picture: true
-   slogan: true
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  logo: true
+  name: true
+  node_user_picture: true
+  slogan: true
 
 core: '8.x'

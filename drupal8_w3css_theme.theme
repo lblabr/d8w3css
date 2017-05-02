@@ -229,9 +229,6 @@ function drupal8_w3css_theme_preprocess_breadcrumb(&$variables) {
  * Implements hook_theme_suggestions_HOOK_alter() for form templates.
  */
 
-/**
- * Form alter.
- */
 function drupal8_w3css_theme_theme_suggestions_form_alter(array &$suggestions, array $variables) {
   // Suggest the name for the search block.
   if ($variables['element']['#form_id'] == 'search_block_form') {
