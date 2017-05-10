@@ -40,24 +40,15 @@ Colors). You can create unlimited color themes.
 8- Drupal8 W3CSS Theme comes with ability to create your own private w3.css
 theme and apply it to your site.
 9- Drupal8 W3CSS Theme comes with 8 social media links easy to configure.
-10- Drupal8 W3CSS Theme has a top region with three flexible blocks. Block width
-will change automatically based on the number of assigned blocks. Block share
-equal width based on number of assigned blocks. (Example, If you have only two
-blocks in top area block, Block share 50% each block, If you assign three it
-come 33.3% each). Block width will change automatically based on assigned block,
-Block share equal width based on assigned block. (Example, If you have only two
-blocks in top area block, Block share 50% each block, If you assign three it
-come 33.3% each).
-11- Drupal8 W3CSS Theme has a bottom region with four flexible blocks. Block
-width will change automatically based on the number of assigned blocks. Block
-share equal width based on number of assigned blocks. (Example, If you have only
-three blocks in bottom region, Block share 33.3% each block, If you assign four
-it come 25% each).
-12- Drupal8 W3CSS Theme has a footer region with three flexible blocks. Block
-width will change automatically based on the number of assigned blocks. Block
-share equal width based on number of assigned blocks. (Example, If you have only
-two blocks in footer region, Block share 50% each block, If you assign three it
-come 33.3% each).
+10- Drupal8 W3CSS Theme has a top region that includes three flexible regions.
+(The total space in the top region will be divided by the number of regions you
+filled.)
+11- Drupal8 W3CSS Theme has a bottom region that includes four flexible regions.
+(The total space in the bottom region will be divided by the number of regions
+you filled.)
+12- Drupal8 W3CSS Theme has a footer region that includes three flexible
+regions. (The total space in the footer region will be divided by the number of
+regions you filled.)
 13- Drupal8 W3CSS Theme comes with font awesome added to the css library.
 14- Drupal8 W3CSS Theme comes with jQuery match height. Example, if you have
 three blocks in the top area, they will always have the height in any width.
