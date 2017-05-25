@@ -367,6 +367,11 @@ function drupal8_w3css_theme_form_system_theme_settings_alter(&$form, FormStateI
     '#title' => t('Enter Breadcrumb Background color, Text Color or any W3.CSS classes'),
     '#default_value' => theme_get_setting('color_breadcrumb'),
   ];
+  $form['drupal8_w3css_theme_settings']['w3_colors']['color_sidebar_first'] = [
+    '#type' => 'textfield',
+    '#title' => t('Enter Sidebar First Background color, Text Color or any W3.CSS classes'),
+    '#default_value' => theme_get_setting('color_sidebar_first'),
+  ];
   $form['drupal8_w3css_theme_settings']['w3_colors']['color_content'] = [
     '#type' => 'textfield',
     '#title' => t('Enter W3CSS Content Background color, Text Color or any W3.CSS classes'),
