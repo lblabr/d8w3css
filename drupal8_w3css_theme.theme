@@ -480,7 +480,7 @@ function drupal8_w3css_theme_form_system_theme_settings_alter(&$form, FormStateI
     '#title' => t('Instagram Profile'),
     '#default_value' => theme_get_setting('instagram_url'),
   ];
-  $form['drupal8_w3css_theme_settings']['social_icon']['Youtube_url'] = [
+  $form['drupal8_w3css_theme_settings']['social_icon']['youtube_url'] = [
     '#type' => 'textfield',
     '#title' => t('Youtube Profile'),
     '#default_value' => theme_get_setting('youtube_url'),
