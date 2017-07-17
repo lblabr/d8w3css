@@ -157,3 +157,21 @@ drupal8 w3css subtheme.
 ==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
 Inside your-drupal-site-directory/themes/drupal8_w3css_theme/
 drupal8_w3css_subtheme you will have all the necessary files for start up theme.
+Steps for creating a new sub theme.
+1. Copy the sub-theme from the Drupal8 W3CSS Theme and paste it in your custom 
+theme directory.
+2. Re-name the copied folder to have the new sub-theme name. Example: my new 
+sub-theme is Titto.  I will rename the folder from "drupal8_w3css_subtheme" to
+ "titto". 
+3. Open the new named sub-theme folder "titto" and change the following 
+files' names from:
+drupal8_w3css_subtheme.theme >> To >> titto.theme
+drupal8_w3css_subtheme.info.yml >> To >> titto.info.yml
+drupal8_w3css_subtheme.libraries.yml >> To >> titto.libraries.yml
+4. Open the file titto.info.yml in your text editor and edit,
+line 1 from "Drupal8 W3CSS Subtheme" >> To "Titto"
+line 7 from "drupal8_w3css_subtheme/global-components" >> 
+To >> "titto/global-components".
+Make sure the spaces in this file are not changed.
+The sub-theme now is ready to be enabled.
+
