@@ -79,9 +79,9 @@ W3CSS Theme and click on Install and set as default and click save.
 
 |-  How to change the logo
 ==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
-Go to www.your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme
-and uncheck “Use the logo supplied by the theme” then upload your own website
-logo and click save.
+Go to your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme and
+uncheck “Use the logo supplied by the theme” then upload your own website logo
+they insert the path in logo text "Path to custom logo" box and click save.
 
 |-  How to enable the page title
 ==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
@@ -111,7 +111,10 @@ width and click save.
 ==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
 Go to www.your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme
 and click on  w3css predefined themes to expand it.  Copy and paste any of your
-desired w3css color theme and click save.
+desired w3css color theme and click save.  FYI: if you have any w3 classes in
+Advanced Site Color Section they will not override the uploaded color theme
+because of the CSS order.  Any predefined theme file it will be loaded after
+w3.css.
 
 |-  How to change website colors
 ==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
