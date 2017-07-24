@@ -144,3 +144,10 @@ ul.links li a {
   height: 90px;
   width: 110px;
 }
+/* Global Classes */
+.w3-padding-0 {
+  padding: 0!important;
+}
+.w3-margin-0 {
+  margin: 0!important;
+}

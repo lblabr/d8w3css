@@ -174,4 +174,3 @@ line 7 from "drupal8_w3css_subtheme/global-components" >>
 To >> "titto/global-components".
 Make sure the spaces in this file are not changed.
 The sub-theme now is ready to be enabled.
-
