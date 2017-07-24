@@ -118,34 +118,63 @@ ul.w3-ul li {
 .messages--error p.error {
   color: #a51b00;
 }
-
 /* Form API. */
+.form-radios .form-item,
+.form-checkboxes .form-item{
+  margin-top: 0.4em!important;
+  margin-bottom: 0.4em!important;
+}
+.form-radios .form-type-radio,
+.form-type-checkbox {
+  max-width: : 100%;
+  text-align: left;
+}
+.form-type-radio label,
+.form-type-checkbox label {
+  margin-left: 4px!important; /* LTR */
+  float:none!important;
+}
+[dir="rtl"] .form-type-radio label,
+[dir="rtl"] .form-type-checkbox label {
+  margin-right: 4px!important;
+  margin-left: 0!important;
+}
 .form-type-radio .description,
 .form-type-checkbox .description {
-  margin-left: 2.4em; /* LTR */
+  margin-left: 2px!important; /* LTR */
 }
 [dir="rtl"] .form-type-radio .description,
 [dir="rtl"] .form-type-checkbox .description {
-  margin-left: 0;
-  margin-right: 2.4em;
+  margin-right: 2px!important;
+  margin-left: 0!important;
 }
 .marker {
   color: #e00;
 }
-.form-required:after {
-  content: "\f069";
-  font-family: FontAwesome;
-  color: red;
-  vertical-align: super;
-  display: inline-block;
-  background-size: 6px 6px;
-  width: 6px;
-  height: 6px;
-  margin: 0 0.3em;
-}
+input.form-checkbod,
+input.form-radio { display: inline-block; }
 abbr.tabledrag-changed,
 abbr.ajax-changed {
   border-bottom: none;
+}
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+  border: 2px solid red;
+}
+.form-wrapper .field-multiple-table .label {
+  font-size: inherit;
+}
+.form-required:after {
+  content: "\f069"!important;
+  font-family: FontAwesome;
+  color: red;
+  vertical-align: super;
+  display: inline-block!important;
+  background-size: 10px 10px;
+  width: 10px;
+  height: 10px;
+  margin: 0 0.3em;
 }
 /* Inline Error Message. */
 .form-item--error-message:before {
@@ -190,11 +219,4 @@ ul.secondary > li a {
 .maintenance-page main {
   min-height: 700px;
   margin-top: 30px!important;
-}
-/* Global Classes */
-.w3-padding-0 {
-  padding: 0!important;
-}
-.w3-margin-0 {
-  margin: 0!important;
 }
