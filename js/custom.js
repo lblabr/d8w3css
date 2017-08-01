@@ -165,8 +165,8 @@
             .once('div.details-wrapper')
             .addClass('w3-padding-large w3-left-align');
       $(context)
-            .find('a > img')
-            .once('a > img')
+            .find('a > img.w3-image')
+            .once('a > img.w3-image')
             .each(
                 function () {
                   $(this).parent().addClass('d8-has-image');
