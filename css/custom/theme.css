@@ -9,7 +9,7 @@ a:hover {
 }
 a.d8-has-image {
   overflow: hidden;
-  display: inline-block;
+  display: inline;
   height: 100%;
 }
 a.d8-has-image:hover,
