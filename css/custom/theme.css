@@ -144,7 +144,7 @@ ul.links li a {
   height: 90px;
   width: 110px;
 }
-/* This class for Honeypot module */
+/* The class for Honeypot module */
 form #edit-url {
   display: none!important;
 }
