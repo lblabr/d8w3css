@@ -1,7 +1,6 @@
 /**
- * License: MIT
- * jquery-match-height master by @liabru
- * http://brm.io/jquery-match-height/
+ * @file
+ * MIT jquery-match-height master by @liabru http://brm.io/jquery-match-height/.
  */
 
 (function (factory) {
