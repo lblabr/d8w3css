@@ -34,7 +34,7 @@
       $('.bottom-region').matchHeight({property: 'height'});
       $('.footer-region').matchHeight({property: 'height'});
     }
-    else if ((screen.width >= 601) && (screen.width >= 992)) {
+    else if ((screen.width >= 601) && (screen.width <= 992)) {
             // Add class to the body for medium screen.
       $('body').removeClass('small-screen large-screen').addClass('medium-screen');
             // Remove the match height on medium screen.

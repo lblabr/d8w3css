@@ -40,8 +40,8 @@
 .footer-container-inner .footer-region > div {
   height: 100%;
   float: left;
-  width: 100%;
-  padding: 12px;
+  width: 100%!important;
+  padding: 12px!important;
 }
 .w3-width-100-percent {
   max-width: 100%!important;
@@ -74,7 +74,7 @@
   .main-container-inner .main-region > div,
   .bottom-container-inner .bottom-region > div,
   .footer-container-inner .footer-region > div {
-    padding: 8px;
+    padding: 8px!important;
 }
 }
 /* Medium Screen Only */
@@ -83,7 +83,7 @@
   .main-container-inner .main-region > div,
   .bottom-container-inner .bottom-region > div,
   .footer-container-inner .footer-region > div {
-    padding: 10px;
+    padding: 10px!important;
 }
 }
 /* Large Screen Only */
@@ -101,13 +101,13 @@
   .top-container-inner .top-region,
   .bottom-container-inner .bottom-region,
   .footer-container-inner .footer-region {
-    margin: 15px 0;
+    margin: 15px 0!important;
 }
   .top-container-inner .top-region > div,
   .main-container-inner .main-region > div,
   .bottom-container-inner .bottom-region > div,
   .footer-container-inner .footer-region > div {
-    padding: 12px;
+    padding: 12px!important;
 }
 }
 /*  Small and Medium Screen Only*/
@@ -125,7 +125,7 @@
   .footer-container-inner .first-footer,
   .footer-container-inner .second-footer,
   .footer-container-inner .third-footer {
-    width: 100%;
+    width: 100%!important;
 }
   .page-node-type-article .node .field--type-image {
     float: none;

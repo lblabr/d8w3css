@@ -1,18 +1,18 @@
 drupal8_w3css_theme.screen-sm-min:
   label: screen-sm-min
-  mediaQuery: 'all and (min-width: 768px)'
-  weight: 1
+  mediaQuery:
+  weight: 0
   multipliers:
     - 1x
 drupal8_w3css_theme.screen-md-min:
   label: screen-md-min
-  mediaQuery: 'all and (min-width: 992px)'
+  mediaQuery: 'all and (min-width: 601px) and (max-width: 992px)'
   weight: 1
   multipliers:
     - 1x
 drupal8_w3css_theme.screen-lg-min:
   label: screen-lg-min
-  mediaQuery: 'all and (min-width: 1290px)'
-  weight: 1
+  mediaQuery: 'all and (min-width: 993px)'
+  weight: 2
   multipliers:
     - 1x
