@@ -6,7 +6,6 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Url;
 
 /**
  * Implements hook_preprocess_page() for page templates.
@@ -214,18 +213,6 @@ function drupal8_w3css_theme_preprocess_page(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_breadcrumb().
- */
-function drupal8_w3css_theme_preprocess_breadcrumb(&$variables) {
-  if (($node = \Drupal::routeMatch()->getParameter('node')) && $variables['breadcrumb']) {
-    $variables['breadcrumb'][] = [
-      'text' => $node->getTitle(),
-      'url' => $node->URL(),
-    ];
-  }
-}
-
-/**
  * Implements hook_theme_suggestions_HOOK_alter() for form templates.
  */
 function drupal8_w3css_theme_theme_suggestions_form_alter(array &$suggestions, array $variables) {
@@ -236,14 +223,41 @@ function drupal8_w3css_theme_theme_suggestions_form_alter(array &$suggestions, a
 }
 
 /**
- * Page alter.
+ * Implements hook_preprocess_breadcrumb().
+ */
+function drupal8_w3css_theme_preprocess_breadcrumb(&$variables) {
+  if ($variables['breadcrumb']) {
+    $request = \Drupal::request();
+    $route_match = \Drupal::routeMatch();
+    $page_title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+    if (!empty($page_title)) {
+      $variables['breadcrumb'][] = [
+        'text' => $page_title,
+      ];
+      // Add cache context based on url.
+      $variables['#cache']['contexts'][] = 'url';
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
  */
 function drupal8_w3css_theme_theme_suggestions_page_alter(array &$suggestions, array $variables) {
   // Suggest the node page according to the content type name.
-  if ($node = \Drupal::routeMatch()->getParameter('node')) {
-    if ($content_type = $node->bundle()) {
-      $suggestions[] = 'page__' . $content_type;
+  // In 8.3 the node id and revision id are both strings
+  // https://www.drupal.org/node/2521876#comment-12144221
+  $node     = \Drupal::routeMatch()->getParameter('node');
+  $revision = \Drupal::routeMatch()->getRawParameter('node_revision');
+  if ($node) {
+    if ($revision) {
+      $revised_node = \Drupal::entityTypeManager()->getStorage('node')->loadRevision($revision);
+      $content_type = $revised_node->bundle();
     }
+    else {
+      $content_type = $node->bundle();
+    }
+    $suggestions[] = 'page__' . $content_type;
   }
   // Suggest the view page according to view name.
   if ($view_name = \Drupal::routeMatch()->getRouteObject()->getDefault('view_id')) {
