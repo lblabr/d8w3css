@@ -1,26 +1,23 @@
 w3-css:
-  Version: 2.x
+  version: 1.x
   css:
     theme:
       css/w3-css/w3.css: {}
       css/w3-css/w3css-color-libraries.css: {}
 
 font-awesome:
-  Version: VERSION
+  version: 1.x
   css:
     theme :
       css/font-awesome/font-awesome.css: {}
 
 global-components:
-  Version: VERSION
+  version: 1.x
   css:
-    base:
-      css/custom/base.css: {}
-    layout:
-      css/custom/layout.css: {}
-    component:
-      css/custom/components.css: {}
     theme:
+      css/custom/base.css: {}
+      css/custom/layout.css: {}
+      css/custom/components.css: {}
       css/custom/theme.css: {}
 
   js:
