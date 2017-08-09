@@ -22,7 +22,7 @@ function drupal8_w3css_theme_preprocess_page(&$variables) {
     $variables['top_third_class'] = 'w3-half';
   }
   else {
-    $variables['top_w3css'] = 'w3-rest';
+    $variables['top_w3css'] = 'w3-col';
   }
 
   // Add W3.CSS Responsive classes to left and right side bar.
@@ -40,7 +40,7 @@ function drupal8_w3css_theme_preprocess_page(&$variables) {
     $variables['sidebarsecond'] = 'w3-quarter';
   }
   else {
-    $variables['content_w3css'] = 'w3-rest';
+    $variables['content_w3css'] = 'w3-col';
   }
 
   // Add W3.CSS Responsive classes to Bottom Container.
@@ -54,7 +54,7 @@ function drupal8_w3css_theme_preprocess_page(&$variables) {
     $variables['bottom_w3css'] = 'w3-half';
   }
   else {
-    $variables['bottom_w3css'] = 'w3-rest';
+    $variables['bottom_w3css'] = 'w3-col';
   }
 
   // Add W3.CSS Responsive classes to Footer Container.
@@ -67,7 +67,7 @@ function drupal8_w3css_theme_preprocess_page(&$variables) {
     $variables['footer_third_class'] = 'w3-half';
   }
   else {
-    $variables['ooter_w3css'] = 'w3-rest';
+    $variables['ooter_w3css'] = 'w3-col';
   }
   // Website Width.
   $variables['website_width'] = str_replace(' ', '', theme_get_setting('website_width'));
