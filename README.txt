@@ -67,6 +67,11 @@ create a page template name page--recent-video.html.twig.
 You can view live demo by going to:
 <a href="http://drupal8.w3css.theme.flashwebcenter.com" title="Drupal8 W3CSS
 Theme Demo">http://drupal8.w3css.theme.flashwebcenter.com/</a>
+20- Drupal8 W3CSS Theme comes with the ability to change the Main Container's
+Columns layout.  The main container has three columns. The three columns are
+stacked (25% 50% 25%). To change the three columns to be stacked equal width
+(33% 33% 33%), just insert in the text box 33-33-33 If you want to go back to
+the stacked columns (25% 50% 25%), just remove the text 33-33-33
 ========================================================
 |=       DRUPAL8 W3CSS THEME CONFIGURATION            =|
 ========================================================
@@ -158,19 +163,25 @@ drupal8 w3css subtheme.
 Inside your-drupal-site-directory/themes/drupal8_w3css_theme/
 drupal8_w3css_subtheme you will have all the necessary files for start up theme.
 Steps for creating a new sub theme.
-1. Copy the sub-theme from the Drupal8 W3CSS Theme and paste it in your custom 
+1. Copy the sub-theme from the Drupal8 W3CSS Theme and paste it in your custom
 theme directory.
-2. Re-name the copied folder to have the new sub-theme name. Example: my new 
+2. Re-name the copied folder to have the new sub-theme name. Example: my new
 sub-theme is Titto.  I will rename the folder from "drupal8_w3css_subtheme" to
- "titto". 
-3. Open the new named sub-theme folder "titto" and change the following 
+ "titto".
+3. Open the new named sub-theme folder "titto" and change the following
 files' names from:
 drupal8_w3css_subtheme.theme >> To >> titto.theme
 drupal8_w3css_subtheme.info.yml >> To >> titto.info.yml
 drupal8_w3css_subtheme.libraries.yml >> To >> titto.libraries.yml
 4. Open the file titto.info.yml in your text editor and edit,
 line 1 from "Drupal8 W3CSS Subtheme" >> To "Titto"
-line 7 from "drupal8_w3css_subtheme/global-components" >> 
+line 7 from "drupal8_w3css_subtheme/global-components" >>
 To >> "titto/global-components".
 Make sure the spaces in this file are not changed.
 The sub-theme now is ready to be enabled.
+
+|-  How to Change The Main Container's Columns to Equal Width
+==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
+Go to www.your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme
+and click on Change The Main Container's Columns to Equal Width and insert
+33-33-33 in the text box then click save.
