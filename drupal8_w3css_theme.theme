@@ -43,6 +43,27 @@ function drupal8_w3css_theme_preprocess_page(&$variables) {
     $variables['content_w3css'] = 'w3-col';
   }
 
+  // Add 3col stacked equal width.
+  $my_equal_width = ($variables['equal_width'] = theme_get_setting('equal_width'));
+  $my_equal_width = str_replace(' ', '', $my_equal_width);
+  if ($my_equal_width == '33-33-33') {
+    if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
+      $variables['content_w3css'] = 'w3-third';
+      $variables['sidebarfirst'] = 'w3-third';
+      $variables['sidebarsecond'] = 'w3-third';
+    }
+    elseif (!empty($variables['page']['sidebar_first'])) {
+      $variables['content_w3css'] = 'w3-twothird';
+      $variables['sidebarfirst'] = 'w3-third';
+    }
+    elseif (!empty($variables['page']['sidebar_second'])) {
+      $variables['content_w3css'] = 'w3-twothird';
+      $variables['sidebarsecond'] = 'w3-third';
+    }
+    else {
+      $variables['content_w3css'] = 'w3-col';
+    }
+  }
   // Add W3.CSS Responsive classes to Bottom Container.
   if (!empty($variables['page']['bottom_first']) && !empty($variables['page']['bottom_second']) && !empty($variables['page']['bottom_third']) && !empty($variables['page']['bottom_forth'])) {
     $variables['bottom_w3css'] = 'w3-quarter';
@@ -311,6 +332,21 @@ function drupal8_w3css_theme_form_system_theme_settings_alter(&$form, FormStateI
     '#type' => 'textfield',
     '#title' => t('Enter your desired theme name'),
     '#default_value' => theme_get_setting('current_theme'),
+
+  ];
+
+  // W3.CSS layout type.
+  $form['drupal8_w3css_theme_settings']['w3_equal_width'] = [
+    '#type' => 'details',
+    '#title' => t('Change The Main Container Columns to Equal Width'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+    '#description'   => t("<p>The main container has three columns.  The three columns are stacked <strong>(25% 50% 25%)</strong>.</p><p>To change the three columns to be stacked equal width <strong>(33% 33% 33%)</strong>, please insert in the text box <strong>33-33-33</strong></p><p>If you want to go back to the stacked columns <strong>(25% 50% 25%)</strong>, just remove the text <strong>33-33-33</strong></p>"),
+  ];
+  $form['drupal8_w3css_theme_settings']['w3_equal_width']['equal_width'] = [
+    '#type' => 'textfield',
+    '#title' => t('Insert the text here'),
+    '#default_value' => theme_get_setting('equal_width'),
 
   ];
   // Advances Site Colors.

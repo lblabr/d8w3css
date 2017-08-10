@@ -214,7 +214,7 @@ ul.primary > li {
   border-right: 1px solid gray!important;
   float: left;
 }
-ul.primary > li:last-child{
+ul.primary > li:last-child {
   border-right: none!important;
 }
 ul.primary > li a {
