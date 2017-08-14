@@ -338,7 +338,7 @@ function drupal8_w3css_theme_form_system_theme_settings_alter(&$form, FormStateI
   // W3.CSS layout type.
   $form['drupal8_w3css_theme_settings']['w3_equal_width'] = [
     '#type' => 'details',
-    '#title' => t('Change The Main Container\'s Columns to Equal Width'),
+    '#title' => t("Change The Main Container's Columns to Equal Width"),
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
     '#description'   => t("<p>The main container has three columns.  The three columns are stacked <strong>(25% 50% 25%)</strong>.</p><p>To change the three columns to be stacked equal width <strong>(33% 33% 33%)</strong>, please insert in the text box <strong>33-33-33</strong></p><p>If you want to go back to the stacked columns <strong>(25% 50% 25%)</strong>, just remove the text <strong>33-33-33</strong></p>"),
