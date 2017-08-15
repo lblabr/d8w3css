@@ -36,7 +36,7 @@
   {%
     set submenu_classes = [
       'w3-ul',
-      'w3-menu-0-' ~ menu_name|clean_class ~ '__submenu w3-mobile',
+      'w3-menu-0-' ~ menu_name|clean_class ~ '__submenu submenu w3-mobile',
     ]
   %}
   {% if items %}
@@ -52,9 +52,9 @@
           'w3-mobile',
           'w3-padding-0',
           'w3-menu-' ~ menu_name|clean_class ~ '__item',
-          item.is_expanded ? 'w3-menu-' ~ menu_name|clean_class ~ '__item--expanded',
-          item.is_collapsed ? 'w3-menu-' ~ menu_name|clean_class ~ '__item--collapsed',
-          item.in_active_trail ? 'w3-menu-' ~ menu_name|clean_class ~ '__item--active-trail',
+          item.is_expanded ? 'w3-menu-' ~ menu_name|clean_class ~ '__item--expanded menu-item-expanded',
+          item.is_collapsed ? 'w3-menu-' ~ menu_name|clean_class ~ '__item--collapsed menu-item-collapsed',
+          item.in_active_trail ? 'w3-menu-' ~ menu_name|clean_class ~ '__item--active-trail menu-item-active-trail',
         ]
       %}
       {%
