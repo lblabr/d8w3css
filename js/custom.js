@@ -5,9 +5,6 @@
 
 (function ($, Drupal) {
   'use strict';
-    // Finds background color of parent.
-  var bgColor = $('#main-navigation').css('background-color');
-  $('ul.w3-menu-0-main__submenu').css('background-color', bgColor);
     // Add flex position to the main menu at scroll.
   var mainNavigation = document.querySelector('#main-navigation-h');
     // In case the main menu not printed.
@@ -23,7 +20,7 @@
       mainNavigation.classList.remove('w3-fixed');
     }
   }
-    // Make sure all the divs inside any region are equal height only for medium and large screen.
+    // Make sure all the divs inside any region are equal height.
     // make sure the height is the same for all top regions.
   function mediaSize() {
     if (screen.width >= 993) {
@@ -106,13 +103,13 @@
                   }
                 }
             );
-            // Change the sumbmenu color as the main menu .
+            // Change the form color to match the footer color.
       var footerFormBg = $('#footer-menu').css('background-color');
       $(context)
             .find('#footer-menu form')
             .once('#footer-menu form')
             .css('background-color', footerFormBg);
-            // Change the form color to match the footer color .
+            // Change the sumbmenu color as the main menu.
       var subMenuBg = $('.main-navigation-wrapper').css('background-color');
       $(context)
             .find('.main-navigation-wrapper ul.w3-menu-0-main__submenu')
@@ -133,7 +130,7 @@
             .addClass('w3-button w3-right w3-border w3-margin-top');
             // Add button class to any link inside li.
       $(context)
-            .find('ul.w3-menu-main li > ul li')
+            .find('.w3-menu-main li > ul li')
             .once('li')
             .removeClass('w3-bar-item');
             // w3-search-block-form.
@@ -147,26 +144,26 @@
             .addClass('w3-col l4 w3-mobile');
             // Multi value table draggable.
       $(context)
-            .find('div.tabledrag-toggle-weight-wrapper button')
+            .find('.tabledrag-toggle-weight-wrapper button')
             .once('button')
             .addClass('w3-button');
             // Theme setttings.
       $(context)
-            .find('form#system-theme-settings details')
+            .find('#system-theme-settings details')
             .once('details')
             .removeAttr('open')
             .addClass('w3-border w3-bar w3-left-align w3-margin-bottom');
       $(context)
-            .find('form#system-theme-settings details > summary')
+            .find('#system-theme-settings details > summary')
             .once('summary')
             .addClass('w3-button w3-bar w3-left-align');
       $(context)
-            .find('form#system-theme-settings details > div.details-wrapper')
-            .once('div.details-wrapper')
+            .find('#system-theme-settings details > div.details-wrapper')
+            .once('.details-wrapper')
             .addClass('w3-padding-large w3-left-align');
       $(context)
-            .find('a > img.w3-image')
-            .once('a > img.w3-image')
+            .find('a > .w3-image')
+            .once('a > .w3-image')
             .each(
                 function () {
                   $(this).parent().addClass('d8-has-image');
