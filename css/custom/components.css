@@ -87,6 +87,12 @@ li.w3-menu-main__item--expanded > a:after {
   top: 0;
   width: 100%;
 }
+.w3-fixed .w3-menu-main {
+  line-height: 55px;
+}
+.w3-fixed .w3-menu-main ul {
+  line-height: 35px;
+}
 .w3-relative {
   position: relative;
   width: 100%;
@@ -143,6 +149,19 @@ div.item-list > ol.item-list > li article::before,
   padding: 0;
 }
 /* search bar */
+.w3-search-block-form > .form-type-search {
+  width: 70%;
+  float: right;
+}
+.w3-search-block-form > .form-submit {
+  width: 29%;
+  float: right;
+  padding: 0;
+  line-height: 38px;
+}
+.w3-search-block-form > .form-type-search input {
+  border-left: none!important;
+}
 .w3-search-block-form > div,
 .w3-search-block-form > input {
   margin: 5px auto!important;

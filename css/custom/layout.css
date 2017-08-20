@@ -43,6 +43,25 @@
   width: 100%!important;
   padding: 12px!important;
 }
+.top-container-inner .first-top,
+.top-container-inner .second-top,
+.top-container-inner .third-top,
+.bottom-container-inner .first-bottom,
+.bottom-container-inner .second-bottom,
+.bottom-container-inner .third-bottom,
+.bottom-container-inner .forth-bottom,
+.footer-container-inner .first-footer,
+.footer-container-inner .second-footer,
+.footer-container-inner .third-footer {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.main-container-inner .first-sidebar,
+.main-container-inner .w3css-content,
+.main-container-inner .second-sidebar {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
 .w3-width-100-percent {
   max-width: 100%!important;
 }
@@ -98,11 +117,6 @@
     width: auto;
     clear: none;
 }
-  .top-container-inner .top-region,
-  .bottom-container-inner .bottom-region,
-  .footer-container-inner .footer-region {
-    margin: 15px 0!important;
-}
   .top-container-inner .top-region > div,
   .main-container-inner .main-region > div,
   .bottom-container-inner .bottom-region > div,
@@ -127,6 +141,28 @@
   .footer-container-inner .third-footer {
     width: 100%!important;
 }
+  .top-container-inner .third-top,
+  .main-container-inner .second-sidebar,
+  .bottom-container-inner .forth-bottom,
+  .footer-container-inner .third-footer {
+    margin-bottom: 8px;
+}
+  .top-container-inner .first-top,
+  .main-container-inner .first-sidebar,
+  .bottom-container-inner .first-bottom,
+  .footer-container-inner .first-footer {
+    margin-top: 8px;
+}
+  .main-container-inner .first-sidebar {
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
+
+  .main-container-inner .second-sidebar {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
   .page-node-type-article .node .field--type-image {
     float: none;
     margin: 0 auto;
@@ -141,5 +177,15 @@
 }
   ul.w3-menu-0-main__submenu {
     position: relative!important;
+}
+  .w3-fixed .w3-menu-main {
+    line-height: 55px;
+}
+  .w3-fixed .w3-menu-main ul {
+    line-height: 35px;
+}
+  .w3-fixed .w3-menu-main,
+  .w3-fixed .w3-menu-main ul {
+    line-height: 30px;
 }
 }

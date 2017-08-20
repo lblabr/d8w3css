@@ -133,15 +133,6 @@
             .find('.w3-menu-main li > ul li')
             .once('li')
             .removeClass('w3-bar-item');
-            // w3-search-block-form.
-      $(context)
-            .find('.w3-search-block-form .form-type-search')
-            .once('.form-type-search')
-            .addClass('w3-col l8 w3-mobile');
-      $(context)
-            .find('.w3-search-block-form .form-actions')
-            .once('.form-actions')
-            .addClass('w3-col l4 w3-mobile');
             // Multi value table draggable.
       $(context)
             .find('.tabledrag-toggle-weight-wrapper button')
