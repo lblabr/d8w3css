@@ -126,6 +126,7 @@
 /*footer menu font*/
 .footer-menu-inner .ul-parent-footer li {
   float: none;
+  width:auto;
 }
 .copyright-inner,
 .ul-parent-footer {
