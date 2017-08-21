@@ -110,7 +110,7 @@
             .on(
                 'click', function (e) {
                   var myWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-                  if (myWidth <= 992) {
+                  if ((myWidth <= 992) || ($('#main-navigation-v').css('display') == 'block')) {
                     e.preventDefault();
                     var $this = $(this);
                     if ($this.next().hasClass('w3-show')) {

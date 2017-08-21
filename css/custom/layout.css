@@ -123,8 +123,8 @@
   .ul-parent li  ul {
     position: absolute;
 }
-  .li-expanded:hover > .ul-child,
-  .li-expanded > .li-expanded:hover > .ul-child {
+  .ul-parent .li-expanded:hover > .ul-child,
+  .ul-parent .li-expanded > .li-expanded:hover > .ul-child {
     display: block;
 }
   .top-container-inner .top-region > div,
@@ -187,7 +187,7 @@
     display: block!important;
     clear: both;
 }
-  .main-navigation-wrapper .ul-parent {
+  #main-navigation-h .ul-parent {
     display: none;
     transition: height 0.3s linear 0s;
 }
