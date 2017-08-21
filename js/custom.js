@@ -26,8 +26,12 @@
   function mediaSize() {
     if (currentWidth >= 993) {
             // Add class to the body for large screen.
+      var childMenu = $('.main-navigation-wrapper').css('background-color');
       $('body').removeClass('small-screen medium-screen').addClass('large-screen');
       $('.ul-parent').removeClass('w3-show');
+      $('.ul-child').removeClass('w3-show');
+      $('.ul-child').removeAttr('style');
+      $('.ul-child').css('background-color', childMenu);
             // Make sure all the inside regions have the same height.
       $('.top-region').matchHeight({property: 'height'});
       $('.main-region').matchHeight({property: 'height'});
@@ -111,13 +115,13 @@
                     var $this = $(this);
                     if ($this.next().hasClass('w3-show')) {
                       $this.next().removeClass('w3-show');
-                      $this.next().slideUp(350);
+                      $this.next().slideUp();
                     }
                     else {
                       $this.parent().parent().find('ul-child').removeClass('w3-show');
-                      $this.parent().parent().find('ul-child').slideUp(350);
+                      $this.parent().parent().find('ul-child').slideUp();
                       $this.next().toggleClass('w3-show');
-                      $this.next().slideToggle(350);
+                      $this.next().slideToggle();
                     }
                   }
                 });
