@@ -105,8 +105,8 @@
             .once('.tMenu')
             .on(
                 'click', function (e) {
-            var myWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-            if (myWidth <= 992) {
+                  var myWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                  if (myWidth <= 992) {
               e.preventDefault();
               var $this = $(this);
               if ($this.next().hasClass('w3-show')) {
