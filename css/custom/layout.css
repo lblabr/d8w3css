@@ -91,7 +91,6 @@
 }
 /* Samll Screen Only */
 @media (max-width:600px) {
-
   .top-container-inner .top-region > div,
   .main-container-inner .main-region > div,
   .bottom-container-inner .bottom-region > div,
@@ -159,12 +158,10 @@
     margin-bottom: 0;
     margin-top: 20px;
   }
-
   .main-container-inner .second-sidebar {
     margin-top: 0;
     margin-bottom: 20px;
   }
-
   .page-node-type-article .node .field--type-image {
     float: none;
     margin: 0 auto;
@@ -174,10 +171,7 @@
     display: block!important;
     clear: both;
 }
-
 /* Global setting for any menu created in teh system*/
-
-
   .ul-parent {
     display: none;
 }
@@ -189,11 +183,9 @@
     text-align: left;
     clear: both;
   }
-
   .ul-child {
     position: relative!important;
 }
-
   .w3-fixed .main-navigation-inner-h .ul-parent,
   .w3-fixed .main-navigation-inner-h .ul-parent ul {
     line-height: 30px;

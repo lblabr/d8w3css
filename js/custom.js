@@ -164,12 +164,10 @@
                   $(this).parent().addClass('d8-has-image');
                 }
             );
-
       mediaSize();
       window.addEventListener('resize', mediaSize);
       document.addEventListener('scroll', scrollWindow);
 
     }
   };
-
 })(jQuery, Drupal);
