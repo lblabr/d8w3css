@@ -3,15 +3,11 @@ type: theme
 description: 'Drupal 8 W3.CSS Theme W3.CSS is a modern CSS framework with built-in responsiveness. Developed & Designed by <a href=http://www.FlashWebCenter.com>Flash Web Center</a><br/>Contact us for Drupal Design & Development <a href=mailto:info@flashwebcenter.com>info@flashwebcenter.com</a>'
 package: core
 # core: 8.x
-
 #Libraries
 libraries:
   - drupal8_w3css_theme/w3-css
   - drupal8_w3css_theme/font-awesome
   - drupal8_w3css_theme/global-components
-
-
-
 #Regions
 regions:
   header: 'Header'
@@ -36,5 +32,4 @@ regions:
   footer_third: 'Footer Third Container'
   footer_menu: 'Footer Menu Container'
   auto_hidden_block: 'Auto Hidden Blocks'
-
 core: '8.x'

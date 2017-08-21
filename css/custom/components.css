@@ -75,16 +75,7 @@
   position: absolute;
   min-width: 160px;
   display: none;
-  transition: ease-out .35s;
-  -moz-transition: ease-out .35s;
-  -webkit-transition: ease-out .35s;
 }
-.ul-parent li:hover {
-  transition: ease-in .35s;
-  -moz-transition: ease-in .35s;
-  -webkit-transition: ease-in .35s;
-}
-
 .ul-parent li li a {
   display: block;
   position: relative;
@@ -97,30 +88,10 @@
 .toggle-child {
   cursor: pointer!important;
 }
-/* First Level */
-.li-expanded:hover > .ul-child,
-.li-expanded > .li-expanded:hover > .ul-child {
-  transition: ease-in .35s;
-  -moz-transition: ease-in .35s;
-  -webkit-transition: ease-in .35s;
-}
-.ul-parent li ul li:hover,
-.ul-parent li ul li ul li:hover {
-  transition: ease-in-out .35s;
-  -moz-transition: ease-in-out .35s;
-  -webkit-transition: ease-in-out .35s;
-}
-.ul-parent li ul li:hover a,
-.ul-parent li ul li ul li:hover a {
-  transition: ease-in-out .35s;
-  -moz-transition: ease-in-out .35s;
-  -webkit-transition: ease-in-out .35s;
-}
 /* Horizontal Main Menu */
 .main-navigation-inner-h .ul-parent a {
   padding: 15px 20px;
 }
-
 /* Vertical main menu */
 #main-navigation-v {
   display: none;
@@ -149,7 +120,6 @@
   background-color: transparent!important;
   margin: 10px 20px 0 0;
 }
-
 /* Header */
 .w3-fixed {
   position: fixed;

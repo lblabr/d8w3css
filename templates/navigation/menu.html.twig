@@ -18,18 +18,14 @@
  *   - in_active_trail: TRUE if the link is in the active trail.
  */
 #}
-
 {% import _self as menus %}
-
 {#
   We call a macro which calls itself to render the full tree.
   @see http://twig.sensiolabs.org/doc/tags/macro.html
 #}
 {{ menus.menu_links(items, attributes, 0, menu_name) }}
-
 {% macro menu_links(items, attributes, menu_level, menu_name) %}
   {% import _self as menus %}
-
   {%
     set menu_classes = [
       'ul-parent ul-parent-' ~ menu_name|clean_class,
@@ -40,7 +36,6 @@
       'ul-child ul-child-' ~ menu_name|clean_class,
     ]
   %}
-
   {% if items %}
     {% if menu_level == 0 %}
       <ul {{ attributes.addClass(menu_classes) }}>
