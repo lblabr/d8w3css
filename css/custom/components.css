@@ -37,6 +37,7 @@
 .ul-parent .ul-child {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 3000;
+  transition: height 0.3s linear 0s;
 }
 .ul-parent .ul-child .ul-child {
   z-index: 4000;
@@ -75,10 +76,6 @@
 .toggle-parent,
 .toggle-child {
   cursor: pointer!important;
-}
-/* Horizontal Main Menu */
-.main-navigation-inner-h .ul-parent a {
-  padding: 15px 20px;
 }
 /* Vertical main menu */
 #main-navigation-v {
@@ -126,7 +123,7 @@
 /*footer menu font*/
 .footer-menu-inner .ul-parent-footer li {
   float: none;
-  width:auto;
+  width: auto;
 }
 .copyright-inner,
 .ul-parent-footer {

@@ -60,7 +60,7 @@
       {% else %}
       {%
         set link_classes = [
-          'li-link w3-button li-link-' ~ menu_name|clean_class,
+          'w3-button li-link li-link-' ~ menu_name|clean_class,
         ]
       %}
       <li{{ item.attributes.addClass(item_classes) }}>

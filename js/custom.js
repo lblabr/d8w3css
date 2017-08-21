@@ -115,13 +115,12 @@
                     var $this = $(this);
                     if ($this.next().hasClass('w3-show')) {
                       $this.next().removeClass('w3-show');
-                      $this.next().slideUp();
+                      $this.next().slideUp(500);
                     }
                     else {
                       $this.parent().parent().find('ul-child').removeClass('w3-show');
                       $this.parent().parent().find('ul-child').slideUp();
                       $this.next().toggleClass('w3-show');
-                      $this.next().slideToggle();
                     }
                   }
                 });
