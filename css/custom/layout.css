@@ -136,6 +136,10 @@
   .li-1 .toggle-child .dropdown-arrow {
     display: none;
 }
+.w3-search-block-form > .form-submit {
+  line-height: 39px;
+  padding: 0;
+}
 }
 /*  Small and Medium Screen Only*/
 @media (max-width:992px) {
