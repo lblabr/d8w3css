@@ -136,9 +136,9 @@
   .li-1 .toggle-child .dropdown-arrow {
     display: none;
 }
-.w3-search-block-form > .form-submit {
-  line-height: 39px;
-  padding: 0;
+  .w3-search-block-form > .form-submit {
+    line-height: 39px;
+    padding: 0;
 }
 }
 /*  Small and Medium Screen Only*/
@@ -189,6 +189,7 @@
 }
   .main-navigation-wrapper .ul-parent {
     display: none;
+    transition: height 0.3s linear 0s;
 }
   .main-navigation-wrapper .li-item,
   .main-navigation-wrapper .ul-child,
@@ -206,11 +207,12 @@
   .ul-child {
     position: relative!important;
 }
-  .ul-parent > ul {
-    text-indent: 10px;
+/* Horizontal Main Menu */
+  .main-navigation-inner-h .ul-parent .ul-child a {
+    padding-left: 35px!important;
 }
-  .ul-parent > ul > ul {
-    text-indent: 20px;
+  .main-navigation-inner-h .ul-parent .ul-child .ul-child a {
+    padding-left: 50px!important;
 }
   .li-1 .toggle-child .right-arrow {
     display: none;
