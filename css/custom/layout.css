@@ -187,17 +187,21 @@
     display: block!important;
     clear: both;
 }
-/* Global setting for any menu created in the system */
-  .ul-parent {
+  .main-navigation-wrapper .ul-parent {
     display: none;
 }
+  .main-navigation-wrapper .li-item,
+  .main-navigation-wrapper .ul-child,
+  .main-navigation-wrapper .ul-parent {
+    clear: both;
+    width: 100%;
+}
+/* Global setting for any menu created in the system */
   .ul-parent a,
   .ul-parent li,
   .ul-parent ul {
     display: block;
-    width: 100%;
     text-align: left;
-    clear: both;
   }
   .ul-child {
     position: relative!important;
