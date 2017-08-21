@@ -38,9 +38,9 @@
   %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul id="main-menu-{{menu_level}}" {{ attributes.addClass(menu_classes) }}>
+      <ul id="main-menu" {{ attributes.addClass(menu_classes) }}>
     {% else %}
-      <ul id="main-menu-inner-{{menu_level}}" {{ attributes.removeClass(menu_classes).addClass(submenu_classes) }}>
+      <ul {{ attributes.removeClass(menu_classes).addClass(submenu_classes) }}>
     {% endif %}
     {% for item in items %}
       {%
@@ -53,10 +53,10 @@
       %}
       {% if menu_level == 0 and item.is_expanded %}
         <li{{ item.attributes.addClass(item_classes) }}>
-        <a href="#" class="w3-button toggle-parent">{{ item.title }} <span class="fa fa-chevron-down dropdown-arrow"></span></a>
+        <a href="#" class="w3-button tMenu toggle-parent">{{ item.title }} <span class="fa fa-chevron-down dropdown-arrow"></span></a>
       {% elseif menu_level != 0 and item.is_expanded %}
         <li{{ item.attributes.addClass(item_classes) }}>
-        <a href="#" class="w3-button toggle-child">{{ item.title }} <span class="fa fa-arrow-right right-arrow "></span></a>
+        <a href="#" class="w3-button tMenu toggle-child">{{ item.title }} <span class="fa fa-arrow-right right-arrow"></span><span class=" fa fa-chevron-down dropdown-arrow"></span></a>
       {% else %}
       {%
         set link_classes = [

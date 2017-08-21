@@ -110,9 +110,18 @@
 /* Large Screen Only */
 @media (min-width:993px) {
   /* for the main menu  */
+  .w3-fixed .main-navigation-inner-h .ul-parent {
+    line-height: 45px;
+}
+  .w3-fixed .main-navigation-inner-h .ul-parent ul {
+    line-height: 35px;
+}
   .ul-parent li .li-expanded:hover ul {
     left: 100%;
     top: 0;
+}
+  .ul-parent li  ul {
+    position: absolute;
 }
   .li-expanded:hover > .ul-child,
   .li-expanded > .li-expanded:hover > .ul-child {
@@ -123,6 +132,9 @@
   .bottom-container-inner .bottom-region > div,
   .footer-container-inner .footer-region > div {
     padding: 12px!important;
+}
+  .li-1 .toggle-child .dropdown-arrow {
+    display: none;
 }
 }
 /*  Small and Medium Screen Only*/
@@ -171,7 +183,7 @@
     display: block!important;
     clear: both;
 }
-/* Global setting for any menu created in teh system*/
+/* Global setting for any menu created in the system */
   .ul-parent {
     display: none;
 }
@@ -186,8 +198,13 @@
   .ul-child {
     position: relative!important;
 }
-  .w3-fixed .main-navigation-inner-h .ul-parent,
-  .w3-fixed .main-navigation-inner-h .ul-parent ul {
-    line-height: 30px;
+  .ul-parent > ul {
+    text-indent: 10px;
+}
+  .ul-parent > ul > ul {
+    text-indent: 20px;
+}
+  .li-1 .toggle-child .right-arrow {
+    display: none;
 }
 }

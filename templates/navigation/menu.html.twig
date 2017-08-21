@@ -51,12 +51,12 @@
           item.in_active_trail ? 'active',
         ]
       %}
-      {% if menu_level == 0 and item.is_expanded %}
+     {% if menu_level == 0 and item.is_expanded %}
         <li{{ item.attributes.addClass(item_classes) }}>
-        <a href="#" class="w3-button toggle-parent">{{ item.title }} <span class="dropdown-arrow"></span></a>
+        <a href="#" class="w3-button tMenu toggle-parent">{{ item.title }} <span class="fa fa-chevron-down dropdown-arrow"></span></a>
       {% elseif menu_level != 0 and item.is_expanded %}
         <li{{ item.attributes.addClass(item_classes) }}>
-        <a href="#" class="w3-button toggle-child">{{ item.title }} <span class="right-arrow"></span></a>
+        <a href="#" class="w3-button tMenu toggle-child">{{ item.title }} <span class="fa fa-arrow-right right-arrow"></span><span class=" fa fa-chevron-down dropdown-arrow"></span></a>
       {% else %}
       {%
         set link_classes = [
