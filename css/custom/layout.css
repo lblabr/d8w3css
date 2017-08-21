@@ -62,6 +62,9 @@
   margin-bottom: 20px;
   margin-top: 20px;
 }
+.main-region > div {
+  height: 100%;
+}
 .w3-width-100-percent {
   max-width: 100%!important;
 }
@@ -108,14 +111,13 @@
 /* Large Screen Only */
 @media (min-width:993px) {
   /* for the main menu  */
-  .main-navigation-inner-h li.w3-menu-main__item--expanded:hover ul.w3-menu-0-main__submenu {
-    display: block;
+  .ul-parent li .li-expanded:hover ul {
+    left: 100%;
+    top: 0;
 }
-  #main-menu > li {
-    display: inline-block;
-    float: left;
-    width: auto;
-    clear: none;
+  .li-expanded:hover > .ul-child,
+  .li-expanded > .li-expanded:hover > .ul-child {
+    display: block;
 }
   .top-container-inner .top-region > div,
   .main-container-inner .main-region > div,
@@ -172,20 +174,28 @@
     display: block!important;
     clear: both;
 }
-  #main-menu {
+
+/* Global setting for any menu created in teh system*/
+
+
+  .ul-parent {
     display: none;
 }
-  ul.w3-menu-0-main__submenu {
+  .ul-parent a,
+  .ul-parent li,
+  .ul-parent ul {
+    display: block;
+    width: 100%;
+    text-align: left;
+    clear: both;
+  }
+
+  .ul-child {
     position: relative!important;
 }
-  .w3-fixed .w3-menu-main {
-    line-height: 55px;
-}
-  .w3-fixed .w3-menu-main ul {
-    line-height: 35px;
-}
-  .w3-fixed .w3-menu-main,
-  .w3-fixed .w3-menu-main ul {
+
+  .w3-fixed .main-navigation-inner-h .ul-parent,
+  .w3-fixed .main-navigation-inner-h .ul-parent ul {
     line-height: 30px;
 }
 }

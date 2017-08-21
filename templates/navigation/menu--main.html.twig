@@ -21,6 +21,10 @@
 
 {% import _self as menus %}
 
+{#
+  We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
 {{ menus.menu_links(items, attributes, 0, menu_name) }}
 
 {% macro menu_links(items, attributes, menu_level, menu_name) %}
@@ -28,38 +32,40 @@
 
   {%
     set menu_classes = [
-      'w3-ul',
-      'w3-bar',
-      'w3-menu-' ~ menu_name|clean_class,
+      'ul-parent ul-parent-' ~ menu_name|clean_class,
     ]
   %}
   {%
     set submenu_classes = [
-      'w3-ul',
-      'w3-menu-0-' ~ menu_name|clean_class ~ '__submenu submenu w3-mobile',
+      'ul-child ul-child-' ~ menu_name|clean_class,
     ]
   %}
+
   {% if items %}
     {% if menu_level == 0 %}
-      <ul id="main-menu" {{ attributes.addClass(menu_classes) }}>
+      <ul id="main-menu-{{menu_level}}" {{ attributes.addClass(menu_classes) }}>
     {% else %}
-      <ul id="main-menu-inner" {{ attributes.removeClass(menu_classes).addClass(submenu_classes) }}>
+      <ul id="main-menu-inner-{{menu_level}}" {{ attributes.removeClass(menu_classes).addClass(submenu_classes) }}>
     {% endif %}
     {% for item in items %}
       {%
         set item_classes = [
-          'w3-bar',
-          'w3-mobile',
-          'w3-padding-0',
-          'w3-menu-' ~ menu_name|clean_class ~ '__item',
-          item.is_expanded ? 'w3-menu-' ~ menu_name|clean_class ~ '__item--expanded menu-item-expanded',
-          item.is_collapsed ? 'w3-menu-' ~ menu_name|clean_class ~ '__item--collapsed menu-item-collapsed',
-          item.in_active_trail ? 'w3-menu-' ~ menu_name|clean_class ~ '__item--active-trail menu-item-active-trail',
+          'li-item li-item-' ~ menu_name|clean_class,
+          item.is_expanded? 'li-expanded',
+          item.is_expanded and menu_level == 0 ? 'li-parent',
+          item.in_active_trail ? 'active',
         ]
       %}
+      {% if menu_level == 0 and item.is_expanded %}
+        <li{{ item.attributes.addClass(item_classes) }}>
+        <a href="#" class="w3-button toggle-parent">{{ item.title }} <span class="fa fa-chevron-down dropdown-arrow"></span></a>
+      {% elseif menu_level != 0 and item.is_expanded %}
+        <li{{ item.attributes.addClass(item_classes) }}>
+        <a href="#" class="w3-button toggle-child">{{ item.title }} <span class="fa fa-arrow-right right-arrow "></span></a>
+      {% else %}
       {%
         set link_classes = [
-          'w3-menu-' ~ menu_name|clean_class ~ '__link w3-block w3-button w3-left-align w3-padding-large',
+          'li-link w3-button li-link-' ~ menu_name|clean_class,
         ]
       %}
       <li{{ item.attributes.addClass(item_classes) }}>
@@ -70,9 +76,10 @@
             item.attributes.removeClass(item_classes).addClass(link_classes)
           )
         }}
-        {% if item.below %}
+      {% endif %}
+      {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1, menu_name) }}
-        {% endif %}
+      {% endif %}
       </li>
     {% endfor %}
     </ul>
