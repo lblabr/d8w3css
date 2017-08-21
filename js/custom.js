@@ -7,6 +7,8 @@
   'use strict';
     // Add flex position to the main menu at scroll.
   var mainNavigation = document.querySelector('#main-navigation-h');
+  var currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  var currentHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
     // In case the main menu not printed.
   var origOffsetY;
   if ($('#main-navigation-h .ul-parent').length > 0) {
@@ -23,7 +25,7 @@
     // Make sure all the divs inside any region are equal height.
     // make sure the height is the same for all top regions.
   function mediaSize() {
-    if (screen.width >= 993) {
+    if (currentWidth >= 993) {
             // Add class to the body for large screen.
       $('body').removeClass('small-screen medium-screen').addClass('large-screen');
       $('.ul-parent').removeClass('w3-show');
@@ -33,15 +35,15 @@
       $('.bottom-region').matchHeight({property: 'height'});
       $('.footer-region').matchHeight({property: 'height'});
     }
-    else if ((screen.width >= 601) && (screen.width <= 992)) {
+    else if ((currentWidth >= 601) && (currentWidth <= 992)) {
             // Add class to the body for medium screen.
       $('body').removeClass('small-screen large-screen').addClass('medium-screen');
     }
-    else if (screen.width <= 600) {
+    else if (currentWidth <= 600) {
             // Add class to the body for small screen.
       $('body').removeClass('large-screen medium-screen').addClass('small-screen');
     }
-    else if (screen.width <= 992) {
+    else if (currentWidth <= 992) {
             // Remove the match height on small screen.
       $('.top-region').matchHeight({remove: true});
       $('.main-region').matchHeight({remove: true});
@@ -84,27 +86,13 @@
                 }
             );
             // On click expand the dropdown menu for small device.
-      $(context)
-            .find('.toggle-parent')
-            .once('.toggle-parent')
-            .on(
-                'click', function () {
-                  var d = document.getElementById('main-menu-inner-1');
-                  if (d.className.indexOf('w3-show') === -1) {
-                    d.className += ' w3-show';
-                  }
-                  else {
-                    d.className = d.className.replace(' w3-show', '');
-                  }
-                }
-            );
             // Show the mobile menu on click horizontal.
       $(context)
             .find('.mobile-nav')
             .once('.mobile-nav')
             .on(
                 'click', function () {
-                  var x = document.getElementById('main-menu-0');
+                  var x = document.getElementById('main-menu');
                   if (x.className.indexOf('w3-show') === -1) {
                     x.className += ' w3-show';
                   }
@@ -113,6 +101,27 @@
                   }
                 }
             );
+            $(context)
+            .find('.tMenu')
+            .once('.tMenu')
+            .on(
+                'click', function (e) {
+            var myWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            if (myWidth <= 992) {
+            e.preventDefault();
+            var $this = $(this);
+            if ($this.next().hasClass('w3-show')) {
+                $this.next().removeClass('w3-show');
+                $this.next().slideUp(350);
+            }
+             else {
+                $this.parent().parent().find('ul-child').removeClass('w3-show');
+                $this.parent().parent().find('ul-child').slideUp(350);
+                $this.next().toggleClass('w3-show');
+                $this.next().slideToggle(350);
+            }
+          }
+        });
             // Change the form color to match the footer color.
       var footerFormBg = $('#footer-menu').css('background-color');
       $(context)
