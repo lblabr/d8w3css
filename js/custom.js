@@ -5,14 +5,11 @@
 
 (function ($, Drupal) {
   'use strict';
-    // Finds background color of parent.
-  var bgColor = $('#main-navigation').css('background-color');
-  $('ul.w3-menu-0-main__submenu').css('background-color', bgColor);
     // Add flex position to the main menu at scroll.
   var mainNavigation = document.querySelector('#main-navigation-h');
     // In case the main menu not printed.
   var origOffsetY;
-  if ($('#main-navigation-h ul.w3-menu-main').length > 0) {
+  if ($('#main-navigation-h .ul-parent').length > 0) {
     origOffsetY = mainNavigation.offsetTop;
   }
   function scrollWindow(e) {
@@ -23,30 +20,31 @@
       mainNavigation.classList.remove('w3-fixed');
     }
   }
-    // Make sure all the divs inside any region are equal height only for medium and large screen.
+    // Make sure all the divs inside any region are equal height.
     // make sure the height is the same for all top regions.
   function mediaSize() {
     if (screen.width >= 993) {
             // Add class to the body for large screen.
       $('body').removeClass('small-screen medium-screen').addClass('large-screen');
+      $('.ul-parent').removeClass('w3-show');
             // Make sure all the inside regions have the same height.
       $('.top-region').matchHeight({property: 'height'});
+      $('.main-region').matchHeight({property: 'height'});
       $('.bottom-region').matchHeight({property: 'height'});
       $('.footer-region').matchHeight({property: 'height'});
     }
     else if ((screen.width >= 601) && (screen.width <= 992)) {
             // Add class to the body for medium screen.
       $('body').removeClass('small-screen large-screen').addClass('medium-screen');
-            // Remove the match height on medium screen.
-      $('.top-region').matchHeight({remove: true});
-      $('.bottom-region').matchHeight({remove: true});
-      $('.footer-region').matchHeight({remove: true});
     }
     else if (screen.width <= 600) {
             // Add class to the body for small screen.
       $('body').removeClass('large-screen medium-screen').addClass('small-screen');
+    }
+    else if (screen.width <= 992) {
             // Remove the match height on small screen.
       $('.top-region').matchHeight({remove: true});
+      $('.main-region').matchHeight({remove: true});
       $('.bottom-region').matchHeight({remove: true});
       $('.footer-region').matchHeight({remove: true});
     }
@@ -55,10 +53,20 @@
     attach: function (context, settings) {
       settings.drupal8_w3css_theme = settings.drupal8_w3css_theme || {};
 
-      mediaSize();
-      window.addEventListener('resize', mediaSize);
-      document.addEventListener('scroll', scrollWindow);
-
+      $(context)
+            .find('ul')
+            .once('ul')
+            .each(function () {
+              var depth = $(this).parents('ul').length;
+              $(this).addClass('ul-' + depth);
+            });
+      $(context)
+            .find('ul li')
+            .once('ul li')
+            .each(function () {
+              var depth = $(this).parents('li').length;
+              $(this).addClass('li-' + depth);
+            });
       $(context)
             .find('#main-navigation-v #close-nav')
             .once('#main-navigation-v #close-nav')
@@ -77,18 +85,17 @@
             );
             // On click expand the dropdown menu for small device.
       $(context)
-            .find('ul.w3-menu-main li.w3-menu-main__item--expanded > a')
-            .once('a')
+            .find('.toggle-parent')
+            .once('.toggle-parent')
             .on(
                 'click', function () {
-                  var d = document.getElementById('main-menu-inner');
+                  var d = document.getElementById('main-menu-inner-1');
                   if (d.className.indexOf('w3-show') === -1) {
                     d.className += ' w3-show';
                   }
                   else {
                     d.className = d.className.replace(' w3-show', '');
                   }
-                  return false;
                 }
             );
             // Show the mobile menu on click horizontal.
@@ -97,7 +104,7 @@
             .once('.mobile-nav')
             .on(
                 'click', function () {
-                  var x = document.getElementById('main-menu');
+                  var x = document.getElementById('main-menu-0');
                   if (x.className.indexOf('w3-show') === -1) {
                     x.className += ' w3-show';
                   }
@@ -106,17 +113,17 @@
                   }
                 }
             );
-            // Change the sumbmenu color as the main menu .
+            // Change the form color to match the footer color.
       var footerFormBg = $('#footer-menu').css('background-color');
       $(context)
             .find('#footer-menu form')
             .once('#footer-menu form')
             .css('background-color', footerFormBg);
-            // Change the form color to match the footer color .
+            // Change the sumbmenu color as the main menu.
       var subMenuBg = $('.main-navigation-wrapper').css('background-color');
       $(context)
-            .find('.main-navigation-wrapper ul.w3-menu-0-main__submenu')
-            .once('.main-navigation-wrapper ul.w3-menu-0-main__submenu')
+            .find('.main-navigation-wrapper .ul-child')
+            .once('.main-navigation-wrapper ul-child')
             .css('background-color', subMenuBg);
             // Add classes to search page.
       $(context)
@@ -131,47 +138,37 @@
             .find('.search-form .search-help-link')
             .once('.search-form .search-help-link')
             .addClass('w3-button w3-right w3-border w3-margin-top');
-            // Add button class to any link inside li.
       $(context)
-            .find('ul.w3-menu-main li > ul li')
-            .once('li')
-            .removeClass('w3-bar-item');
-            // w3-search-block-form.
-      $(context)
-            .find('.w3-search-block-form .form-type-search')
-            .once('.form-type-search')
-            .addClass('w3-col l8 w3-mobile');
-      $(context)
-            .find('.w3-search-block-form .form-actions')
-            .once('.form-actions')
-            .addClass('w3-col l4 w3-mobile');
-            // Multi value table draggable.
-      $(context)
-            .find('div.tabledrag-toggle-weight-wrapper button')
+            .find('.tabledrag-toggle-weight-wrapper button')
             .once('button')
             .addClass('w3-button');
             // Theme setttings.
       $(context)
-            .find('form#system-theme-settings details')
+            .find('#system-theme-settings details')
             .once('details')
             .removeAttr('open')
             .addClass('w3-border w3-bar w3-left-align w3-margin-bottom');
       $(context)
-            .find('form#system-theme-settings details > summary')
+            .find('#system-theme-settings details > summary')
             .once('summary')
             .addClass('w3-button w3-bar w3-left-align');
       $(context)
-            .find('form#system-theme-settings details > div.details-wrapper')
-            .once('div.details-wrapper')
+            .find('#system-theme-settings details > div.details-wrapper')
+            .once('.details-wrapper')
             .addClass('w3-padding-large w3-left-align');
       $(context)
-            .find('a > img.w3-image')
-            .once('a > img.w3-image')
+            .find('a > .w3-image')
+            .once('a > .w3-image')
             .each(
                 function () {
                   $(this).parent().addClass('d8-has-image');
                 }
             );
+
+      mediaSize();
+      window.addEventListener('resize', mediaSize);
+      document.addEventListener('scroll', scrollWindow);
+
     }
   };
 
