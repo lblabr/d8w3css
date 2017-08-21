@@ -107,19 +107,19 @@
                 'click', function (e) {
                   var myWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
                   if (myWidth <= 992) {
-              e.preventDefault();
-              var $this = $(this);
-              if ($this.next().hasClass('w3-show')) {
-                $this.next().removeClass('w3-show');
-                $this.next().slideUp(350);
-              }
-              else {
-                $this.parent().parent().find('ul-child').removeClass('w3-show');
-                $this.parent().parent().find('ul-child').slideUp(350);
-                $this.next().toggleClass('w3-show');
-                $this.next().slideToggle(350);
-              }
-            }
+                    e.preventDefault();
+                    var $this = $(this);
+                    if ($this.next().hasClass('w3-show')) {
+                      $this.next().removeClass('w3-show');
+                      $this.next().slideUp(350);
+                    }
+                    else {
+                      $this.parent().parent().find('ul-child').removeClass('w3-show');
+                      $this.parent().parent().find('ul-child').slideUp(350);
+                      $this.next().toggleClass('w3-show');
+                      $this.next().slideToggle(350);
+                    }
+                  }
                 });
             // Change the form color to match the footer color.
       var footerFormBg = $('#footer-menu').css('background-color');
