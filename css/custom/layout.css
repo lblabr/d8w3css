@@ -110,12 +110,6 @@
 /* Large Screen Only */
 @media (min-width:993px) {
   /* for the main menu  */
-  .w3-fixed .main-navigation-inner-h .ul-parent {
-    line-height: 45px;
-}
-  .w3-fixed .main-navigation-inner-h .ul-parent ul {
-    line-height: 35px;
-}
   .ul-parent li .li-expanded:hover ul {
     left: 100%;
     top: 0;
@@ -136,7 +130,7 @@
   .li-1 .toggle-child .dropdown-arrow {
     display: none;
 }
-  .w3-search-block-form > .form-submit {
+  .second-sidebar .w3-search-block-form > .form-submit {
     line-height: 39px;
     padding: 0;
 }

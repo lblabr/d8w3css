@@ -27,7 +27,8 @@
 .ul-parent {
   z-index: 2000;
 }
-.ul-parent a {
+.large-screen .main-navigation-inner-h .ul-parent a {
+  padding: 15px 20px;
   text-align: left;
 }
 .ul-parent a:hover {

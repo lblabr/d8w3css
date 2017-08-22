@@ -15,7 +15,9 @@ a.d8-has-image {
 }
 a.d8-has-image > img.w3-image {
   width: 100%;
+  float: left;
 }
+a:hover img,
 a.d8-has-image:hover,
 .ul-parent a:hover,
 .w3-button:hover a {

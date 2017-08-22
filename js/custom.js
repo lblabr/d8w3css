@@ -27,7 +27,9 @@
     if (currentWidth >= 993) {
             // Add class to the body for large screen.
       var childMenu = $('.main-navigation-wrapper').css('background-color');
-      $('body').removeClass('small-screen medium-screen').addClass('large-screen');
+      $('body').addClass('large-screen');
+      $('body').removeClass('small-screen');
+      $('body').removeClass('medium-screen');
       $('.ul-parent').removeClass('w3-show');
       $('.ul-child').removeClass('w3-show');
       $('.ul-child').removeAttr('style');
@@ -40,11 +42,15 @@
     }
     else if ((currentWidth >= 601) && (currentWidth <= 992)) {
             // Add class to the body for medium screen.
-      $('body').removeClass('small-screen large-screen').addClass('medium-screen');
+      $('body').addClass('medium-screen');
+      $('body').removeClass('large-screen');
+      $('body').removeClass('small-screen');
     }
     else if (currentWidth <= 600) {
             // Add class to the body for small screen.
-      $('body').removeClass('large-screen medium-screen').addClass('small-screen');
+      $('body').addClass('small-screen');
+      $('body').removeClass('large-screen');
+      $('body').removeClass('medium-screen');
     }
     else if (currentWidth <= 992) {
             // Remove the match height on small screen.
