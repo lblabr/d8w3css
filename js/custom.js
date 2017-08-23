@@ -31,16 +31,17 @@
   }
   var mediaSize = function () {
     var currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    var childMenu = $('.main-navigation-wrapper').css('background-color');
+    var mainMenuChild = $('#main-navigation-h').css('background-color');
     if (currentWidth >= 993) {
             // Add class to the body for large screen.
       $('body').addClass('large-screen');
-      $('body').removeClass('mall-screen');
+      $('body').removeClass('small-screen');
       $('body').removeClass('medium-screen');
       $('.ul-parent').removeClass('w3-show');
       $('.ul-child').removeClass('w3-show');
-      $('.ul-child').removeAttr('style');
-      $('.ul-child').css('background-color', childMenu);
+      $('#main-navigation-h .ul-parent').removeAttr('style');
+      $('#main-navigation-h .ul-child').removeAttr('style');
+      $('#main-navigation-h .ul-child').css('background-color', mainMenuChild);
             // Make sure all the inside regions have the same height.
       $('.top-region').matchHeight({property: 'height'});
       $('.main-region').matchHeight({property: 'height'});
@@ -110,16 +111,15 @@
             );
             // Show the mobile menu on click horizontal.
       $(context)
-            .find('.mobile-nav')
-            .once('.mobile-nav')
+            .find('#main-navigation-h .mobile-nav')
+            .once('#main-navigation-h .mobile-nav')
             .on(
                 'click', function () {
-                  var x = document.getElementById('main-menu');
-                  if (x.className.indexOf('w3-show') === -1) {
-                    x.className += ' w3-show';
+                  if ($('#main-navigation-h .ul-parent').is(':hidden')) {
+                    $('#main-navigation-h .ul-parent').slideDown(500);
                   }
                   else {
-                    x.className = x.className.replace(' w3-show', '');
+                    $('#main-navigation-h .ul-parent').slideUp(500);
                   }
                 }
             );
@@ -155,12 +155,22 @@
             .find('#footer-menu form')
             .once('#footer-menu form')
             .css('background-color', footerFormBg);
+
             // Change the sumbmenu color as the main menu.
-      var subMenuBg = $('.main-navigation-wrapper').css('background-color');
+      var mainMenuChild = $('.main-navigation-wrapper').css('background-color');
       $(context)
             .find('.main-navigation-wrapper .ul-child')
-            .once('.main-navigation-wrapper ul-child')
-            .css('background-color', subMenuBg);
+            .once('.main-navigation-wrapper .ul-child')
+            .css('background-color', mainMenuChild);
+      var parentColor = $('.ul-parent').css('background-color');
+      $(context)
+            .find('.ul-parent .ul-child')
+            .once('.ul-parent .ul-child')
+            .each(
+                function () {
+                  $(this).css('background-color', parentColor);
+                }
+            );
             // Add classes to search page.
       $(context)
             .find('.search-form .search-advanced')
@@ -189,7 +199,7 @@
             .once('summary')
             .addClass('w3-button w3-bar w3-left-align');
       $(context)
-            .find('#system-theme-settings details > div.details-wrapper')
+            .find('#system-theme-settings details > .details-wrapper')
             .once('.details-wrapper')
             .addClass('w3-padding-large w3-left-align');
       $(context)
@@ -200,7 +210,6 @@
                   $(this).parent().addClass('d8-has-image');
                 }
             );
-      scrollWindow();
       mediaSize();
       window.addEventListener('resize', mediaSize);
       document.addEventListener('scroll', scrollWindow);

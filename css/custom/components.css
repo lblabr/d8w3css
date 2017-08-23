@@ -1,13 +1,10 @@
 /* Global css for any menu created in the system */
-.main-navigation-wrapper div,
-.main-navigation-wrapper li,
-.main-navigation-wrapper a {
-  color: inherit!important;
-  background-color: inherit!important;
-}
-.ul-parent {
-  list-style: none;
+.ul-parent,
+.ul-child,
+.li-item {
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 .ul-parent:before,
 .ul-parent:after {
@@ -17,30 +14,18 @@
 .ul-parent:after {
   clear: both;
 }
-.ul-parent,
-.ul-child,
-.li-item {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
 .ul-parent {
-  z-index: 2000;
-}
-.large-screen .main-navigation-inner-h .ul-parent a {
-  padding: 15px 20px;
-  text-align: left;
-}
-.ul-parent a:hover {
-  opacity: 1;
+  z-index: 200;
 }
 .ul-parent .ul-child {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 3000;
-  transition: height 0.3s linear 0s;
+  z-index: 300;
 }
 .ul-parent .ul-child .ul-child {
-  z-index: 4000;
+  z-index: 400;
+}
+.ul-parent a:hover {
+  opacity: 1;
 }
 .ul-parent li {
   position: relative;
@@ -58,9 +43,6 @@
   text-align: right;
   display: inline-block;
 }
-.large-screen .ul-parent > li > a {
-  display: block;
-}
 .ul-parent li  ul {
   min-width: 160px;
   display: none;
@@ -68,25 +50,32 @@
 .ul-parent li li a {
   display: block;
   position: relative;
-  z-index: 100;
-}
-.ul-parent li li li a {
-  z-index: 200;
 }
 .toggle-parent,
 .toggle-child {
   cursor: pointer!important;
+}
+.ul-parent .li-item a {
+  display: block;
+  text-align: left;
+}
+/* Vertical and Horizontal main menu */
+
+.main-navigation-inner-h .ul-parent a {
+  text-align: left;
+  width: 100%;
 }
 /* Vertical main menu */
 #main-navigation-v {
   display: none;
   width: auto!important;
 }
+
 #main-navigation-v #close-nav {
   width: 100%;
 }
 #main-navigation-v .ul-parent .li-expanded:hover > .ul-child,
-#main-navigation-v .ul-parent .li-expanded > .li-expanded:hover > .ul-child {
+#main-navigation-v .ul-parent .li-expanded > .ul-parent > .li-expanded:hover > .ul-child {
   display: none;
 }
 #main-navigation-v .ul-parent,
@@ -96,11 +85,30 @@
   clear: both!important;
   float: left!important;
 }
-#main-navigation-v .li-item {
+#main-navigation-v .ul-parent li  ul {
   position: relative;
 }
 #main-navigation-v .ul-parent li .li-expanded:hover ul {
   left: 0;
+}
+#main-navigation-v .ul-parent .ul-child a {
+  padding-left: 35px!important;
+}
+#main-navigation-v .ul-parent .ul-child .ul-child a {
+  padding-left: 50px!important;
+}
+#main-navigation-v .li-1 .toggle-child .right-arrow {
+  display: none;
+}
+#main-navigation-v .li-1 .toggle-child {
+  width: auto;
+  clear: none;
+}
+#main-navigation-v .li-1 .toggle-child:after {
+  content: "\f078";
+  font-family: FontAwesome;
+  padding-left: 5px;
+  text-align: right;
 }
 #open-nav-inner {
   width: 50px;

@@ -110,6 +110,9 @@
 /* Large Screen Only */
 @media (min-width:993px) {
   /* for the main menu  */
+  .main-navigation-inner-h .ul-parent a {
+    padding: 15px 20px;
+}
   .ul-parent li .li-expanded:hover ul {
     left: 100%;
     top: 0;
@@ -118,7 +121,7 @@
     position: absolute;
 }
   .ul-parent .li-expanded:hover > .ul-child,
-  .ul-parent .li-expanded > .li-expanded:hover > .ul-child {
+  .ul-parent .li-expanded > .ul-child > .li-expanded:hover > .ul-child {
     display: block;
 }
   .top-container-inner .top-region > div,
