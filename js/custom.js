@@ -39,6 +39,8 @@
       $('body').removeClass('medium-screen');
       $('.ul-parent').removeClass('w3-show');
       $('.ul-child').removeClass('w3-show');
+      $('.ul-responsive-h .ul-parent').removeAttr('style');
+      $('.ul-responsive-h .ul-child').removeAttr('style');
       $('#main-navigation-h .ul-parent').removeAttr('style');
       $('#main-navigation-h .ul-child').removeAttr('style');
       $('#main-navigation-h .ul-child').css('background-color', mainMenuChild);
@@ -86,6 +88,42 @@
               var depth = $(this).parents('li').length;
               $(this).addClass('li-' + depth);
             });
+    }
+  };
+
+  Drupal.behaviors.d8w3cssResponsiveMenu = {
+    attach: function (context, settings) {
+            // Add class to any UL/LI according to the depth.
+      $(context)
+            .find('.mobile-nav-responsive')
+            .once('.mobile-nav-responsive')
+            .on(
+                'click', function () {
+                  if ($('.ul-responsive-h .ul-parent').is(':hidden')) {
+                    $('.ul-responsive-h .ul-parent').slideDown(500);
+                  }
+                  else {
+                    $('.ul-responsive-h .ul-parent').slideUp(500);
+                  }
+                }
+            );
+      $(context)
+            .find('.tMenu-v')
+            .once('.tMenu-v')
+            .on(
+                'click', function (e) {
+                  e.preventDefault();
+                  var $this = $(this);
+                  if ($this.next().hasClass('w3-show')) {
+                    $this.next().removeClass('w3-show');
+                    $this.next().slideUp(500);
+                  }
+                  else {
+                    $this.parent().parent().find('ul-child').removeClass('w3-show');
+                    $this.parent().parent().find('ul-child').slideUp();
+                    $this.next().toggleClass('w3-show');
+                  }
+                });
     }
   };
 
@@ -162,15 +200,6 @@
             .find('.main-navigation-wrapper .ul-child')
             .once('.main-navigation-wrapper .ul-child')
             .css('background-color', mainMenuChild);
-      var parentColor = $('.ul-parent').css('background-color');
-      $(context)
-            .find('.ul-parent .ul-child')
-            .once('.ul-parent .ul-child')
-            .each(
-                function () {
-                  $(this).css('background-color', parentColor);
-                }
-            );
             // Add classes to search page.
       $(context)
             .find('.search-form .search-advanced')

@@ -17,6 +17,7 @@ global-components:
       css/custom/layout.css: {}
       css/custom/components.css: {}
       css/custom/theme.css: {}
+      css/custom/responsive.css: {}
   js:
     js/jquery.matchHeight.js: {}
     js/custom.js: {}

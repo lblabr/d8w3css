@@ -150,9 +150,6 @@ ul.links li a {
   height: 90px;
   width: 110px;
 }
-.main-navigation-wrapper {
-  z-index: 3000;
-}
 /* The class for Honeypot module */
 form #edit-url {
   display: none!important;
