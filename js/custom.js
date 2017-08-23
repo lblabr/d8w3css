@@ -5,14 +5,22 @@
 
 (function ($, Drupal) {
   'use strict';
-    // Add flex position to the main menu at scroll.
-  var mainNavigation = document.querySelector('#main-navigation-h');
-  var currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    // In case the main menu not printed.
+    // Used for fixed menu.
   var origOffsetY;
+  var mainNavigation = document.querySelector('#main-navigation-h');
+    // Used for resizing behaviors.
+  var resizeTimeoutId;
+  var resizeTimeoutDuration = 100;
+  var currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  var resizeDebounce = function () {
+    clearTimeout(resizeTimeoutId);
+    resizeTimeoutId = setTimeout(doneResizing, resizeTimeoutDuration);
+  };
+    // In case the main menu not printed.
   if ($('#main-navigation-h .ul-parent').length > 0) {
     origOffsetY = mainNavigation.offsetTop;
   }
+    // Add flex position to the main menu at scroll.
   function scrollWindow(e) {
     if (window.scrollY > origOffsetY) {
       mainNavigation.classList.add('w3-fixed');
@@ -21,13 +29,14 @@
       mainNavigation.classList.remove('w3-fixed');
     }
   }
-    // Make sure all the divs inside any region are equal height.
-    // make sure the height is the same for all top regions.
-  function mediaSize() {
+  var mediaSize = function () {
+    var currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var childMenu = $('.main-navigation-wrapper').css('background-color');
     if (currentWidth >= 993) {
             // Add class to the body for large screen.
-      var childMenu = $('.main-navigation-wrapper').css('background-color');
-      $('body').removeClass('small-screen medium-screen').addClass('large-screen');
+      $('body').addClass('large-screen');
+      $('body').removeClass('mall-screen');
+      $('body').removeClass('medium-screen');
       $('.ul-parent').removeClass('w3-show');
       $('.ul-child').removeClass('w3-show');
       $('.ul-child').removeAttr('style');
@@ -40,11 +49,15 @@
     }
     else if ((currentWidth >= 601) && (currentWidth <= 992)) {
             // Add class to the body for medium screen.
-      $('body').removeClass('small-screen large-screen').addClass('medium-screen');
+      $('body').addClass('medium-screen');
+      $('body').removeClass('large-screen');
+      $('body').removeClass('small-screen');
     }
     else if (currentWidth <= 600) {
             // Add class to the body for small screen.
-      $('body').removeClass('large-screen medium-screen').addClass('small-screen');
+      $('body').addClass('small-screen');
+      $('body').removeClass('large-screen');
+      $('body').removeClass('medium-screen');
     }
     else if (currentWidth <= 992) {
             // Remove the match height on small screen.
@@ -53,11 +66,11 @@
       $('.bottom-region').matchHeight({remove: true});
       $('.footer-region').matchHeight({remove: true});
     }
-  }
-  Drupal.behaviors.drupal8_w3css_theme = {
-    attach: function (context, settings) {
-      settings.drupal8_w3css_theme = settings.drupal8_w3css_theme || {};
+  };
 
+  Drupal.behaviors.d8w3cssMenuDepth = {
+    attach: function (context, settings) {
+            // Add class to any UL/LI according to the depth.
       $(context)
             .find('ul')
             .once('ul')
@@ -72,6 +85,13 @@
               var depth = $(this).parents('li').length;
               $(this).addClass('li-' + depth);
             });
+    }
+  };
+
+  Drupal.behaviors.d8w3cssMainNav = {
+    attach: function (context, settings) {
+
+            // On click show/hide the vertical main menu.
       $(context)
             .find('#main-navigation-v #close-nav')
             .once('#main-navigation-v #close-nav')
@@ -88,7 +108,6 @@
                   document.getElementById('main-navigation-v').style.display = 'block';
                 }
             );
-            // On click expand the dropdown menu for small device.
             // Show the mobile menu on click horizontal.
       $(context)
             .find('.mobile-nav')
@@ -104,13 +123,14 @@
                   }
                 }
             );
+            // On click expand the dropdown menu for small device.
       $(context)
             .find('.tMenu')
             .once('.tMenu')
             .on(
                 'click', function (e) {
-                  var myWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-                  if (myWidth <= 992) {
+                  var currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                  if ((currentWidth <= 992) || ($('#main-navigation-v').css('display') == 'block')) {
                     e.preventDefault();
                     var $this = $(this);
                     if ($this.next().hasClass('w3-show')) {
@@ -124,6 +144,11 @@
                     }
                   }
                 });
+    }
+  };
+
+  Drupal.behaviors.d8w3cssTheme = {
+    attach: function (context, settings) {
             // Change the form color to match the footer color.
       var footerFormBg = $('#footer-menu').css('background-color');
       $(context)
@@ -175,10 +200,10 @@
                   $(this).parent().addClass('d8-has-image');
                 }
             );
+      scrollWindow();
       mediaSize();
       window.addEventListener('resize', mediaSize);
       document.addEventListener('scroll', scrollWindow);
-
     }
   };
 })(jQuery, Drupal);
