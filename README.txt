@@ -185,3 +185,22 @@ The sub-theme now is ready to be enabled.
 Go to www.your-drupal-site-name/admin/appearance/settings/drupal8_w3css_theme
 and click on Change The Main Container's Columns to Equal Width and insert
 33-33-33 in the text box then click save.
+
+|-  How to Create a Responsive Horizontal Menu
+==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
+Create a menu with any name. Example the new menu name is 'Titto'.  Add all the
+links as usual in drupal. The maximum number of menu levels to show is three.
+This maximum number includes the initial level.  Level one is always visible on
+screen resolution bigger than 992px. The two levels show on hover. On screen
+resolution less than 992px all levels are hidden and they show by clicking.
+Go to d8w3css/templates/navigation and clone menu--responsive-h.html.twig to
+menu--titto.html.twig. Clear all caches and you are done.
+
+|-  How to Create a Responsive Vertical Menu
+==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
+Create a menu with any name.  Example the new menu name is 'Titto'.
+Add all the links as usuall in drupal. The maximum number of menu levels to show
+is three. This maximum number includes the initial level. Level one is always
+visible. The two levels are hidden and you show them by clicking.
+Go to d8w3css/templates/navigation and clone menu--responsive-v.html.twig to
+menu--titto.html.twig. Clear all caches and you are done.
