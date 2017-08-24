@@ -195,7 +195,7 @@ be the main menu.
 3- If you want a horizontal menu just drop ANY menu in the  Primary Menu
 Vertical region.
 4- You don't have to create any a special template for the vertical or
-horizontal main menu.
+horizontal main menu. menu--main.html.twig
 5- You can create two main menus and use the two regions.
 http://drupal8.w3css.theme.flashwebcenter.com
 
