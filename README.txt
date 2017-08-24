@@ -194,7 +194,8 @@ This maximum number includes the initial level.  Level one is always visible on
 screen resolution bigger than 992px. The two levels show on hover. On screen
 resolution less than 992px all levels are hidden and they show by clicking.
 Go to d8w3css/templates/navigation and clone menu--responsive-h.html.twig to
-menu--titto.html.twig. Clear all caches and you are done.
+your sub theme folder and name it menu--titto.html.twig. Clear all caches and
+you are done.
 
 |-  How to Create a Responsive Vertical Menu
 ==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
@@ -203,4 +204,5 @@ Add all the links as usuall in drupal. The maximum number of menu levels to show
 is three. This maximum number includes the initial level. Level one is always
 visible. The two levels are hidden and you show them by clicking.
 Go to d8w3css/templates/navigation and clone menu--responsive-v.html.twig to
-menu--titto.html.twig. Clear all caches and you are done.
+your sub theme folder and name it menu--titto.html.twig. Clear all caches and
+you are done.
