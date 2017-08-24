@@ -196,7 +196,8 @@ be the main menu.
 Vertical region.
 4- You don't have to create any a special template for the vertical or
 horizontal main menu.
-5- You can't use the two regions at once.
+5- You can create two main menus and use the two regions.
+http://drupal8.w3css.theme.flashwebcenter.com
 
 6- Note: A vertical main menu is different from a side menu in your website.
 (Example for the vertical menu:
