@@ -8,14 +8,6 @@
     // Used for fixed menu.
   var origOffsetY;
   var mainNavigation = document.querySelector('#main-navigation-h');
-    // Used for resizing behaviors.
-  var resizeTimeoutId;
-  var resizeTimeoutDuration = 100;
-  var currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-  var resizeDebounce = function () {
-    clearTimeout(resizeTimeoutId);
-    resizeTimeoutId = setTimeout(doneResizing, resizeTimeoutDuration);
-  };
     // In case the main menu not printed.
   if ($('#main-navigation-h .ul-parent').length > 0) {
     origOffsetY = mainNavigation.offsetTop;
@@ -167,10 +159,10 @@
             .once('.tMenu')
             .on(
                 'click', function (e) {
+                  e.preventDefault();
                   var currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-                  if ((currentWidth <= 992) || ($('#main-navigation-v').css('display') == 'block')) {
-                    e.preventDefault();
-                    var $this = $(this);
+                  var $this = $(this);
+                  if ((currentWidth <= 992) || ($('#main-navigation-v').css('display') === 'block')) {
                     if ($this.next().hasClass('w3-show')) {
                       $this.next().removeClass('w3-show');
                       $this.next().slideUp(500);
