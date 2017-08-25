@@ -236,6 +236,9 @@ div.item-list > ol.item-list > li article::before,
   display: inline-block;
   font-family: Consolas, "courier new";
 }
+.w3-search-block-form > input {
+  font-family: FontAwesome;
+}
 /* label form in the footer */
 
 .footer-menu-inner form label {
