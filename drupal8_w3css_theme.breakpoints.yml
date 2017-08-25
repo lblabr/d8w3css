@@ -12,7 +12,13 @@ drupal8_w3css_theme.screen-md-min:
     - 1x
 drupal8_w3css_theme.screen-lg-min:
   label: screen-lg-min
-  mediaQuery: 'all and (min-width: 993px)'
+  mediaQuery: 'all and (min-width: 993px) and (max-width: 1280px)'
   weight: 2
+  multipliers:
+    - 1x
+drupal8_w3css_theme.screen-xlg-min:
+  label: screen-xlg-min
+  mediaQuery: 'all and (min-width: 1281px)'
+  weight: 3
   multipliers:
     - 1x
