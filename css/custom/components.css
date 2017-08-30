@@ -221,14 +221,14 @@ div.item-list > ol.item-list > li article::before,
 /* search bar */
 .w3-search-block-form > .form-type-search {
   width: 70%;
-  float: right;
+  float: left;
 }
 .w3-search-block-form > .form-submit {
-  width: 29%;
+  width: 30%;
   float: right;
 }
 .w3-search-block-form > .form-type-search input {
-  border-left: none!important;
+  border-right: none!important;
 }
 .w3-search-block-form > div,
 .w3-search-block-form > input {
