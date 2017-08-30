@@ -219,6 +219,9 @@ div.item-list > ol.item-list > li article::before,
   padding: 0;
 }
 /* search bar */
+.w3-search-block-form {
+  position: relative;
+}
 .w3-search-block-form > .form-type-search {
   width: 70%;
   float: left;
@@ -229,6 +232,14 @@ div.item-list > ol.item-list > li article::before,
 }
 .w3-search-block-form > .form-type-search input {
   border-right: none!important;
+  text-indent: 20px;
+}
+.w3-search-block-form > .form-type-search:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  position: absolute;
+  top: 22px;
+  left: 25px;
 }
 .w3-search-block-form > div,
 .w3-search-block-form > input {
