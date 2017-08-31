@@ -244,7 +244,7 @@ function drupal8_w3css_theme_theme_suggestions_form_alter(array &$suggestions, a
 }
 
 /**
- * Implements hook_form_FORM_ID_alter for search block.
+ * Implements hook_form_FORM_ID_alter().
  */
 function drupal8_w3css_theme_form_search_block_form_alter(&$form, &$form_state) {
   $form['keys']['#attributes']['placeholder'][] = t('Search');
