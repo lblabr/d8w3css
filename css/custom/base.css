@@ -239,7 +239,8 @@ ul.secondary > li a {
 .w3-margin-0 {
   margin: 0!important;
 }
-input {
+input,
+textarea {
   -webkit-box-shadow: inset 0px 0px 5px 0px rgba(51,44,51,0.1);
   -moz-box-shadow: inset 0px 0px 5px 0px rgba(51,44,51,0.1);
   box-shadow: inset 0px 0px 5px 0px rgba(51,44,51,0.1);
