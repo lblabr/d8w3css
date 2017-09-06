@@ -92,10 +92,10 @@
             .on(
                 'click', function () {
                   if ($('.ul-responsive-h .ul-parent').is(':hidden')) {
-                    $('.ul-responsive-h .ul-parent').slideDown(500);
+                    $('.ul-responsive-h .ul-parent').slideDown(350);
                   }
                   else {
-                    $('.ul-responsive-h .ul-parent').slideUp(500);
+                    $('.ul-responsive-h .ul-parent').slideUp(350);
                   }
                 }
             );
@@ -106,14 +106,15 @@
                 'click', function (e) {
                   e.preventDefault();
                   var $this = $(this);
-                  if ($this.next().hasClass('w3-show')) {
-                    $this.next().removeClass('w3-show');
-                    $this.next().slideUp(500);
+                  if ($this.next().hasClass('show')) {
+                    $this.next().removeClass('show');
+                    $this.next().slideUp(350);
                   }
                   else {
-                    $this.parent().parent().find('ul-child').removeClass('w3-show');
-                    $this.parent().parent().find('ul-child').slideUp();
-                    $this.next().toggleClass('w3-show');
+                    $this.parent().parent().find('li .ul-child').removeClass('show');
+                    $this.parent().parent().find('li .ul-child').slideUp(350);
+                    $this.next().toggleClass('show');
+                    $this.next().slideToggle(350);
                   }
                 });
     }
@@ -146,10 +147,10 @@
             .on(
                 'click', function () {
                   if ($('#main-navigation-h .ul-parent').is(':hidden')) {
-                    $('#main-navigation-h .ul-parent').slideDown(500);
+                    $('#main-navigation-h .ul-parent').slideDown(350);
                   }
                   else {
-                    $('#main-navigation-h .ul-parent').slideUp(500);
+                    $('#main-navigation-h .ul-parent').slideUp(350);
                   }
                 }
             );
@@ -163,14 +164,15 @@
                   var currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
                   var $this = $(this);
                   if ((currentWidth <= 992) || ($('#main-navigation-v').css('display') === 'block')) {
-                    if ($this.next().hasClass('w3-show')) {
-                      $this.next().removeClass('w3-show');
-                      $this.next().slideUp(500);
+                    if ($this.next().hasClass('show')) {
+                      $this.next().removeClass('show');
+                      $this.next().slideUp(350);
                     }
                     else {
-                      $this.parent().parent().find('ul-child').removeClass('w3-show');
-                      $this.parent().parent().find('ul-child').slideUp();
-                      $this.next().toggleClass('w3-show');
+                      $this.parent().parent().find('li .ul-child').removeClass('show');
+                      $this.parent().parent().find('li .ul-child').slideUp(350);
+                      $this.next().toggleClass('show');
+                      $this.next().slideToggle(350);
                     }
                   }
                 });

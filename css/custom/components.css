@@ -23,6 +23,10 @@
 .ul-parent ul ul > li > a {
   z-index: 400;
 }
+ul .ul-child.show {
+  /* display: block; */
+  background-color: inherit;
+}
 .ul-parent a:hover {
   opacity: 1;
 }
@@ -33,6 +37,9 @@
 .ul-parent > li {
   display: inline-block;
   float: left;
+}
+.ul-parent li a.tMenu {
+  transition: background .3s ease;
 }
 .right-arrow,
 .dropdown-arrow {
