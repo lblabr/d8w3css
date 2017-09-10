@@ -147,10 +147,6 @@ ul.links li a {
 .site-slogan {
   padding-left: 16px;
 }
-.site-logo img {
-  height: 90px;
-  width: 110px;
-}
 /* The class for Honeypot module */
 form #edit-url {
   display: none!important;
