@@ -69,24 +69,26 @@
   var fadeBox = function () {
     didScroll = true;
     var animationHeight = $(window).innerHeight() * 0.25;
-    var ratio = Math.round( (1 / animationHeight) * 10000 ) / 10000;
-    $('.d8-fade').each(function() {
+    var ratio = Math.round((1 / animationHeight) * 10000) / 10000;
+    $('.d8-fade').each(function () {
       var objectTop = $(this).offset().top;
       var windowBottom = $(window).scrollTop() + $(window).innerHeight();
-        if ( objectTop < windowBottom ) {
-          if ( objectTop < windowBottom - animationHeight ) {
-            $(this).css( {
+        if (objectTop < windowBottom) {
+          if (objectTop < windowBottom - animationHeight) {
+            $(this).css({
               transition: 'opacity 1s linear',
               opacity: 1
             });
-        } else {
-            $(this).css( {
+        }
+else {
+            $(this).css({
               transition: 'opacity 0.5s linear',
               opacity: (windowBottom - objectTop) * ratio
             });
           }
-        } else {
-            $(this).css( 'opacity', 0 );
+        }
+else {
+            $(this).css('opacity', 0);
         }
     });
   };
