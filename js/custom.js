@@ -73,22 +73,22 @@
     $('.d8-fade').each(function () {
       var objectTop = $(this).offset().top;
       var windowBottom = $(window).scrollTop() + $(window).innerHeight();
-        if (objectTop < windowBottom) {
-          if (objectTop < windowBottom - animationHeight) {
-            $(this).css({
-              transition: 'opacity 1s linear',
-              opacity: 1
-            });
+      if (objectTop < windowBottom) {
+        if (objectTop < windowBottom - animationHeight) {
+          $(this).css({
+            transition: 'opacity 1s linear',
+            opacity: 1
+          });
         }
-else {
+          else {
             $(this).css({
               transition: 'opacity 0.5s linear',
               opacity: (windowBottom - objectTop) * ratio
             });
           }
         }
-else {
-            $(this).css('opacity', 0);
+      else {
+          $(this).css('opacity', 0);
         }
     });
   };
