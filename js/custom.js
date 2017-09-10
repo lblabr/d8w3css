@@ -7,20 +7,23 @@
   'use strict';
     // Used for fixed menu.
   var origOffsetY;
+  var didScroll = false;
   var mainNavigation = document.querySelector('#main-navigation-h');
     // In case the main menu not printed.
   if ($('#main-navigation-h .ul-parent').length > 0) {
     origOffsetY = mainNavigation.offsetTop;
   }
     // Add flex position to the main menu at scroll.
-  function scrollWindow(e) {
+  var scrollWindow = function () {
+    didScroll = true;
     if (window.scrollY > origOffsetY) {
       mainNavigation.classList.add('w3-fixed');
     }
     else {
       mainNavigation.classList.remove('w3-fixed');
     }
-  }
+  };
+    // Add and remove classes on window resize.
   var mediaSize = function () {
     var currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     var mainMenuChild = $('#main-navigation-h').css('background-color');
@@ -62,6 +65,37 @@
       $('.footer-region').matchHeight({remove: true});
     }
   };
+
+  var fadeBox = function () {
+    didScroll = true;
+    var animationHeight = $(window).innerHeight() * 0.25;
+    var ratio = Math.round( (1 / animationHeight) * 10000 ) / 10000;
+    $('.d8-fade').each(function() {
+      var objectTop = $(this).offset().top;
+      var windowBottom = $(window).scrollTop() + $(window).innerHeight();
+        if ( objectTop < windowBottom ) {
+          if ( objectTop < windowBottom - animationHeight ) {
+            $(this).css( {
+              transition: 'opacity 1s linear',
+              opacity: 1
+            });
+        } else {
+            $(this).css( {
+              transition: 'opacity 0.5s linear',
+              opacity: (windowBottom - objectTop) * ratio
+            });
+          }
+        } else {
+            $(this).css( 'opacity', 0 );
+        }
+    });
+  };
+
+  setInterval(function () {
+    if (didScroll) {
+      didScroll = false;
+    }
+  }, 100);
 
   Drupal.behaviors.d8w3cssMenuDepth = {
     attach: function (context, settings) {
@@ -226,6 +260,10 @@
             .once('.details-wrapper')
             .addClass('w3-padding-large w3-left-align');
       $(context)
+            .find('.d8-fade')
+            .once('.d8-fade')
+            .css('opacity', 0);
+      $(context)
             .find('a > .w3-image')
             .once('a > .w3-image')
             .each(
@@ -234,8 +272,10 @@
                 }
             );
       mediaSize();
+      fadeBox();
       window.addEventListener('resize', mediaSize);
-      document.addEventListener('scroll', scrollWindow);
+      window.addEventListener('scroll', scrollWindow);
+      window.addEventListener('scroll', fadeBox);
     }
   };
 })(jQuery, Drupal);
