@@ -80,16 +80,16 @@
             opacity: 1
           });
         }
-          else {
-            $(this).css({
-              transition: 'opacity 0.5s linear',
-              opacity: (windowBottom - objectTop) * ratio
-            });
-          }
+        else {
+          $(this).css({
+            transition: 'opacity 0.5s linear',
+            opacity: (windowBottom - objectTop) * ratio
+          });
         }
+      }
       else {
-          $(this).css('opacity', 0);
-        }
+        $(this).css('opacity', 0);
+      }
     });
   };
 
