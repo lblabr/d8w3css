@@ -239,6 +239,99 @@ ul.secondary > li a {
 .w3-margin-0 {
   margin: 0!important;
 }
+.w3-box-shadow-0 {
+  box-shadow: none!important;
+}
+.w3-border-0 {
+  border: none!important;
+}
+.w3-round-0 {
+  border-radius: 0!important;
+}
+/* Link Color Classes */
+.w3-link-red a {
+  color: #f44336!important;
+}
+.w3-link-green a {
+  color: #4caf50!important;
+}
+.w3-link-blue a {
+  color: #2196f3!important;
+}
+.w3-link-yellow a {
+  color: #ffeb3b!important;
+}
+.w3-link-white a {
+  color: #fff!important;
+}
+.w3-link-black a {
+  color: #000!important;
+}
+.w3-link-grey a,
+.w3-link-gray a {
+  color: #757575!important;
+}
+.w3-link-amber a {
+  color: #ffc107!important;
+}
+.w3-link-aqua a {
+  color: #00ffff!important;
+}
+.w3-link-light-blue a {
+  color: #87ceeb!important;
+}
+.w3-link-brown a {
+  color: #795548!important;
+}
+.w3-link-cyan a {
+  color: #00bcd4!important;
+}
+.w3-link-blue-grey a,
+.w3-link-blue-gray a {
+  color: #607d8b!important;
+}
+.w3-link-light-green a {
+  color: #8bc34a!important;
+}
+.w3-link-indigo a {
+  color: #3f51b5!important;
+}
+.w3-link-khaki a {
+  color: #b4aa50!important;
+}
+.w3-link-lime a {
+  color: #cddc39!important;
+}
+.w3-link-orange a {
+  color: #ff9800!important;
+}
+.w3-link-deep-orange a {
+  color: #ff5722!important;
+}
+.w3-link-pink a {
+  color: #e91e63!important;
+}
+.w3-link-purple a {
+  color: #9c27b0!important;
+}
+.w3-link-deep-purple a {
+  color: #673ab7!important;
+}
+.w3-link-sand a {
+  color: #fdf5e6!important;
+}
+.w3-link-teal a {
+  color: #009688!important;
+}
+.w3-link-light-gray a,
+.w3-link-light-grey a {
+  color: #f1f1f1!important;
+}
+.w3-link-dark-gray a,
+.w3-link-dark-grey a {
+  color: #3a3a3a!important;
+}
+/* Form */
 input,
 textarea {
   -webkit-box-shadow: inset 0px 0px 5px 0px rgba(51,44,51,0.1);
