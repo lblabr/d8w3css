@@ -21,12 +21,12 @@
   {% endif %}
 <div class="w3-left w3-margin-left">
   {% if site_name %}
-    <h1 class="site-name w3-xlarge w3-padding">
-      <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+    <h1 class="site-name w3-show-block">
+      <a class="w3-xlarge w3-padding" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
     </h1>
   {% endif %}
   {% if site_slogan %}
-    <h3 class="site-slogan w3-large">{{ site_slogan }}</h3>
+    <h3 class="site-slogan w3-large w3-show-block">{{ site_slogan }}</h3>
   {% endif %}
 </div>
 {% endblock %}
