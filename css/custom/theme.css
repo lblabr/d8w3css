@@ -126,10 +126,13 @@ a:hover > img.w3-image {
 .field--name-field-tags .field__item,
 ul.links li {
   border: none!important;
-  padding: 0!important;
 }
-.field--name-field-tags .field__item a,
 ul.links li a {
+  border: none;
+  padding: 0px!important;
+  float: left;
+}
+.field--name-field-tags .field__item a {
   border: none;
   padding: 7px 14px!important;
   float: left;
