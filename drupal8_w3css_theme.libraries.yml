@@ -14,6 +14,7 @@ global-components:
   css:
     theme:
       css/custom/base.css: {}
+      css/custom/w3-custom-classes.css: {}
       css/custom/layout.css: {}
       css/custom/components.css: {}
       css/custom/theme.css: {}
