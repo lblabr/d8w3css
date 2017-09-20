@@ -1,19 +1,4 @@
 /* The default website size. */
-.page-wrapper,
-#header,
-#main-navigation-h,
-#welcome-text,
-#highlighted,
-#top-container,
-#page-title,
-#main,
-#bottom-container,
-#footer-container,
-#footer-menu,
-#copyright {
-  width: 100%!important;
-  clear: both!important;
-}
 .header-inner,
 .main-navigation-inner-h,
 .welcome-text-inner,
