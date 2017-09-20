@@ -66,11 +66,11 @@ ul .ul-child.show {
   text-align: left;
 }
 /* Vertical/Horizontal Main Menu */
+#main-navigation-h {
+  z-index: 1000;
+}
 .main-navigation-wrapper a {
   z-index: 3000;
-}
-.main-navigation-wrapper {
-  z-index: 100;
 }
 .main-navigation-wrapper .ul-parent a {
   width: 100%;
