@@ -13,16 +13,34 @@
   max-width: 1600px;
   margin: 0 auto!important;
 }
-.top-container-inner .top-region,
-.main-container-inner .main-region,
-.bottom-container-inner .bottom-region,
-.footer-container-inner .footer-region {
+.top-container-inner .first-top,
+.top-container-inner .second-top,
+.top-container-inner .third-top,
+.main-container-inner .first-sidebar,
+.main-container-inner .w3css-content,
+.main-container-inner .second-sidebar,
+.bottom-container-inner .first-bottom,
+.bottom-container-inner .second-bottom,
+.bottom-container-inner .third-bottom,
+.bottom-container-inner .forth-bottom,
+.footer-container-inner .first-footer,
+.footer-container-inner .second-footer,
+.footer-container-inner .third-footer {
   float: left;
 }
-.top-container-inner .top-region > div,
-.main-container-inner .main-region > div,
-.bottom-container-inner .bottom-region > div,
-.footer-container-inner .footer-region > div {
+.top-container-inner .first-top > div,
+.top-container-inner .second-top > div,
+.top-container-inner .third-top > div,
+.main-container-inner .first-sidebar > div,
+.main-container-inner .w3css-content > div,
+.main-container-inner .second-sidebar > div,
+.bottom-container-inner .first-bottom > div,
+.bottom-container-inner .second-bottom > div,
+.bottom-container-inner .third-bottom > div,
+.bottom-container-inner .forth-bottom > div,
+.footer-container-inner .first-footer > div,
+.footer-container-inner .second-footer > div,
+.footer-container-inner .third-footer > div {
   height: 100%;
   float: left;
   width: 100%!important;

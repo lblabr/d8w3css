@@ -1,9 +1,18 @@
 /* Samll Screen Only */
 @media (max-width:600px) {
-  .top-container-inner .top-region > div,
-  .main-container-inner .main-region > div,
-  .bottom-container-inner .bottom-region > div,
-  .footer-container-inner .footer-region > div {
+  .top-container-inner .first-top > div,
+  .top-container-inner .second-top > div,
+  .top-container-inner .third-top > div,
+  .main-container-inner .first-sidebar > div,
+  .main-container-inner .w3css-content > div,
+  .main-container-inner .second-sidebar > div,
+  .bottom-container-inner .first-bottom > div,
+  .bottom-container-inner .second-bottom > div,
+  .bottom-container-inner .third-bottom > div,
+  .bottom-container-inner .forth-bottom > div,
+  .footer-container-inner .first-footer > div,
+  .footer-container-inner .second-footer > div,
+  .footer-container-inner .third-footer > div {
     padding: 8px!important;
 }
 }
@@ -93,20 +102,38 @@
 
 /* Medium Screen Only */
 @media (max-width:992px) and (min-width:601px) {
-  .top-container-inner .top-region > div,
-  .main-container-inner .main-region > div,
-  .bottom-container-inner .bottom-region > div,
-  .footer-container-inner .footer-region > div {
+  .top-container-inner .first-top > div,
+  .top-container-inner .second-top > div,
+  .top-container-inner .third-top > div,
+  .main-container-inner .first-sidebar > div,
+  .main-container-inner .w3css-content > div,
+  .main-container-inner .second-sidebar > div,
+  .bottom-container-inner .first-bottom > div,
+  .bottom-container-inner .second-bottom > div,
+  .bottom-container-inner .third-bottom > div,
+  .bottom-container-inner .forth-bottom > div,
+  .footer-container-inner .first-footer > div,
+  .footer-container-inner .second-footer > div,
+  .footer-container-inner .third-footer > div {
     padding: 10px!important;
 }
 }
 
 /* Large Screen Only */
 @media (min-width:993px) {
-  .top-container-inner .top-region > div,
-  .main-container-inner .main-region > div,
-  .bottom-container-inner .bottom-region > div,
-  .footer-container-inner .footer-region > div {
+  .top-container-inner .first-top > div,
+  .top-container-inner .second-top > div,
+  .top-container-inner .third-top > div,
+  .main-container-inner .first-sidebar > div,
+  .main-container-inner .w3css-content > div,
+  .main-container-inner .second-sidebar > div,
+  .bottom-container-inner .first-bottom > div,
+  .bottom-container-inner .second-bottom > div,
+  .bottom-container-inner .third-bottom > div,
+  .bottom-container-inner .forth-bottom > div,
+  .footer-container-inner .first-footer > div,
+  .footer-container-inner .second-footer > div,
+  .footer-container-inner .third-footer > div {
     padding: 12px!important;
   }
 /* Main Menu */
