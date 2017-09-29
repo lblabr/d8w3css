@@ -114,7 +114,7 @@
 
           {% if page.top_first %}
             <!-- Start: Top container first region -->
-            <div class="{{ top_w3css }} top-region first-top" >
+            <div class="{{ top_w3css }} {{ top_region }} first-top" >
               <div class="d8-fade w3-card-2 w3-round w3-mobile w3-theme-l5 {{ color_top_first}}">
                {{ page.top_first }}
               </div>
@@ -123,7 +123,7 @@
           {% endif %}
           {% if page.top_second %}
             <!-- Start: Top Container Second  -->
-            <div class="{{ top_w3css }} top-region second-top">
+            <div class="{{ top_w3css }} {{ top_region }} second-top">
               <div class="d8-fade w3-card-2 w3-round w3-mobile w3-theme-l5 {{ color_top_second }}">
                {{ page.top_second }}
               </div>
@@ -132,7 +132,7 @@
           {% endif %}
           {% if page.top_third %}
           <!-- Start: Top Container Third -->
-          <div class="{{ top_third_class }} top-region third-top">
+          <div class="{{ top_third_class }} {{ top_region }} third-top">
             <div class="d8-fade w3-card-2 w3-round w3-mobile w3-theme-l5 {{ color_top_third }}">
               {{ page.top_third }}
             </div>
@@ -167,7 +167,7 @@
       <div class="w3-col w3-clear w3-row-padding">
         {% if page.sidebar_first %}
           <!-- Start Left SideBar -->
-          <div class ="{{ sidebarfirst }} main-region first-sidebar">
+          <div class ="{{ sidebarfirst }} {{ main_region }} first-sidebar">
             <div class="d8-fade w3-card-2 w3-round w3-sidebar-first w3-mobile {{ color_sidebar_first }}">
               {{ page.sidebar_first }}
             </div>
@@ -176,7 +176,7 @@
         {% endif %}
         {% if page.content %}
           <!-- Start: Main Content -->
-          <div class="{{ content_w3css }} main-region w3css-content">
+          <div class="{{ content_w3css }} {{ main_region }} w3css-content">
             <div class="d8-fade w3-card-2 w3-round w3-mobile  {{ color_content }}">
               {{ page.content }}
             </div>
@@ -185,7 +185,7 @@
         {% endif %}
         {% if page.sidebar_second %}
           <!-- Start: Right SideBar -->
-          <div class="{{ sidebarsecond }} main-region second-sidebar">
+          <div class="{{ sidebarsecond }} {{ main_region }} second-sidebar">
             <div class="d8-fade w3-card-2 w3-round w3-sidebar-second w3-mobile {{ color_sidebar_second }}">
               {{ page.sidebar_second }}
             </div>
@@ -204,7 +204,7 @@
         <div id="bottom-container-inner" class="w3-row-padding w3-padding-large bottom-container-inner {{ website_width }}">
             {% if page.bottom_first %}
               <!-- Start: Bottom First -->
-              <div class="{{ bottom_w3css }} bottom-region first-bottom">
+              <div class="{{ bottom_w3css }} {{ bottom_region }} first-bottom">
                 <div class="d8-fade w3-card-2 w3-round w3-mobile w3-theme-l4 {{ color_bottom_first }}">
                   {{ page.bottom_first }}
                 </div>
@@ -213,7 +213,7 @@
             {% endif %}
             {% if page.bottom_second %}
               <!-- Start: Bottom Second -->
-              <div class="{{ bottom_w3css }} bottom-region second-bottom">
+              <div class="{{ bottom_w3css }} {{ bottom_region }} second-bottom">
                 <div class="d8-fade w3-card-2 w3-round w3-mobile w3-theme-l4 {{ color_bottom_second }}">
                   {{ page.bottom_second }}
                 </div>
@@ -222,7 +222,7 @@
             {% endif %}
             {% if page.bottom_third %}
               <!-- Start: Bottom Third  -->
-              <div class="{{ bottom_w3css }} bottom-region third-bottom">
+              <div class="{{ bottom_w3css }} {{ bottom_region }} third-bottom">
                 <div class="d8-fade w3-card-2 w3-round w3-mobile w3-theme-l4 {{ color_bottom_third }}">
                   {{ page.bottom_third }}
                 </div>
@@ -231,7 +231,7 @@
             {% endif %}
             {% if page.bottom_forth %}
               <!-- Start: Bottom Forth  -->
-              <div class ="{{ bottom_w3css }} bottom-region forth-bottom">
+              <div class ="{{ bottom_w3css }} {{ bottom_region }} forth-bottom">
                 <div class="d8-fade w3-card-2 w3-round w3-mobile w3-theme-l4 {{ color_bottom_forth }}">
                   {{ page.bottom_forth }}
                 </div>
@@ -250,7 +250,7 @@
 
         {% if page.footer_first %}
           <!-- Start: Footer First  -->
-          <div class="{{ footer_w3css }} footer-region first-footer">
+          <div class="{{ footer_w3css }} {{ footer_region }} first-footer">
             <div class="d8-fade w3-card-2 w3-round w3-mobile w3-theme-l4 {{ color_footer_first }}">
               {{ page.footer_first }}
             </div>
@@ -259,7 +259,7 @@
         {% endif %}
         {% if page.footer_second %}
           <!-- Start: Footer Second Region -->
-          <div class="{{ footer_w3css }} footer-region second-footer">
+          <div class="{{ footer_w3css }} {{ footer_region }} second-footer">
             <div class="d8-fade w3-card-2 w3-round w3-mobile w3-theme-l5 {{ color_footer_second }}">
               {{ page.footer_second }}
             </div>
@@ -268,7 +268,7 @@
         {% endif %}
         {% if page.footer_third %}
           <!-- Start: Footer Third -->
-          <div class="{{ footer_third_class }} footer-region third-footer">
+          <div class="{{ footer_third_class }} {{ footer_region }} third-footer">
             <div class="d8-fade w3-card-2 w3-round w3-mobile w3-theme-l4 {{ color_footer_third }}">
               {{ page.footer_third }}
             </div>

@@ -4,6 +4,13 @@
  */
 
 /* Reset Links. */
+html {
+  min-height: 100%;
+}
+body {
+  min-height: 100%;
+  overflow-wrap: break-word;
+}
 img,
 object,
 embed,
