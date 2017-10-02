@@ -1,10 +1,17 @@
 <?php
 
 /**
- * @file Theme settngs files
+ * @file
+ * Drupal8 W3CSS Theme.theme.
+ *
+ * Filename:     drupal8_w3css_theme.theme
+ * Website:      http://www.flashwebcenter.com
+ * Description:  template
+ * Author:       Alaa Haddad http://www.alaahaddad.com.
  */
 
 use Drupal\Core\Form\FormStateInterface;
+
 /**
  * Implements hook_form_system_theme_settings_alter().
  */

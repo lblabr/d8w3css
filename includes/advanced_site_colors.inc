@@ -51,38 +51,133 @@ $form['drupal8_w3css_theme_settings']['w3_colors'] = [
 </table>'),
 ];
 
-$color_fields = [
-  'color_page_wrapper' => 'Page Wrapper',
-  'color_header' => 'Header',
-  'color_primary_menu' => 'Primary Main Menu',
-  'color_welcome_text' => 'Welcome Text',
-  'color_highlighted' => 'Highlighted',
-  'color_top_container' => 'Top Container Wrapper',
-  'color_top_first' => 'Top First',
-  'color_top_second' => 'Top Second',
-  'color_top_third' => 'Top Third',
-  'color_page_title' => 'Page Title',
-  'color_main' => 'Main Container Wrapper',
-  'color_breadcrumb' => 'Breadcrumb',
-  'color_sidebar_first' => 'Left Sidebar',
-  'color_content' => 'Main Content',
-  'color_sidebar_second' => 'Right Sidebar',
-  'color_bottom_container' => 'Bottom Container Wrapper',
-  'color_bottom_first' => 'Bottom First',
-  'color_bottom_second' => 'Bottom Second',
-  'color_bottom_third' => 'Bottom Third',
-  'color_bottom_forth' => 'Bottom Forth',
-  'color_footer_container' => 'Footer Container Wrapper',
-  'color_footer_first' => 'Footer First',
-  'color_footer_second' => 'Footer Second',
-  'color_footer_third' => 'Footer Third',
-  'color_footer_menu' => 'Footer Menu',
-  'color_copyright' => 'Copyright',
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_page_wrapper'] = [
+  '#type' => 'textfield',
+  '#title' => t('Page Wrapper'),
+  '#default_value' => theme_get_setting('color_page_wrapper'),
 ];
-foreach ($color_fields as $field => $label) {
-  $form['drupal8_w3css_theme_settings']['w3_colors'][$field] = [
-    '#type' => 'textfield',
-    '#title' => t($label),
-    '#default_value' => theme_get_setting($field),
-  ];
-}
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_header'] = [
+  '#type' => 'textfield',
+  '#title' => t('Header'),
+  '#default_value' => theme_get_setting('color_header'),
+];
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_primary_menu'] = [
+  '#type' => 'textfield',
+  '#title' => t('Main Menu'),
+  '#default_value' => theme_get_setting('color_primary_menu'),
+];
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_welcome_text'] = [
+  '#type' => 'textfield',
+  '#title' => t('Welcome Text'),
+  '#default_value' => theme_get_setting('color_welcome_text'),
+];
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_highlighted'] = [
+  '#type' => 'textfield',
+  '#title' => t('Highlighted'),
+  '#default_value' => theme_get_setting('color_highlighted'),
+];
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_top_container'] = [
+  '#type' => 'textfield',
+  '#title' => t('Top Container Wrapper'),
+  '#default_value' => theme_get_setting('color_top_container'),
+];
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_top_first'] = [
+  '#type' => 'textfield',
+  '#title' => t('Top First'),
+  '#default_value' => theme_get_setting('color_top_first'),
+];
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_top_second'] = [
+  '#type' => 'textfield',
+  '#title' => t('Top Second'),
+  '#default_value' => theme_get_setting('color_top_second'),
+];
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_top_third'] = [
+  '#type' => 'textfield',
+  '#title' => t('Top Third'),
+  '#default_value' => theme_get_setting('color_top_third'),
+];
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_page_title'] = [
+  '#type' => 'textfield',
+  '#title' => t('Page Title'),
+  '#default_value' => theme_get_setting('color_page_title'),
+];
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_main'] = [
+  '#type' => 'textfield',
+  '#title' => t('Main Container Wrapper'),
+  '#default_value' => theme_get_setting('color_main'),
+];
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_breadcrumb'] = [
+  '#type' => 'textfield',
+  '#title' => t('Breadcrumb'),
+  '#default_value' => theme_get_setting('color_breadcrumb'),
+];
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_sidebar_first'] = [
+  '#type' => 'textfield',
+  '#title' => t('Sidebar First'),
+  '#default_value' => theme_get_setting('color_sidebar_first'),
+];
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_content'] = [
+  '#type' => 'textfield',
+  '#title' => t('W3CSS Content'),
+  '#default_value' => theme_get_setting('color_content'),
+];
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_sidebar_second'] = [
+  '#type' => 'textfield',
+  '#title' => t('Sidebar Second'),
+  '#default_value' => theme_get_setting('color_sidebar_second'),
+];
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_bottom_container'] = [
+  '#type' => 'textfield',
+  '#title' => t('Bottom Container Wrapper'),
+  '#default_value' => theme_get_setting('color_bottom_container'),
+];
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_bottom_first'] = [
+  '#type' => 'textfield',
+  '#title' => t('Bottom First'),
+  '#default_value' => theme_get_setting('color_bottom_first'),
+];
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_bottom_second'] = [
+  '#type' => 'textfield',
+  '#title' => t('Bottom Second'),
+  '#default_value' => theme_get_setting('color_bottom_second'),
+];
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_bottom_third'] = [
+  '#type' => 'textfield',
+  '#title' => t('Bottom Third'),
+  '#default_value' => theme_get_setting('color_bottom_third'),
+];
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_bottom_forth'] = [
+  '#type' => 'textfield',
+  '#title' => t('Bottom Forth'),
+  '#default_value' => theme_get_setting('color_bottom_forth'),
+];
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_footer_container'] = [
+  '#type' => 'textfield',
+  '#title' => t('Footer Container Wrapper'),
+  '#default_value' => theme_get_setting('color_footer_container'),
+];
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_footer_first'] = [
+  '#type' => 'textfield',
+  '#title' => t('Footer First'),
+  '#default_value' => theme_get_setting('color_footer_first'),
+];
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_footer_second'] = [
+  '#type' => 'textfield',
+  '#title' => t('Footer Second'),
+  '#default_value' => theme_get_setting('color_footer_second'),
+];
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_footer_third'] = [
+  '#type' => 'textfield',
+  '#title' => t('Footer Third'),
+  '#default_value' => theme_get_setting('color_footer_third'),
+];
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_footer_menu'] = [
+  '#type' => 'textfield',
+  '#title' => t('Footer Menu'),
+  '#default_value' => theme_get_setting('color_footer_menu'),
+];
+$form['drupal8_w3css_theme_settings']['w3_colors']['color_copyright'] = [
+  '#type' => 'textfield',
+  '#title' => t('Copyright'),
+  '#default_value' => theme_get_setting('color_copyright'),
+];
