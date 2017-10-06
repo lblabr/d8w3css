@@ -16,7 +16,7 @@
 
 $form['drupal8_w3css_theme_settings']['w3_match_height'] = [
   '#type' => 'details',
-  '#title' => t('Disabl/Enable Match Height'),
+  '#title' => t('Disable/Enable Match Height'),
   '#collapsible' => TRUE,
   '#collapsed' => FALSE,
   '#description'   => t('<p>Disable or enable match height for Top Containers, Main Containers, Bottom Containers and Footer Containers.</p>'),
