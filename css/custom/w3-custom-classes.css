@@ -3,6 +3,9 @@
  * Custom w3 css classes.
  */
 /* Global Classes */
+.w3-animate-opacity {
+  animation: opac 3s;
+}
 .w3-padding-0 {
   padding: 0!important;
 }
