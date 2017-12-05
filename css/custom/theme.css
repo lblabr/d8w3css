@@ -1,9 +1,4 @@
 /* Global settings */
-h1,
-h2,
-h3 {
-  font-weight: bold;
-}
 a:hover {
   opacity: 0.60;
 }
@@ -77,8 +72,11 @@ a:hover > img.w3-image {
   color: #efefef;
 }
 #main-container {
-  background-color: #f8f8f8;
+  background-color: #f4f4f4;
   color: #3a3a3a;
+}
+#main-container .main-region > div {
+  background-color: #ffffff;
 }
 #bottom-container {
   background-color: #4d4d4d;

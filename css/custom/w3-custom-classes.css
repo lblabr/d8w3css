@@ -6,6 +6,9 @@
 .w3-animate-opacity {
   animation: opac 3s;
 }
+.w3-card {
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.12);
+}
 .w3-padding-0 {
   padding: 0!important;
 }
