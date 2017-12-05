@@ -4,12 +4,12 @@
  */
 
 /* Reset Links. */
-html {
-  min-height: 100%;
-}
+html,
 body {
   min-height: 100%;
   overflow-wrap: break-word;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
 }
 img,
 object,

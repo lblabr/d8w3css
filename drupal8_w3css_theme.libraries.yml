@@ -13,6 +13,7 @@ global-components:
   Version: VERSION
   css:
     theme:
+      'https://fonts.googleapis.com/css?family=Montserrat': { type: external }
       css/custom/base.css: {}
       css/custom/w3-custom-classes.css: {}
       css/custom/layout.css: {}
