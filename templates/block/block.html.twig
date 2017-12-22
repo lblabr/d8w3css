@@ -25,7 +25,7 @@
  * @see template_preprocess_block()
  */
 #}
-
+<div class="w3-row w3-block-wrapper"{{attributes|without('class') }}>
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes.addClass('w3-padding w3-block-title') }}>{{ label }}</h2>
@@ -34,3 +34,4 @@
   {% block content %}
     {{ content }}
   {% endblock %}
+</div>
