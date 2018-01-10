@@ -14,31 +14,45 @@
  * Implements hook_preprocess_page() for page templates.
  */
 function drupal8_w3css_theme_preprocess_page(&$variables) {
-
+  // Top regions variables.
+  $has_top_first = !empty($variables['page']['top_first']);
+  $has_top_second = !empty($variables['page']['top_second']);
+  $has_top_third = !empty($variables['page']['top_third']);
+  // Main regions variables.
+  $has_sidebar_first = !empty($variables['page']['sidebar_first']);
+  $has_sidebar_second = !empty($variables['page']['sidebar_second']);
+  // Bottom regions variables.
+  $has_bottom_first = !empty($variables['page']['bottom_first']);
+  $has_bottom_second = !empty($variables['page']['bottom_second']);
+  $has_bottom_third = !empty($variables['page']['bottom_third']);
+  $has_bottom_forth = !empty($variables['page']['bottom_forth']);
+  // Footer regions variables.
+  $has_footer_first = !empty($variables['page']['footer_first']);
+  $has_footer_second = !empty($variables['page']['footer_second']);
+  $has_footer_third = !empty($variables['page']['footer_third']);
   // Add W3.CSS Responsive classes to Top Container.
-  if (!empty($variables['page']['top_first']) && !empty($variables['page']['top_second']) && !empty($variables['page']['top_third'])) {
+  if ($has_top_first && $has_top_second && $has_top_third) {
     $variables['top_w3css'] = 'w3-third';
-    $variables['top_third_class'] = 'w3-third';
   }
-  elseif ((!empty($variables['page']['top_first']) && !empty($variables['page']['top_second'])) || (!empty($variables['page']['top_first']) && !empty($variables['page']['top_third'])) || (!empty($variables['page']['top_third']) && !empty($variables['page']['top_second']))) {
+  elseif (($has_top_first && $has_top_second)  ||
+           ($has_top_first && $has_top_third)  ||
+           ($has_top_second && $has_top_third)) {
     $variables['top_w3css'] = 'w3-half';
-    $variables['top_third_class'] = 'w3-half';
   }
   else {
     $variables['top_w3css'] = 'w3-col';
   }
-
   // Add W3.CSS Responsive classes to left and right side bar.
-  if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
+  if ($has_sidebar_first && $has_sidebar_second) {
     $variables['content_w3css'] = 'w3-half';
     $variables['sidebarfirst'] = 'w3-quarter';
     $variables['sidebarsecond'] = 'w3-quarter';
   }
-  elseif (!empty($variables['page']['sidebar_first'])) {
+  elseif ($has_sidebar_first) {
     $variables['content_w3css'] = 'w3-threequarter';
     $variables['sidebarfirst'] = 'w3-quarter';
   }
-  elseif (!empty($variables['page']['sidebar_second'])) {
+  elseif ($has_sidebar_second) {
     $variables['content_w3css'] = 'w3-threequarter';
     $variables['sidebarsecond'] = 'w3-quarter';
   }
@@ -47,18 +61,18 @@ function drupal8_w3css_theme_preprocess_page(&$variables) {
   }
 
   // Add 3col stacked equal width.
-  $my_equal_width = ($variables['equal_width'] = theme_get_setting('equal_width'));
-  if ($my_equal_width == TRUE) {
-    if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
+  $variables['equal_width'] = theme_get_setting('equal_width');
+  if ($variables['equal_width'] != NULL) {
+    if ($has_sidebar_first && $has_sidebar_second) {
       $variables['content_w3css'] = 'w3-third';
       $variables['sidebarfirst'] = 'w3-third';
       $variables['sidebarsecond'] = 'w3-third';
     }
-    elseif (!empty($variables['page']['sidebar_first'])) {
+    elseif ($has_sidebar_first) {
       $variables['content_w3css'] = 'w3-twothird';
       $variables['sidebarfirst'] = 'w3-third';
     }
-    elseif (!empty($variables['page']['sidebar_second'])) {
+    elseif ($has_sidebar_second) {
       $variables['content_w3css'] = 'w3-twothird';
       $variables['sidebarsecond'] = 'w3-third';
     }
@@ -67,13 +81,21 @@ function drupal8_w3css_theme_preprocess_page(&$variables) {
     }
   }
   // Add W3.CSS Responsive classes to Bottom Container.
-  if (!empty($variables['page']['bottom_first']) && !empty($variables['page']['bottom_second']) && !empty($variables['page']['bottom_third']) && !empty($variables['page']['bottom_forth'])) {
+  if ($has_bottom_first && $has_bottom_second && $has_bottom_third && $has_bottom_forth) {
     $variables['bottom_w3css'] = 'w3-quarter';
   }
-  elseif (!empty($variables['page']['bottom_first']) && !empty($variables['page']['bottom_second']) && !empty($variables['page']['bottom_third'])) {
+  elseif (($has_bottom_first && $has_bottom_second && $has_bottom_third)   ||
+           ($has_bottom_first && $has_bottom_third && $has_bottom_forth)   ||
+           ($has_bottom_first && $has_bottom_second && $has_bottom_forth)  ||
+           ($has_bottom_second && $has_bottom_third && $has_bottom_forth)) {
     $variables['bottom_w3css'] = 'w3-third';
   }
-  elseif ((!empty($variables['page']['bottom_first']) && !empty($variables['page']['bottom_second'])) || (!empty($variables['page']['bottom_first']) && !empty($variables['page']['bottom_third'])) || (!empty($variables['page']['bottom_third']) && !empty($variables['page']['bottom_second']))) {
+  elseif (($has_bottom_first && $has_bottom_second)  ||
+           ($has_bottom_first && $has_bottom_third)  ||
+           ($has_bottom_first && $has_bottom_forth)  ||
+           ($has_bottom_second && $has_bottom_forth) ||
+           ($has_bottom_second && $has_bottom_third) ||
+           ($has_bottom_third && $has_bottom_forth)) {
     $variables['bottom_w3css'] = 'w3-half';
   }
   else {
@@ -81,13 +103,13 @@ function drupal8_w3css_theme_preprocess_page(&$variables) {
   }
 
   // Add W3.CSS Responsive classes to Footer Container.
-  if (!empty($variables['page']['footer_first']) && !empty($variables['page']['footer_second']) && !empty($variables['page']['footer_third'])) {
+  if ($has_footer_first && $has_footer_second && $has_footer_third) {
     $variables['footer_w3css'] = 'w3-third';
-    $variables['footer_third_class'] = 'w3-third';
   }
-  elseif ((!empty($variables['page']['footer_first']) && !empty($variables['page']['footer_second'])) || (!empty($variables['page']['footer_first']) && !empty($variables['page']['footer_third'])) || (!empty($variables['page']['footer_third']) && !empty($variables['page']['footer_second']))) {
+  elseif (($has_footer_first && $has_footer_second)  ||
+           ($has_footer_first && $has_footer_third)  ||
+           ($has_footer_second && $has_footer_third)) {
     $variables['footer_w3css'] = 'w3-half';
-    $variables['footer_third_class'] = 'w3-half';
   }
   else {
     $variables['footer_w3css'] = 'w3-col';
