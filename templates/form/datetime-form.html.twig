@@ -10,6 +10,10 @@
  * @see template_preprocess_datetime_form()
  */
 #}
-<div{{ attributes.addClass('w3-panel container-inline') }}>
-  {{ content }}
-</div>
+{%
+  set classes = [
+    'w3-panel',
+    'container-inline',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>{{ content }}</div>

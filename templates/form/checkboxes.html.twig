@@ -12,4 +12,12 @@
  @todo: remove this file once https://www.drupal.org/node/1819284 is resolved.
  This is identical to core/modules/system/templates/container.html.twig
 #}
-<div{{ attributes.addClass('w3-section form-checkboxes w3-margin-0 w3-padding-0') }}>{{ children }}</div>
+{%
+  set classes = [
+    'w3-section',
+    'form-checkboxes',
+    'form-checkboxes',
+    'w3-padding-0',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>{{ children }}</div>

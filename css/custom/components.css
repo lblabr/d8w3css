@@ -231,20 +231,23 @@ div.item-list > ol.item-list > li article::before,
   width: 100%;
   display: inline-block;
 }
-.w3-search-block-form > .form-type-search {
+.w3-search-block-form input {
+  width: 100%;
+}
+.w3-search-block-form .form-item {
   width: 70%;
   float: left;
 }
-.w3-search-block-form > .form-submit {
+.w3-search-block-form .form-actions {
   width: 30%;
   float: right;
 }
-.w3-search-block-form > .form-type-search input {
+.w3-search-block-form .form-type-search input {
   border-right: none!important;
   text-indent: 20px;
   background-color: transparent;
 }
-.w3-search-block-form > .form-type-search:before {
+.w3-search-block-form .form-type-search:before {
   content: "\f002";
   font-family: FontAwesome;
   position: absolute;
@@ -252,14 +255,15 @@ div.item-list > ol.item-list > li article::before,
   left: 25px;
   background-color: transparent;
 }
-.w3-search-block-form > div,
-.w3-search-block-form > input {
+.w3-search-block-form .form-item,
+.w3-search-block-form .form-actions {
   margin: 5px auto!important;
   display: inline-block;
   font-family: Consolas, "courier new";
 }
-.w3-search-block-form > input {
+.w3-search-block-form .form-actions input {
   font-family: FontAwesome;
+  margin: 0!important;
 }
 /* label form in the footer */
 

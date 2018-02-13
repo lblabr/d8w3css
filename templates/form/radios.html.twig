@@ -10,4 +10,12 @@
  * @see template_preprocess_radios()
  */
 #}
-<div{{ attributes.addClass('w3-section form-radios w3-margin-0 w3-padding-0') }}>{{ children }}</div>
+{%
+  set classes = [
+    'w3-section',
+    'form-radios',
+    'w3-margin-0',
+    'w3-padding-0',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>{{ children }}</div>
