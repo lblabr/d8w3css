@@ -19,4 +19,12 @@
  * @see template_preprocess_container()
  */
 #}
-{{ children }}
+{%
+  set classes = [
+    'w3-row',
+    'element-container-wrapper',
+    has_parent ? 'js-form-wrapper',
+    has_parent ? 'form-wrapper',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>{{ children }}</div>
