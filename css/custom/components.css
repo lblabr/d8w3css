@@ -458,3 +458,13 @@ article.node > footer.node__meta .field--name-user-picture {
 [dir="rtl"] .node--unpublished .comment__content:after {
   border-left-color: #fff4f4;
 }
+/*  Advance search for views */
+.view-filters details.form-wrapper {
+  margin: 16px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+.view-filters details.form-wrapper:hover {
+  cursor: pointer;
+}
+
