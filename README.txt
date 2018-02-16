@@ -236,4 +236,3 @@ visible. The two levels are hidden and you show them by clicking.
 Go to d8w3css/templates/navigation and clone menu--responsive-v.html.twig to
 your sub theme folder and name it menu--titto.html.twig. Clear all caches and
 you are done.
-
