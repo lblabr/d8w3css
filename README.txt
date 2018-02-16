@@ -1,3 +1,6 @@
+========================================================
+|=                     INTRODUCTION                   =|
+========================================================
 Drupal8 W3CSS Theme is using the W3.CSS framework with built-in responsiveness:
 - Smaller and faster than other CSS frameworks.
 - Easier to learn, and easier to use than other CSS frameworks.
@@ -7,10 +10,24 @@ Drupal8 W3CSS Theme is using the W3.CSS framework with built-in responsiveness:
 - Provides CSS equality for all browsers. Chrome, Firefox, IE, Safari, and more.
 - Provides CSS equality for all devices. PC, laptop, tablet, and mobile.
 - Learn more about W3.CSS https://www.w3schools.com/w3css/
+========================================================
+|=                     REQUIREMENTS                   =|
+========================================================
 
+This theme does not require any moduels to be installed.
 
 ========================================================
-|=           DRUPAL8 W3CSS THEME FEATURES             =|
+|=                     INSTALLATION                   =|
+========================================================
+
+|-  How to install drupal8 w3css theme
+==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
+Download the theme to www.your-drupal-site-name/themes/ and go to
+your-site-domain/admin/appearance and scroll to the bottom until you see Drupal8
+W3CSS Theme and click on Install and set as default and click save.
+
+========================================================
+|=                     FEATURES                       =|
 ========================================================
 1-Drupal8 W3CSS Theme is using the W3.CSS framework with built-in responsiveness
 2- Drupal8 W3CSS Theme has 22 regions.
@@ -73,14 +90,8 @@ stacked (25% 50% 25%). To change the three columns to be stacked equal width
 (33% 33% 33%), just insert in the text box 33-33-33 If you want to go back to
 the stacked columns (25% 50% 25%), just remove the text 33-33-33
 ========================================================
-|=       DRUPAL8 W3CSS THEME CONFIGURATION            =|
+|=                     CONFIGURATION                  =|
 ========================================================
-
-|-  How to install drupal8 w3css theme
-==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
-Download the theme to www.your-drupal-site-name/themes/ and go to
-your-site-domain/admin/appearance and scroll to the bottom until you see Drupal8
-W3CSS Theme and click on Install and set as default and click save.
 
 |-  How to change the logo
 ==--+-+--+--+--+-+--+--+--+--+-+--+--+--+-+--+--+--+--==
@@ -225,3 +236,4 @@ visible. The two levels are hidden and you show them by clicking.
 Go to d8w3css/templates/navigation and clone menu--responsive-v.html.twig to
 your sub theme folder and name it menu--titto.html.twig. Clear all caches and
 you are done.
+
