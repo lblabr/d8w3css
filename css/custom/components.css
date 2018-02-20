@@ -93,6 +93,9 @@ ul .ul-child.show {
 #main-navigation-v .ul-parent .li-expanded .li-expanded:hover > ul {
   display: none;
 }
+ul li.li-expanded > a:hover {
+  cursor: default!important;
+}
 .ul-responsive-v .ul-parent li,
 .ul-responsive-v .ul-parent li,
 #main-navigation-v .ul-parent a,
