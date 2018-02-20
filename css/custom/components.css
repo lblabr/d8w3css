@@ -94,7 +94,7 @@ ul .ul-child.show {
   display: none;
 }
 ul li.li-expanded > a:hover {
-  cursor: default!important;
+  cursor: context-menu!important;
 }
 .ul-responsive-v .ul-parent li,
 .ul-responsive-v .ul-parent li,
