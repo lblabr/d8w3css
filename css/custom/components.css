@@ -93,6 +93,7 @@ ul .ul-child.show {
 #main-navigation-v .ul-parent .li-expanded .li-expanded:hover > ul {
   display: none;
 }
+.mobile-nav:hover,
 ul li.li-expanded > a:hover {
   cursor: context-menu!important;
 }
