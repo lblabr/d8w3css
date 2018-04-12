@@ -15,7 +15,7 @@ img,
 object,
 embed,
 video {
-  outline: 0;
+  outline: none;
   padding: 0;
   margin: 0;
   border: 0;
@@ -56,9 +56,9 @@ a:focus {
   text-decoration: none;
   outline: none;
 }
-ul.w3-ul li {
+.w3-ul li {
   border: none;
-  border-width: 0px!important;
+  border-width: 0!important;
 }
 /* System Messages. */
 .messages {
@@ -158,8 +158,8 @@ ul.w3-ul li {
 .marker {
   color: #e00;
 }
-input.form-checkbod,
-input.form-radio {
+.form-checkbox,
+.form-radio {
   display: inline-block;
 }
 abbr.tabledrag-changed,
@@ -243,7 +243,7 @@ ul.secondary > li a {
 input,
 textarea,
 .view-filters details.form-wrapper {
-  -webkit-box-shadow: inset 0px 0px 5px 0px rgba(51,44,51,0.1);
-  -moz-box-shadow: inset 0px 0px 5px 0px rgba(51,44,51,0.1);
-  box-shadow: inset 0px 0px 5px 0px rgba(51,44,51,0.1);
+  -webkit-box-shadow: inset 0 0 5px 0 rgba(51,44,51,0.1);
+  -moz-box-shadow: inset 0 0 5px 0 rgba(51,44,51,0.1);
+  box-shadow: inset 0 0 5px 0 rgba(51,44,51,0.1);
 }
