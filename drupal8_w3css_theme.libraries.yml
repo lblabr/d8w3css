@@ -1,19 +1,29 @@
 w3-css:
-  Version: VERSION
+  remote: https://www.w3schools.com/w3css/
+  version: 4
+  license:
+    name: MIT
+    url: https://www.w3schools.com/w3css/w3css_downloads.asp
+    gpl-compatible: true
   css:
     theme:
-      css/w3-css/w3.css: {}
+      https://www.w3schools.com/w3css/4/w3.css: { type: external, minified: true }
       css/w3-css/w3css-color-libraries.css: {}
 font-awesome:
-  Version: VERSION
+  remote: https://fortawesome.github.io/Font-Awesome/
+  version: 4.7.0
+  license:
+    name: MIT
+    url: https://fortawesome.github.io/Font-Awesome/license/
+    gpl-compatible: true
   css:
-    theme :
-      css/font-awesome/font-awesome.css: {}
+    theme:
+      https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css: { type: external, minified: true }
 global-components:
   Version: VERSION
   css:
     theme:
-      'https://fonts.googleapis.com/css?family=Montserrat': { type: external }
+      'https://fonts.googleapis.com/css?family=Montserrat': { type: external, minified: true }
       css/custom/base.css: {}
       css/custom/w3-custom-classes.css: {}
       css/custom/layout.css: {}

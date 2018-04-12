@@ -41,8 +41,8 @@
 .footer-container-inner .first-footer > div,
 .footer-container-inner .second-footer > div,
 .footer-container-inner .third-footer > div {
-  height: 100%;
   float: left;
+  height: 100%;
   width: 100%!important;
   padding: 12px!important;
 }
