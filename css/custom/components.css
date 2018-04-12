@@ -85,7 +85,7 @@ ul .ul-child.show {
 }
 .ul-responsive-v .ul-parent .ul-child,
 #main-navigation-v .ul-parent .ul-child {
-  box-shadow: none rgba(0,0,0,0.2)!important;
+  box-shadow: none!important;
 }
 .ul-responsive-v .ul-parent .li-expanded:hover > ul,
 .ul-responsive-v .ul-parent .li-expanded .li-expanded:hover > ul,
@@ -112,7 +112,7 @@ ul li.li-expanded > a:hover {
 #main-navigation-v .ul-parent,
 #main-navigation-v .ul-child,
 #main-navigation-v .li-item {
-  min-width: 220px;
+  min-width: 100%;
   clear: both!important;
   float: left!important;
 }
