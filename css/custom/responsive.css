@@ -98,8 +98,8 @@
     padding-left: 50px!important;
 }
 /* Vertical Menus */
-#main-navigation-v .li-1 .toggle-child:after {
-  content: none;
+  #main-navigation-v .li-1 .toggle-child:after {
+    content: none;
 }
 }
 
