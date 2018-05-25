@@ -458,6 +458,9 @@ ol {
 [dir="rtl"] .node--unpublished .comment__content:after {
   border-left-color: #fff4f4;
 }
+ul.links li.comment-forbidden a {
+  float: none;
+}
 /*  Advance search for views */
 .view-filters details.form-wrapper {
   margin: 16px 0;
