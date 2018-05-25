@@ -121,6 +121,45 @@ a:hover > img.w3-image {
   color: #bebebe;
 }
 /* ul links and tags */
+.field--label-inline,
+.field--label-above {
+  width: 100%;
+  clear: both;
+  float: left;
+  display: inline-block;
+}
+.field--label-above > .field__label,
+.field--label-above > .field__item,
+.field--label-above > .field__items {
+  clear: both;
+  display: block;
+  float: left;
+}
+.field--label-above > .field__item,
+.field--label-above > .field__items > .field__item:first-child,
+.field--label-above > .field__items > .field__item:first-child a {
+  margin-left: 0!important;
+  padding-left: 0!important;
+}
+.field--label-above > .field__items .field__item {
+  float: left;
+}
+.field--label-inline > .field__label,
+.field--label-inline > .field__item,
+.field--label-inline > .field__items,
+.field--label-inline > .field__items > .field__item {
+  clear: none!important;
+  float: left;
+}
+.field--label-above > .field__label,
+.field--label-inline > .field__label {
+  font-size: 13px;
+  line-height: 30px;
+}
+.field--label-inline .field__label::after {
+  content: ':';
+}
+
 .field--name-field-tags .field__item,
 ul.links li {
   border: none!important;
@@ -128,7 +167,7 @@ ul.links li {
 ul.links li a {
   border: none;
   padding: 0px!important;
-  float: left;
+  display: inline-block;
 }
 .field--name-field-tags .field__item a {
   border: none;
@@ -136,7 +175,11 @@ ul.links li a {
   float: left;
 }
 .node__content ul.links {
-  float: left;
+  float: right;
+}
+.node__content ul.links li:last-child {
+  margin-right: 0!important;
+  padding-right: 0!important;
 }
 .field--name-field-tags .field__item a {
   font-size: 13px;
