@@ -458,8 +458,8 @@ ol {
 [dir="rtl"] .node--unpublished .comment__content:after {
   border-left-color: #fff4f4;
 }
-ul.links li.comment-forbidden a {
-  float: none;
+.text-format-wrapper > .w3-section {
+  margin-bottom: 0!important;
 }
 /*  Advance search for views */
 .view-filters details.form-wrapper {
