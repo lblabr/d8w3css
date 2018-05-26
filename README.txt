@@ -104,8 +104,8 @@ for any view.  Example if you have a view name "recent_video", then you can
 create a page template name page--recent-video.html.twig.
 
 You can view live demo by going to:
-<a href="http://drupal8.w3css.theme.flashwebcenter.com" title="Drupal8 W3CSS
-Theme Demo">http://drupal8.w3css.theme.flashwebcenter.com/</a>
+<a href="http://drupal8-w3css-theme.flashwebcenter.com" title="Drupal8 W3CSS
+Theme Demo">http://drupal8-w3css-theme.flashwebcenter.com/</a>
 
 20- Drupal8 W3CSS Theme comes with the ability to change the Main Container's
 Columns layout.  The main container has three columns. The three columns are
@@ -269,7 +269,7 @@ Vertical region.
 horizontal main menu. menu--main.html.twig
 
 5) You can create two main menus and use the two regions.
-http://drupal8.w3css.theme.flashwebcenter.com
+http://drupal8-w3css-theme.flashwebcenter.com
 
 6) Note: A vertical main menu is different from a side menu in your website.
 (Example for the vertical menu:
