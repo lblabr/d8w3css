@@ -362,7 +362,7 @@ ol {
 .comment__content {
   position: relative;
   display: table-cell;
-  padding: 10px 25px 10px 25px;
+  padding: 10px 25px;
   vertical-align: top;
   width: 100%;
   border: 1px solid #d3d7d9;
