@@ -126,7 +126,6 @@ a:hover > img.w3-image {
   width: 100%;
   clear: both;
   float: left;
-  display: inline-block;
 }
 .field--label-above > .field__label,
 .field--label-above > .field__item,
@@ -166,7 +165,7 @@ ul.links li {
 }
 ul.links li a {
   border: none;
-  padding: 0px!important;
+  padding: 0!important;
   display: inline-block;
 }
 .field--name-field-tags .field__item a {
@@ -190,8 +189,4 @@ ul.links li a {
 }
 .site-slogan {
   padding-left: 16px;
-}
-/* The class for Honeypot module */
-form #edit-url {
-  display: none!important;
 }
