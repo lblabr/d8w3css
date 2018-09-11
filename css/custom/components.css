@@ -39,6 +39,8 @@ ul .ul-child.show {
   float: left;
 }
 .ul-parent li a.tMenu {
+  -webkit-transition: background .3s ease;
+  -o-transition: background .3s ease;
   transition: background .3s ease;
 }
 .right-arrow,
@@ -85,7 +87,8 @@ ul .ul-child.show {
 }
 .ul-responsive-v .ul-parent .ul-child,
 #main-navigation-v .ul-parent .ul-child {
-  box-shadow: none!important;
+  -webkit-box-shadow: none!important;
+          box-shadow: none!important;
 }
 .ul-responsive-v .ul-parent .li-expanded:hover > ul,
 .ul-responsive-v .ul-parent .li-expanded .li-expanded:hover > ul,
