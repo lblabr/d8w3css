@@ -88,7 +88,7 @@ ul .ul-child.show {
 .ul-responsive-v .ul-parent .ul-child,
 #main-navigation-v .ul-parent .ul-child {
   -webkit-box-shadow: none!important;
-          box-shadow: none!important;
+  box-shadow: none!important;
 }
 .ul-responsive-v .ul-parent .li-expanded:hover > ul,
 .ul-responsive-v .ul-parent .li-expanded .li-expanded:hover > ul,
@@ -228,6 +228,9 @@ div.item-list > ol.item-list > li article::before,
 .node__meta article.profile {
   margin: 0;
   padding: 0;
+}
+.node__meta .node__submitted {
+  margin-top: -2px;
 }
 /* search bar */
 .w3-search-block-form {
