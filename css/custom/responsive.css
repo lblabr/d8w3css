@@ -41,6 +41,8 @@
   }
   p {
     font-size: 13px;
+    padding: 5px!important;;
+    margin: 0;
   }
   #header-inner {
     padding: 0!important;
@@ -81,7 +83,8 @@
     top: 17px;
     left: 17px;
   }
-  .highlighted-inner {
+  .highlighted-inner,
+  .welcome-text-inner {
     padding: 0 5px!important;
   }
   #copyright-inner .w3-container {
