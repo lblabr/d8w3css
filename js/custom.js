@@ -17,10 +17,10 @@
   var scrollWindow = function () {
     didScroll = true;
     if (window.scrollY > origOffsetY) {
-      mainNavigation.classList.add('w3-fixed');
+      mainNavigation.classList.add('w3-sticky');
     }
     else {
-      mainNavigation.classList.remove('w3-fixed');
+      mainNavigation.classList.remove('w3-sticky');
     }
   };
     // Add and remove classes on window resize.

@@ -160,6 +160,12 @@ ul li.li-expanded > a:hover {
   top: 0;
   width: 100%;
 }
+.w3-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
 .w3-relative {
   position: relative;
   width: 100%;
