@@ -26,7 +26,7 @@ $form['drupal8_w3css_theme_settings']['w3_colors'] = [
  </tr>
   <tr>
     <th>Background Colors:</th>
-    <td>w3-red, w3-pink, w3-purple, w3-deep-purple, w3-indigo, w3-blue, w3-light-blue, w3-cyan, w3-aqua, w3-teal, w3-green, w3-light-green, w3-lime, w3-sand, w3-khaki, w3-yellow, w3-amber, w3-orange, w3-deep-orange, w3-blue-grey, w3-brown, w3-light-grey, w3-grey, w3-dark-grey, w3-black, w3-pale-red, w3-pale-yellow, w3-pale-green and w3-pale-blue</td>
+    <td>w3-red, w3-pink, w3-purple, w3-deep-purple, w3-indigo, w3-blue, w3-light-blue, w3-cyan, w3-aqua, w3-teal, w3-green, w3-light-green, w3-lime, w3-sand, w3-khaki, w3-yellow, w3-amber, w3-orange, w3-deep-orange, w3-blue-grey, w3-brown, w3-light-grey, w3-grey, w3-dark-grey, w3-black, w3-white, w3-pale-red, w3-pale-yellow, w3-pale-green and w3-pale-blue</td>
   </tr>
   <tr>
     <th>Text Colors:</th>
