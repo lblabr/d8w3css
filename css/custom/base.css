@@ -184,6 +184,7 @@ abbr.ajax-changed {
   width: 10px;
   height: 10px;
   margin: 0 0.3em;
+  font-size: 10px;
 }
 /* Inline Error Message. */
 .form-item--error-message:before {
