@@ -150,10 +150,9 @@ a:hover > img.w3-image {
   clear: none!important;
   float: left;
 }
-.field--label-above > .field__label,
+.field__items > .field__item,
 .field--label-inline > .field__label {
-  font-size: 13px;
-  line-height: 30px;
+  margin-right: 10px;
 }
 .field--label-inline .field__label::after {
   content: ':';
