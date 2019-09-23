@@ -31,7 +31,7 @@ global-components:
       css/custom/theme.css: {}
       css/custom/responsive.css: {}
   js:
-    js/jquery.matchHeight.js: {}
+    js/jquery.matchHeight.js: {preprocess: false }
     js/custom.js: {}
   dependencies:
     - core/jquery
