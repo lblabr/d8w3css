@@ -195,7 +195,7 @@ abbr.ajax-changed {
   font-family: FontAwesome;
   content: "\f00d";
   display: inline-block;
-  vertical-align:baseline;
+  vertical-align: baseline;
   color: red;
   background-size: contain;
 }
