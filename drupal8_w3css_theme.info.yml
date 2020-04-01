@@ -1,4 +1,5 @@
 name: Drupal 8 W3CSS Theme
+core: 8.x
 description: 'W3.CSS is a modern CSS framework with built-in responsiveness. It is Smaller, faster, easier to learn and easier to use than other CSS frameworks. Supports modern responsive design (mobile first) by default and provides CSS equality for all browsers (Chrome, Firefox, IE, Safari, and more) and devices (PC, laptop, tablet, and mobile.)<br/> Developed & Designed by <strong><a href=http://www.FlashWebCenter.com>Flash Web Center, LLC</a></strong><br/> For theme <a href=https://www.drupal.org/node/2866181>documnetation</a><br/> To view a <a href=http://www.drupal8-w3css-theme.flashwebcenter.com>live demo</a><br/> To view the <a href=http://www.drupal8-w3css-theme.flashwebcenter.com/screenshots>22 color themes</a><br/>For theme issues please <a href=https://www.drupal.org/project/issues/d8w3css>create issue on drupal</a><br/>Contact us for Drupal Design & Development via our <a href=http://www.flashwebcenter.com/contact>contact form</a>'
 package: core
 type: theme
@@ -34,4 +35,3 @@ regions:
   footer_third: 'Footer Third Container'
   footer_menu: 'Footer Menu Container'
   auto_hidden_block: 'Auto Hidden Blocks'
-core: '8.x'
