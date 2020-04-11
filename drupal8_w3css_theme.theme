@@ -182,6 +182,10 @@ function drupal8_w3css_theme_preprocess_page(&$variables) {
   $my_current_theme = ($variables['current_theme'] = theme_get_setting('current_theme'));
   $predefined_theme_filename = 'drupal8_w3css_theme/' . str_replace('w3-theme-', 'w3-css-theme-', $my_current_theme);
   $variables['#attached']['library'][] = $predefined_theme_filename;
+  // Disable font awesome library if fontawesome module installed.
+  if (\Drupal::moduleHandler()->moduleExists('fontawesome')) {
+    unset($variables['#attached']['library']['drupal8_w3css_theme/font-awesome']);
+  }
 }
 
 /**
