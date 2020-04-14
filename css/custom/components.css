@@ -311,9 +311,12 @@ ol {
   padding: 6px 12px;
   display: inline-block;
 }
-.pager__items li.is-active a {
+.pager__items li.is-active {
+  padding: 6px 12px;
   font-weight: bold;
-  font-size: 120%;
+}
+.pager__items li.is-active a {
+  padding: 0;
 }
 /* Comments Bartik style*/
 #content .comment-wrapper h2 {
