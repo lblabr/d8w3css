@@ -14,14 +14,14 @@
 .ul-parent:after {
   clear: both;
 }
-.ul-parent > li > a {
-  z-index: 200;
+.ul-parent {
+  z-index: 2000!important;
 }
-.ul-parent ul > li > a {
-  z-index: 300;
+.ul-parent li ul.ul-child {
+  z-index: 3000!important;
 }
-.ul-parent ul ul > li > a {
-  z-index: 400;
+.ul-parent li ul.ul-child li .ul-child {
+  z-index: 4000!important;
 }
 ul .ul-child.show {
   /* display: block; */
@@ -68,9 +68,6 @@ ul .ul-child.show {
 /* Vertical/Horizontal Main Menu */
 #main-navigation-h {
   z-index: 1000;
-}
-.main-navigation-wrapper a {
-  z-index: 3000;
 }
 .main-navigation-wrapper .ul-parent a {
   width: 100%;
