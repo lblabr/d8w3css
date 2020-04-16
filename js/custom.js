@@ -20,7 +20,9 @@
       mainNavigation.classList.add('w3-sticky');
     }
     else {
-      mainNavigation.classList.remove('w3-sticky');
+      if ($('.w3-sticky').length) {
+        mainNavigation.classList.remove('w3-sticky');
+      }
     }
   };
     // Add and remove classes on window resize.
