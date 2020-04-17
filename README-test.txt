@@ -1,11 +1,4 @@
-REQUIREMENTS:
---------------------------------------------------------------------------------
-
-This theme does not require any moduels to be installed.
-
-
-INSTALLATION:
---------------------------------------------------------------------------------
+------------------------------------------------------
 
 Download the theme to www.your-drupal-site-name/themes/ and go to
 your-site-domain/admin/appearance and scroll to the bottom until you see Drupal8
