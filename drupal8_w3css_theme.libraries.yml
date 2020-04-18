@@ -39,11 +39,6 @@ global-components:
     - core/drupal
     - core/drupalSettings
     - core/jquery.once
-w3-css-theme-custom:
-  Version: VERSION
-  css:
-    theme:
-      css/w3-css-theme-custom/w3-theme-custom.css: {}
 w3-css-theme-amber:
   Version: VERSION
   css:
@@ -174,3 +169,15 @@ w3-css-theme-grey:
   css:
     theme:
       css/w3-css-theme/w3-theme-grey.css: {}
+
+# My custom predefined color themes.
+w3-css-theme-custom:
+  Version: VERSION
+  css:
+    theme:
+      css/w3-css-theme-custom/w3-theme-custom.css: {}
+w3-css-theme-00000:
+  Version: VERSION
+  css:
+    theme:
+      css/w3-css-theme-custom/w3-theme-00000.css: {}
