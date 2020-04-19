@@ -1,0 +1,8 @@
+global-components:
+  version: VERSION
+  css:
+    theme:
+      css/styles.css: {}
+      css/w3-theme-00000.css: {}
+  js:
+    js/script.js: {}
