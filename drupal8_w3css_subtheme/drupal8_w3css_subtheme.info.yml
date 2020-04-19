@@ -3,7 +3,7 @@ type: theme
 base theme: drupal8_w3css_theme
 core_version_requirement: ^8 || ^9
 description: 'drupal8 w3css subtheme is an empty theme for your customization.'
-
+core: '8.x'
 libraries:
   - drupal8_w3css_subtheme/global-components
 
@@ -39,5 +39,3 @@ features:
   name: true
   node_user_picture: true
   slogan: true
-
-core: '8.x'
