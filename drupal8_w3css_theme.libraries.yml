@@ -181,3 +181,63 @@ w3-css-theme-00000:
   css:
     theme:
       css/w3-css-theme-custom/w3-theme-00000.css: {}
+w3-css-theme-00001:
+  Version: VERSION
+  css:
+    theme:
+      css/w3-css-theme-custom/w3-theme-00001.css: {}
+w3-css-theme-00002:
+  Version: VERSION
+  css:
+    theme:
+      css/w3-css-theme-custom/w3-theme-00002.css: {}
+w3-css-theme-00003:
+  Version: VERSION
+  css:
+    theme:
+      css/w3-css-theme-custom/w3-theme-00003.css: {}
+w3-css-theme-00004:
+  Version: VERSION
+  css:
+    theme:
+      css/w3-css-theme-custom/w3-theme-00004.css: {}
+w3-css-theme-00005:
+  Version: VERSION
+  css:
+    theme:
+      css/w3-css-theme-custom/w3-theme-00005.css: {}
+w3-css-theme-00006:
+  Version: VERSION
+  css:
+    theme:
+      css/w3-css-theme-custom/w3-theme-00006.css: {}
+w3-css-theme-00007:
+  Version: VERSION
+  css:
+    theme:
+      css/w3-css-theme-custom/w3-theme-00007.css: {}
+w3-css-theme-00008:
+  Version: VERSION
+  css:
+    theme:
+      css/w3-css-theme-custom/w3-theme-00008.css: {}
+w3-css-theme-00009:
+  Version: VERSION
+  css:
+    theme:
+      css/w3-css-theme-custom/w3-theme-00009.css: {}
+w3-css-theme-00010:
+  Version: VERSION
+  css:
+    theme:
+      css/w3-css-theme-custom/w3-theme-00010.css: {}
+w3-css-theme-00011:
+  Version: VERSION
+  css:
+    theme:
+      css/w3-css-theme-custom/w3-theme-00011.css: {}
+w3-css-theme-00012:
+  Version: VERSION
+  css:
+    theme:
+      css/w3-css-theme-custom/w3-theme-00012.css: {}

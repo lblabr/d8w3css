@@ -1,0 +1,142 @@
+html,
+body,
+button,
+input,
+select,
+optgroup,
+textarea,
+.ul-parent-account,
+.ul-parent-footer {
+  color: #4f453e;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: #594d45;
+}
+
+.cke_top,
+.w3-border,
+ul.primary,
+.cke_bottom,
+.cke_chrome,
+ul.secondary,
+ul.primary > li {
+  border-color: #d5cdc8 !important;
+}
+
+a,
+.w3-button {
+  transition: 0.4s !important;
+}
+
+#open-nav-inner:hover,
+#open-search:hover,
+.w3-button:hover {
+  color: #f2f0ee !important;
+  background-color: #292420 !important;
+}
+
+.ul-parent-account {
+  color: inherit;
+}
+
+#header .fa,
+#header .svg-inline--fa {
+  color: inherit;
+}
+
+#footer-menu h1,
+#footer-menu h2,
+#footer-menu h3,
+#footer-menu h4,
+#footer-menu h5,
+#footer-menu a,
+#footer-menu p,
+#header h1,
+#header h2,
+#header h3,
+#header h4,
+#header h5,
+#header a,
+#header p {
+  color: white !important;
+}
+
+#header {
+  background-color: #463c36;
+  color: white !important;
+}
+
+.main-navigation-wrapper,
+.close-nav,
+.mobile-nav {
+  background-color: #594d45;
+  color: white;
+}
+
+#page-title,
+#highlighted,
+#top-container,
+#footer-container,
+.search-slide-wrapper,
+#top-container .top-region>div,
+#footer-container .footer-region>div,
+#bottom-container .bottom-region>div {
+  background-color: white;
+  color: #4f453e;
+}
+
+#footer-container .footer-region>div {
+  color: #4f453e;
+}
+
+#main-container {
+  background-color: #faf9f8;
+  color: #4f453e;
+}
+
+/* Four panels - light color */
+.search-slide-wrapper,
+.pager__item.is-active {
+  background-color: #faf9f8 !important;
+}
+
+#bottom-container {
+  background-color: #f2f0ee;
+}
+
+#top-container .top-region>div,
+#bottom-container .bottom-region>div,
+#footer-container .footer-region>div {
+  border: 1px solid #d5cdc8;
+  transition: 0.4s !important;
+}
+
+#top-container .top-region>div:hover,
+#bottom-container .bottom-region>div:hover,
+#footer-container .footer-region>div:hover {
+  box-shadow: 0 7px 15px rgba(0, 0, 0, .25);
+  border-color: #c6bcb5;
+}
+
+/* map and contact  */
+#footer-menu {
+  background-color: #201b19;
+  color: white;
+}
+
+#copyright {
+  background-color: #161311;
+  color: white;
+}
