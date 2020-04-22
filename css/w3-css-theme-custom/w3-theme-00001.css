@@ -1,0 +1,136 @@
+html,
+body,
+button,
+input,
+select,
+optgroup,
+textarea,
+.ul-parent-account,
+.ul-parent-footer {
+  color: #1b2327;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: #54758c;
+}
+
+.cke_top,
+.w3-border,
+ul.primary,
+.cke_bottom,
+.cke_chrome,
+ul.secondary,
+ul.primary > li {
+  border-color: #ccd8e0 !important;
+}
+
+a,
+.w3-button {
+  transition: 0.4s !important;
+}
+
+#open-nav-inner:hover,
+#open-search:hover,
+.w3-button:hover {
+  color: #d6e0e7 !important;
+  background-color: #4e6c82 !important;
+}
+
+.ul-parent-account {
+  color: inherit;
+}
+
+#header .fa,
+#header .svg-inline--fa {
+  color: inherit;
+}
+
+#footer-menu h1,
+#footer-menu h2,
+#footer-menu h3,
+#footer-menu h4,
+#footer-menu h5,
+#footer-menu a,
+#footer-menu p,
+#header h1,
+#header h2,
+#header h3,
+#header h4,
+#header h5,
+#header a,
+#header p {
+  color: white !important;
+}
+
+#header {
+  background-color: #3d5059;
+  color: white !important;
+}
+
+.main-navigation-wrapper,
+.close-nav,
+.mobile-nav {
+  background-color: #445963;
+  color: white;
+}
+
+#page-title,
+#highlighted,
+#top-container,
+#footer-container,
+.search-slide-wrapper,
+#top-container .top-region>div,
+#footer-container .footer-region>div,
+#bottom-container .bottom-region>div {
+  background-color: white;
+  color: #1b2327;
+}
+
+#main-container {
+  background-color: #ecf0f3;
+  color: #1b2327;
+}
+
+#top-container .top-region>div,
+#bottom-container .bottom-region>div,
+#footer-container .footer-region>div {
+  border: 1px solid #ccd8e0;
+  transition: 0.4s !important;
+}
+
+#top-container .top-region>div:hover,
+#bottom-container .bottom-region>div:hover,
+#footer-container .footer-region>div:hover {
+  box-shadow: 0 7px 15px rgba(0, 0, 0, .25);
+  border-color: #c1d0da;
+}
+#footer-container .footer-region>div {
+  color: #1b2327;
+}
+/* Four panels - light color */
+#bottom-container,
+.pager__item.is-active {
+  background-color: #ecf0f3;
+}
+
+/* map and contact  */
+#footer-menu {
+  background-color: #141c22;
+  color: white;
+}
+
+#copyright {
+  background-color: #0e1317;
+  color: white;
+}

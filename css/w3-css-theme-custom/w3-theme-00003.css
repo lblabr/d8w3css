@@ -1,0 +1,133 @@
+html,
+body,
+button,
+input,
+select,
+optgroup,
+textarea,
+.ul-parent-account,
+.ul-parent-footer {
+  color: #19391a;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: #37803a;
+}
+
+.cke_top,
+.w3-border,
+ul.primary,
+.cke_bottom,
+.cke_chrome,
+ul.secondary,
+ul.primary > li {
+  border-color: #cde9ce !important;
+}
+
+a,
+.w3-button {
+  transition: 0.4s !important;
+}
+#open-nav-inner:hover,
+#open-search:hover,
+.w3-button:hover {
+  color: #cde9ce !important;
+  background-color: #2d6830 !important;
+}
+
+.ul-parent-account {
+  color: inherit;
+}
+
+#header .fa,
+#header .svg-inline--fa {
+  color: inherit;
+}
+
+#page-title,
+#highlighted,
+#top-container,
+#footer-container,
+.search-slide-wrapper,
+#top-container .top-region > div,
+#footer-container .footer-region>div,
+#bottom-container .bottom-region>div {
+  background-color: white;
+  color: #19391a;
+}
+
+.main-navigation-wrapper,
+.close-nav,
+.mobile-nav {
+  background-color: #4caf50;
+  color: white;
+}
+
+#header {
+  background-color: #47a34b;
+  color: white !important;
+}
+#footer-menu h1,
+#footer-menu h2,
+#footer-menu h3,
+#footer-menu h4,
+#footer-menu h5,
+#footer-menu a,
+#footer-menu p,
+#header h1,
+#header h2,
+#header h3,
+#header h4,
+#header h5,
+#header a,
+#header p {
+  color: white !important;
+}
+
+#main-container {
+  background-color: #f0f9f1;
+  color: #19391a;
+}
+
+#top-container .top-region>div,
+#bottom-container .bottom-region>div,
+#footer-container .footer-region>div {
+  border: 1px solid #cde9ce;
+  transition: 0.4s !important;
+}
+
+#top-container .top-region > div:hover,
+#bottom-container .bottom-region>div:hover,
+#footer-container .footer-region>div:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .15);
+  border-color: #c1e4c2;
+}
+#footer-container .footer-region>div {
+  color: #19391a;
+}
+#bottom-container,
+.pager__item.is-active {
+  background-color: #e4f3e5;
+  color: #19391a;
+}
+
+#footer-menu {
+  background-color: #0e210f;
+  color: white;
+}
+
+#copyright {
+  background-color: #09150a;
+  color: white;
+}
