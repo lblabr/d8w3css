@@ -98,6 +98,9 @@
 /* Small/Medium Screen Only */
 /* Layout */
 @media (max-width:992px) {
+  .highlighted-inner {
+    padding: 10px;
+  }
   .top-container-inner .first-top,
   .top-container-inner .second-top,
   .top-container-inner .third-top,
@@ -215,6 +218,9 @@
 
 /* Large Screen Only */
 @media (min-width:993px) {
+  .highlighted-inner {
+    padding: 20px;
+  }
   /* Main Menu */
   #main-navigation-h .ul-parent li > a {
     padding: 15px 20px;
