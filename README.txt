@@ -301,3 +301,13 @@ visible. The two levels are hidden and you show them by clicking.
 Go to d8w3css/templates/navigation and clone menu--responsive-v.html.twig to
 your sub theme folder and name it menu--titto.html.twig. Clear all caches and
 you are done.
+
+  * How to Make the Main Vertical Menu Open On The Right Side
+  ....................................................
+
+1- Create a sub-theme.
+2- copy page .../d8w3css/templates/layout/page.html.twig to the sub-theme.
+3- Find the words "main-navigation-v". On the same line, change "w3-animate-left" to "w3-animate-right".
+4- Find the word "open-nav-inner". On the same line, change "w3-left" to "w3-right".
+5- Copy and paste the following css in the sub-theme css style file:
+#main-navigation-v.w3-sidebar{right:0;}#open-nav-inner {margin:0 0 0 10px!important;}
