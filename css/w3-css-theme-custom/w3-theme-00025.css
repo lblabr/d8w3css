@@ -13,9 +13,9 @@ a,
   color: inherit;
 }
 
-#top-container .top-region>div,
-#bottom-container .bottom-region>div,
-#footer-container .footer-region>div {
+#top-container .top-box>div,
+#bottom-container .bottom-box>div,
+#footer-container .footer-box>div {
   border-width: 1px;
   border-style: solid;
   transition: 0.4s !important;
@@ -31,16 +31,17 @@ optgroup,
 textarea,
 #page-title,
 #highlighted,
+.page-wrapper,
 #top-container,
 #main-container,
 #footer-container,
 .ul-parent-footer,
 .search-slide-wrapper,
 .pager__item.w3-light-gray a,
-#top-container .top-region>div,
-#footer-container .footer-region>div,
-#bottom-container .bottom-region>div,
-#footer-container .footer-region>div {
+#top-container .top-box>div,
+#footer-container .footer-box>div,
+#bottom-container .bottom-box>div,
+#footer-container .footer-box>div {
   color: #879295;
 }
 
@@ -92,13 +93,14 @@ select,
 textarea,
 #page-title,
 #highlighted,
+.page-wrapper,
 #top-container,
 #footer-container,
 .search-slide-wrapper,
-#top-container .top-region>div,
+#top-container .top-box>div,
 #main-container .main-region>div,
-#footer-container .footer-region>div,
-#bottom-container .bottom-region>div {
+#footer-container .footer-box>div,
+#bottom-container .bottom-box>div {
   background-color: #060707;
 }
 
@@ -141,9 +143,9 @@ ul.primary > li {
   border-color: #514bae !important;
 }
 
-#top-container .top-region>div,
-#bottom-container .bottom-region>div,
-#footer-container .footer-region>div {
+#top-container .top-box>div,
+#bottom-container .bottom-box>div,
+#footer-container .footer-box>div {
   border-color: #514bae;
 }
 
@@ -159,9 +161,9 @@ ul.primary > li {
 input:focus,
 select:focus,
 textarea:focus,
-#top-container .top-region>div:hover,
-#bottom-container .bottom-region>div:hover,
-#footer-container .footer-region>div:hover {
+#top-container .top-box>div:hover,
+#bottom-container .bottom-box>div:hover,
+#footer-container .footer-box>div:hover {
   box-shadow: 0 25px 57px 0 rgba(81, 75, 174, .40);
   border-color: #514bae !important;
 }
@@ -208,15 +210,15 @@ textarea:focus,
 }
 
 /* Border animation  */
-#top-container .top-region>.animate-border,
-#bottom-container .bottom-region>.animate-border,
-#footer-container .footer-region>.animate-border {
+#top-container .top-box>.animate-border,
+#bottom-container .bottom-box>.animate-border,
+#footer-container .footer-box>.animate-border {
   position: relative;
 }
 
-#top-container .top-region>.animate-border:before,
-#bottom-container .bottom-region>.animate-border:before,
-#footer-container .footer-region>.animate-border:before {
+#top-container .top-box>.animate-border:before,
+#bottom-container .bottom-box>.animate-border:before,
+#footer-container .footer-box>.animate-border:before {
   content: '';
   position: absolute;
   top: 0px;
@@ -227,9 +229,9 @@ textarea:focus,
   border: 1px solid transparent;
 }
 
-#top-container .top-region>.animate-border:hover:before,
-#bottom-container .bottom-region>.animate-border:hover:before,
-#footer-container .footer-region>.animate-border:hover:before {
+#top-container .top-box>.animate-border:hover:before,
+#bottom-container .bottom-box>.animate-border:hover:before,
+#footer-container .footer-box>.animate-border:hover:before {
   animation: borderLeftColors 1s linear forwards;
 }
 
@@ -270,9 +272,9 @@ textarea:focus,
 
 }
 
-#top-container .top-region>.animate-border:after,
-#bottom-container .bottom-region>.animate-border:after,
-#footer-container .footer-region>.animate-border:after {
+#top-container .top-box>.animate-border:after,
+#bottom-container .bottom-box>.animate-border:after,
+#footer-container .footer-box>.animate-border:after {
   content: '';
   position: absolute;
   bottom: 0px;
@@ -283,9 +285,9 @@ textarea:focus,
   border: 1px solid transparent;
 }
 
-#top-container .top-region>.animate-border:hover:after,
-#bottom-container .bottom-region>.animate-border:hover:after,
-#footer-container .footer-region>.animate-border:hover:after {
+#top-container .top-box>.animate-border:hover:after,
+#bottom-container .bottom-box>.animate-border:hover:after,
+#footer-container .footer-box>.animate-border:hover:after {
   animation: borderRightColors 1s linear forwards;
 }
 
