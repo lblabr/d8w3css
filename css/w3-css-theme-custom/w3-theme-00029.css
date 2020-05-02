@@ -264,10 +264,15 @@ textarea:focus,
 }
 
 /* We apply the main image to the whole page wrapper */
-.page-wrapper {
+.page-wrapper,
+.wrapper.w3-content {
   background-color: transparent;
   background-size: cover;
   background-image: url(../images/page-wrapper.jpg);
   background-position: top center;
   background-repeat: repeat;
+}
+
+.wrapper.w3-content.page-wrapper {
+  background-image: none;
 }
