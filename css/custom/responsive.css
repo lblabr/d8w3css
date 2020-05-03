@@ -219,7 +219,7 @@
 /* Large Screen Only */
 @media (min-width:993px) {
   .highlighted-inner {
-    padding: 20px;
+    padding: 0 20px;
   }
   /* Main Menu */
   #main-navigation-h .ul-parent li > a {
