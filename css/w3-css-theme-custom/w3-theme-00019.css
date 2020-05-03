@@ -181,7 +181,7 @@ textarea:focus,
 }
 
 .w3-button:hover:before {
-  animation: btnBorderAnimation 0.3s linear forwards;
+  animation: btnBorderAnimation 0.1s linear forwards;
 }
 
 @keyframes btnBorderAnimation {
