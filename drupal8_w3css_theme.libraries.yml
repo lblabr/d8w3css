@@ -1,13 +1,13 @@
 w3-css:
   remote: https://www.w3schools.com/w3css/
-  version: 4
+  version: 4.13
   license:
     name: MIT
     url: https://www.w3schools.com/w3css/w3css_downloads.asp
     gpl-compatible: true
   css:
     theme:
-      https://www.w3schools.com/w3css/4/w3.css: { type: external, minified: true }
+      css/w3-css/w3.css: {}
       css/w3-css/w3css-color-libraries.css: {}
 font-awesome:
   remote: https://fortawesome.github.io/Font-Awesome/
