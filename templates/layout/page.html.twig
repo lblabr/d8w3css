@@ -172,7 +172,7 @@
       <div class="w3-col w3-clear w3-row-padding">
         {% if page.sidebar_first %}
           <!-- Start Left SideBar -->
-          <div class ="{{ sidebarfirst }} main-box {{ main_region ? 'main-region' }} first-sidebar">
+          <div class ="{{ sidebarfirst }} main-box {{ main_region ? 'main-region' }} first-sidebar" role="complementary">
             <div class="d8-fade w3-card w3-round w3-sidebar-first w3-mobile {{ color_sidebar_first }}">
               {{ page.sidebar_first }}
             </div>
@@ -181,7 +181,7 @@
         {% endif %}
         {% if page.content %}
           <!-- Start: Main Content -->
-          <div class="{{ content_w3css }} main-box {{ main_region ? 'main-region' }} w3css-content">
+          <div class="{{ content_w3css }} main-box {{ main_region ? 'main-region' }} w3css-content" role="main">
             <div class="d8-fade w3-card w3-round w3-mobile  {{ color_content }}">
               {{ page.content }}
             </div>
@@ -190,7 +190,7 @@
         {% endif %}
         {% if page.sidebar_second %}
           <!-- Start: Right SideBar -->
-          <div class="{{ sidebarsecond }} main-box {{ main_region ? 'main-region' }} second-sidebar">
+          <div class="{{ sidebarsecond }} main-box {{ main_region ? 'main-region' }} second-sidebar" role="complementary">
             <div class="d8-fade w3-card w3-round w3-sidebar-second w3-mobile {{ color_sidebar_second }}">
               {{ page.sidebar_second }}
             </div>
