@@ -160,7 +160,7 @@ function drupal8_w3css_theme_preprocess_page(&$variables) {
   foreach ($mvar as $value) {
     $variables[$value] = theme_get_setting($value);
   }
-  // Social Mdia's $variables.
+  // Social Media's $variables.
   $svar = [
     'show_social_icon',
     'facebook_url',
@@ -273,6 +273,9 @@ function drupal8_w3css_theme_theme_suggestions_block_alter(array &$suggestions, 
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ *
+ * @param array $suggestions
+ * @param array $variables
  */
 function drupal8_w3css_theme_theme_suggestions_form_alter(array &$suggestions, array $variables) {
   // Suggest the name for the search block.
