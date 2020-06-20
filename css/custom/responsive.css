@@ -151,7 +151,7 @@
     padding: 10px!important;
   }
 }
-/* Samll Screen Only */
+/* Small Screen Only */
 @media (max-width:600px) {
   .top-container-inner .first-top > div,
   .top-container-inner .second-top > div,
