@@ -220,3 +220,27 @@ table ul.dropbutton li.dropbutton-toggle {
 table ul.dropbutton li a {
   line-height: 26px;
 }
+.node-preview-container {
+  position: relative;
+  background-color: #dfd;
+  color: #2196f3;
+}
+.node-preview-container > form {
+  background-color: #dff;
+  border: 1px solid white;
+}
+.node-preview-container > form select {
+  border: 2px solid #fdd!important;
+}
+.node-preview-container .node-preview-backlink {
+  width: 100%;
+  display: block;
+  float: left;
+  text-align: right;
+  color: #3f51b5;
+}
+.node-preview-container .form-item-view-mode {
+  width: 100%;
+  display: block;
+  margin: 0;
+}
