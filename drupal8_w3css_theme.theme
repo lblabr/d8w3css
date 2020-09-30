@@ -38,7 +38,7 @@ function drupal8_w3css_theme_preprocess_html(&$variables) {
     $vocabulary_id = $term->bundle();
     $variables['attributes']['class'][] = 'path-vocabulary-' . Html::cleanCssIdentifier($vocabulary_id);
   }
-  // Add view id to the body class.
+  // Add view Id to the body class.
   $view_id = \Drupal::routeMatch()->getParameter('view_id');
   if ($view_id) {
     $variables['attributes']['class'][] = 'path-view-' . Html::cleanCssIdentifier($view_id);
