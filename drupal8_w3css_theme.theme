@@ -314,3 +314,10 @@ function drupal8_w3css_theme_form_search_block_form_alter(&$form, &$form_state) 
   $form['actions']['submit']['#value'] = html_entity_decode('&#xf061;');
   $form['actions']['submit']['#attributes']['class'][] = 'search-button-block';
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function drupal8_w3css_theme_form_search_form_alter(&$form, &$form_state) {
+  unset($form['help_link']);
+}

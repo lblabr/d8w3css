@@ -236,18 +236,20 @@ div.item-list > ol.item-list > li article::before,
   margin-top: -2px;
 }
 /* Search page */
-.path-search .search-form a.search-help-link {
-  float: left!important;
-  margin-bottom: 15px;
+.path-search form.search-form>.form-wrapper {
+  position: relative;
 }
-.path-search .search-form .form-type-search {
-  width: 100%;
-  margin-bottom: 0!important;
+.path-search form.search-form>.form-wrapper>.form-type-search {
+  float: left;
+  width: 74%;
+  margin: 0 0 10px 0!important;
 }
-.path-search .search-form input.form-submit {
-  float: left!important;
-  min-width: 128px;
-  margin-bottom: 0!important;
+.path-search form.search-form>.form-wrapper>.form-submit {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  margin: 0!important;
+  width: 25%;
 }
 .path-search .search-form .search-advanced summary.w3-button {
   box-sizing: border-box;
