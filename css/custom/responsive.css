@@ -252,4 +252,17 @@
   body {
     font-size: 85%!important;
   }
+  /* Search Page*/
+  .path-search form.search-form>.form-wrapper {
+    margin-bottom: 10px;
+  }
+  .path-search form.search-form>.form-wrapper>.form-type-search {
+    width: 100%;
+  }
+  .path-search form.search-form>.form-wrapper>.form-submit {
+    position: inherit;
+    margin: 0;
+    width: 100%;
+    bottom: 0;
+  }
 }
