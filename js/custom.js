@@ -15,6 +15,10 @@
   }
     // Add flex position to the main menu at scroll.
   let scrollWindow = function () {
+  if($("#layout-builder").length){
+      // Remove the match height on layout builder
+      $('.top-region, .main-region, .bottom-region, .footer-region').matchHeight({remove: true});
+    }
     didScroll = true;
     if (window.scrollY > origOffsetY) {
       mainNavigation.classList.add('w3-sticky');
@@ -27,44 +31,32 @@
   };
     // Add and remove classes on window resize.
   let mediaSize = function () {
-    let currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    let currentWidth  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     let mainMenuChild = $('#main-navigation-h').css('background-color');
+    const bodyTag = $('body');
     if (currentWidth >= 993) {
       // Add class to the body for large screen.
-      $('body').addClass('large-screen');
-      $('body').removeClass('small-screen');
-      $('body').removeClass('medium-screen');
+      bodyTag.addClass('large-screen').removeClass('small-screen', 'medium-screen');
       $('.ul-parent').removeClass('w3-show');
       $('.ul-child').removeClass('w3-show');
       $('.ul-responsive-h .ul-parent').removeAttr('style');
       $('.ul-responsive-h .ul-child').removeAttr('style');
       $('#main-navigation-h .ul-parent').removeAttr('style');
-      $('#main-navigation-h .ul-child').removeAttr('style');
-      $('#main-navigation-h .ul-child').css('background-color', mainMenuChild);
+      $('#main-navigation-h .ul-child').removeAttr('style').css('background-color', mainMenuChild);
       // Make sure all the inside regions have the same height.
-      $('.top-region').matchHeight({property: 'height'});
-      $('.main-region').matchHeight({property: 'height'});
-      $('.bottom-region').matchHeight({property: 'height'});
-      $('.footer-region').matchHeight({property: 'height'});
+      $('.top-region, .main-region, .bottom-region, .footer-region').matchHeight({property: 'height'});
     }
     else if ((currentWidth >= 601) && (currentWidth <= 992)) {
       // Add class to the body for medium screen.
-      $('body').addClass('medium-screen');
-      $('body').removeClass('large-screen');
-      $('body').removeClass('small-screen');
+      bodyTag.addClass('medium-screen').removeClass('large-screen', 'small-screen');
     }
     else if (currentWidth <= 600) {
             // Add class to the body for small screen.
-      $('body').addClass('small-screen');
-      $('body').removeClass('large-screen');
-      $('body').removeClass('medium-screen');
+      bodyTag.addClass('small-screen').removeClass('large-screen', 'medium-screen');
     }
-    else if (currentWidth <= 992) {
-            // Remove the match height on small screen.
-      $('.top-region').matchHeight({remove: true});
-      $('.main-region').matchHeight({remove: true});
-      $('.bottom-region').matchHeight({remove: true});
-      $('.footer-region').matchHeight({remove: true});
+    else if ( currentWidth <= 992   ) {
+      // Remove the match height on small screen.
+      $('.top-region, .main-region, .bottom-region, .footer-region').matchHeight({remove: true});
     }
   };
 
@@ -264,10 +256,6 @@
             .once('.details-wrapper')
             .addClass('w3-padding-large w3-left-align');
       $(context)
-            .find('.d8-fade')
-            .once('.d8-fade')
-            .css('opacity', 0);
-      $(context)
             .find('a > .w3-image')
             .once('a > .w3-image')
             .each(
@@ -275,11 +263,20 @@
                   $(this).parent().addClass('d8-has-image');
                 }
             );
+
+      if (!document.getElementById("layout-builder")) {
+        $(context)
+          .find('.d8-fade')
+          .once('.d8-fade')
+          .css('opacity', 0);
+        fadeBox();
+        window.addEventListener('scroll', fadeBox);
+      }
+
       mediaSize();
-      fadeBox();
       window.addEventListener('resize', mediaSize);
       window.addEventListener('scroll', scrollWindow);
-      window.addEventListener('scroll', fadeBox);
+
     }
   };
 })(jQuery, Drupal);

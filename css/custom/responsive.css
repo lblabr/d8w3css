@@ -1,5 +1,8 @@
 /* Large Screen Only */
 @media (min-width:993px) {
+  #main-container-inner>div:nth-child(2) .main-box {
+    margin-top: 0!important;
+  }
   .highlighted-inner {
     padding: 0 20px;
   }
@@ -34,8 +37,8 @@
 /* Small/Medium Screen Only */
 /* Layout */
 @media (max-width:992px) {
-  .highlighted-inner {
-    padding: 10px;
+  #main-container-inner>div:nth-child(2) .main-box:first-child {
+    margin-top: 0!important;
   }
   .top-container-inner .first-top,
   .top-container-inner .second-top,
