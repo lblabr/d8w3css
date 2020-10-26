@@ -211,15 +211,42 @@
 
   Drupal.behaviors.d8w3cssTheme = {
     attach: function (context, settings) {
-            // Change the form color to match the footer color.
-      let footerFormBg = $('#footer-menu').css('background-color');
+
+      // Change the form color to match the footer color.
+      const footerFormBg = $('#footer-menu').css('background-color')
+      const footerFormTxt = $('#footer-menu').css('color');
       $(context)
-            .find('#footer-menu form')
-            .once('#footer-menu form')
-            .css('background-color', footerFormBg);
+        .find('#footer-menu form')
+        .once('#footer-menu form')
+        .css('background-color', footerFormBg).css('color', footerFormTxt);
+     // apply background and color to opened dialog.
+      let layoutBuilderBox = function () {
+        if ($('.ui-dialog').is(':visible')) {
+        const pageTitleBg = $('#page-title').css('background-color');
+        const pageTitleTxt = $('#page-title h1').css('color');
+        const mainContainerBg = $('#main-container').css('background-color');
+        const mainContainerTxt = $('#main-container p').css('color');
+        $(context)
+          .find('.ui-dialog .ui-dialog-titlebar')
+          .once('.ui-dialog .ui-dialog-titlebar')
+          .css('background', pageTitleBg).css('color', pageTitleTxt);
+        $(context)
+          .find('.ui-dialog')
+          .once('.ui-dialog')
+          .css('background', mainContainerBg).css('color', mainContainerTxt);
+        $(context)
+          .find('.ui-dialog .ui-dialog-content')
+          .once('.ui-dialog .ui-dialog-content')
+          .css('background', mainContainerBg).css('color', mainContainerTxt);
+        $(context)
+          .find('.ui-dialog .ui-dialog-buttonpane')
+          .once('.ui-dialog .ui-dialog-buttonpane')
+          .css('background', footerFormBg).css('color', footerFormTxt);
+        }
+      }
 
             // Change the sub menu color as the main menu.
-      let mainMenuChild = $('.main-navigation-wrapper').css('background-color');
+      const mainMenuChild = $('.main-navigation-wrapper').css('background-color');
       $(context)
             .find('.main-navigation-wrapper .ul-child')
             .once('.main-navigation-wrapper .ul-child')
@@ -263,7 +290,7 @@
                   $(this).parent().addClass('d8-has-image');
                 }
             );
-
+      // Disable show on scroll if layout builder is active.
       if (!document.getElementById("layout-builder")) {
         $(context)
           .find('.d8-fade')
