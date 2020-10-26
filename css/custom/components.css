@@ -200,14 +200,6 @@ ul li.li-expanded > a:hover {
   float: right;
   width: auto;
 }
-/* Table inside field */
-.field-multiple-drag {
-  width: 50px;
-}
-.tabledrag-handle .handle {
-  width: 25px;
-  height: 25px;
-}
 /* To roll the text around the image */
 .node .field--type-image {
   float: left;
@@ -768,4 +760,175 @@ ol {
   background: -moz-linear-gradient(-45deg,  #45484d 0%, #000000 100%);
   background: -webkit-linear-gradient(-45deg,  #45484d 0%,#000000 100%);
   background: linear-gradient(135deg,  #45484d 0%,#000000 100%);
+}
+/* CSS Webform */
+.webform-submission-form fieldset,
+.webform-submission-form fieldset .fieldset-wrapper.w3-panel {
+  border: none;
+  background: transparent!important;
+  margin: 0 auto;
+  padding: 0;
+}
+.webform-submission-form .form-actions {
+  text-align: center;
+}
+.webform-submission-form .form-actions > input {
+  margin: 15px 7px!important;
+}
+.webform-submission-form .form-type-webform-rating label {
+  height: 25px;
+  float: left;
+}
+.webform-multiple-table td input[type="image"] {
+  border-color: #ccc;
+}
+.webform-multiple-add {
+  text-align: center;
+}
+.webform-multiple-add .form-type-number input {
+  display: inline-block;
+  margin: 0;
+  width: 4em;
+}
+.webform-multiple-add div.w3-section.form-item {
+  width: auto;
+  clear: none;
+}
+.webform-multiple-add > div,
+.webform-multiple-add > input {
+  float: left;
+  margin-right: 10px;
+}
+.webform-multiple-add .field-suffix {
+  font-size: 90%;
+}
+.webform-multiple-table td.webform-multiple-table--handle {
+  width: auto;
+}
+.webform-has-field-suffix > div + span.field-suffix,
+.webform-has-field-prefix span.field-prefix + div {
+  display: inline-block;
+  clear: none;
+}
+.webform-multiple-table td input[type="image"] + input[type="image"] {
+  margin: 2px 0 0 0;
+}
+/* CSS Form */
+form > details.form-wrapper::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+form > details.form-wrapper {
+  float: left;
+  width: 100%;
+}
+form details.form-wrapper > summary {
+  cursor: pointer;
+  margin: 10px auto;
+}
+form .tableselect-sort th:first-child,
+form .tableselect-sort td:first-child {
+  width: 85px;
+}
+form tr.draggable td > a,
+form tr.draggable td > div.form-type-radio,
+form tr.draggable td > div.form-type-checkbox {
+  float: left!important;
+  padding: 0!important;
+  margin: 0!important;
+  clear: none!important;
+}
+form a.tabledrag-handle .handle {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+form .draggable a.tabledrag-handle {
+  margin: -3px 5px 0 0!important;
+  width: 25px;
+}
+form tr.draggable .w3-check,
+form tr.draggable .w3-radio {
+  top: 0;
+}
+form .field-multiple-drag {
+  width: 50px;
+}
+form .w3-table-all tr {
+  border-bottom: none;
+}
+form .responsive-enabled {
+  border-collapse: initial;
+}
+form div.form-type-datelist.w3-section.form-item {
+  width: auto;
+  clear: none;
+}
+form .form-type-date label,
+form .form-item-color label,
+form .form-type-select label,
+form .form-type-datelist label,
+form .form-type-datetime label {
+  display: block;
+  clear: both;
+}
+.form-type-datelist > div {
+  padding-left: 0;
+}
+form #edit-datelist,
+form #edit-datetime {
+  padding: 0;
+  margin: 0;
+}
+form #edit-datetime > div {
+  float: left;
+  margin: 0!important;
+  width: 50%;
+}
+form  #edit-datetime > div input {
+  min-width: 165px;
+}
+form .form-type-date,
+form .form-type-datetime,
+form .form-type-webform-time {
+  width: 50%!important;
+  float: left;
+  clear: none;
+}
+form .form-type-date input,
+form .form-type-datetime input,
+form .form-type-webform-time input {
+  width: 99%;
+}
+form .form-item-range > span.field-suffix,
+form .form-item-range .form-item-range__output {
+  display: block;
+  float: left;
+  width: 100%;
+}
+form .form-item-range .form-item-range__output input {
+  width: 4em;
+  display: inline-block;
+  clear: none;
+}
+form .form-item-datelist #edit-datelist > div select {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+form .table-sort-weight.form-select {
+  width: auto;
+}
+form select {
+  min-width: 75px;
+}
+.messages.messages--info {
+  background-position: 2px  17px;
+}
+.js-filter-guidelines {
+  font-size: 85%;
+}
+.js-filter-guidelines li {
+  padding-bottom: 0;
 }
