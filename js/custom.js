@@ -5,6 +5,7 @@
 
 (function ($, Drupal) {
   'use strict';
+
     // Used for fixed menu.
   let origOffsetY;
   let didScroll = false;
@@ -15,6 +16,7 @@
   }
     // Add flex position to the main menu at scroll.
   let scrollWindow = function () {
+
   if($("#layout-builder").length){
       // Remove the match height on layout builder
       $('.top-region, .main-region, .bottom-region, .footer-region').matchHeight({remove: true});
@@ -24,7 +26,7 @@
       mainNavigation.classList.add('w3-sticky');
     }
     else {
-      if ($('.w3-sticky').length) {
+      if ($('.w3-sticky').length > 0) {
         mainNavigation.classList.remove('w3-sticky');
       }
     }
