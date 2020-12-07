@@ -69,8 +69,8 @@ function drupal8_w3css_theme_preprocess_page(&$variables) {
     $variables['top_w3css'] = 'w3-third';
   }
   elseif (($has_top_first && $has_top_second)  ||
-           ($has_top_first && $has_top_third)  ||
-           ($has_top_second && $has_top_third)) {
+        ($has_top_first && $has_top_third)  ||
+        ($has_top_second && $has_top_third)) {
     $variables['top_w3css'] = 'w3-half';
   }
   else {
@@ -119,17 +119,17 @@ function drupal8_w3css_theme_preprocess_page(&$variables) {
     $variables['bottom_w3css'] = 'w3-quarter';
   }
   elseif (($has_bottom_first && $has_bottom_second && $has_bottom_third)   ||
-           ($has_bottom_first && $has_bottom_third && $has_bottom_forth)   ||
-           ($has_bottom_first && $has_bottom_second && $has_bottom_forth)  ||
-           ($has_bottom_second && $has_bottom_third && $has_bottom_forth)) {
+        ($has_bottom_first && $has_bottom_third && $has_bottom_forth)   ||
+        ($has_bottom_first && $has_bottom_second && $has_bottom_forth)  ||
+        ($has_bottom_second && $has_bottom_third && $has_bottom_forth)) {
     $variables['bottom_w3css'] = 'w3-third';
   }
   elseif (($has_bottom_first && $has_bottom_second)  ||
-           ($has_bottom_first && $has_bottom_third)  ||
-           ($has_bottom_first && $has_bottom_forth)  ||
-           ($has_bottom_second && $has_bottom_forth) ||
-           ($has_bottom_second && $has_bottom_third) ||
-           ($has_bottom_third && $has_bottom_forth)) {
+        ($has_bottom_first && $has_bottom_third)  ||
+        ($has_bottom_first && $has_bottom_forth)  ||
+        ($has_bottom_second && $has_bottom_forth) ||
+        ($has_bottom_second && $has_bottom_third) ||
+        ($has_bottom_third && $has_bottom_forth)) {
     $variables['bottom_w3css'] = 'w3-half';
   }
   else {
@@ -141,8 +141,8 @@ function drupal8_w3css_theme_preprocess_page(&$variables) {
     $variables['footer_w3css'] = 'w3-third';
   }
   elseif (($has_footer_first && $has_footer_second)  ||
-           ($has_footer_first && $has_footer_third)  ||
-           ($has_footer_second && $has_footer_third)) {
+        ($has_footer_first && $has_footer_third)  ||
+        ($has_footer_second && $has_footer_third)) {
     $variables['footer_w3css'] = 'w3-half';
   }
   else {
@@ -216,10 +216,6 @@ function drupal8_w3css_theme_preprocess_page(&$variables) {
   $my_current_theme = ($variables['current_theme'] = theme_get_setting('current_theme'));
   $predefined_theme_filename = 'drupal8_w3css_theme/' . str_replace('w3-theme-', 'w3-css-theme-', $my_current_theme);
   $variables['#attached']['library'][] = $predefined_theme_filename;
-  // Disable font awesome library if fontawesome module installed.
-  if (\Drupal::moduleHandler()->moduleExists('fontawesome')) {
-    unset($variables['#attached']['library']['drupal8_w3css_theme/font-awesome']);
-  }
 }
 
 /**
@@ -319,4 +315,15 @@ function drupal8_w3css_theme_form_search_block_form_alter(&$form, &$form_state) 
  */
 function drupal8_w3css_theme_form_search_form_alter(&$form, &$form_state) {
   unset($form['help_link']);
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function drupal8_w3css_theme_page_attachments_alter(array &$attachments) {
+  // Disable font awesome library if fontawesome module installed.
+  if (\Drupal::moduleHandler()->moduleExists('fontawesome')) {
+    $index = array_search('drupal8_w3css_theme/font-awesome', $attachments['#attached']['library'], TRUE);
+    unset($attachments['#attached']['library'][$index]);
+  }
 }
